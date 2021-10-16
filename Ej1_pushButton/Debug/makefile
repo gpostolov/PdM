@@ -11,6 +11,7 @@ RM := rm -rf
 -include sources.mk
 -include Startup/subdir.mk
 -include Src/subdir.mk
+-include Drivers/STM32F4xx_HAL_Driver/Src/Legacy/subdir.mk
 -include Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk
 -include Drivers/Core/Src/subdir.mk
 -include Drivers/CMSIS/subdir.mk
@@ -64,8 +65,8 @@ all: main-build
 main-build: Ej1_pushButton.elf secondary-outputs
 
 # Tool invocations
-Ej1_pushButton.elf: $(OBJS) $(USER_OBJS) /home/pato/STM32CubeIDE/workspace_1.7.0/Ej1_pushButton/STM32F429ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Ej1_pushButton.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/pato/STM32CubeIDE/workspace_1.7.0/Ej1_pushButton/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Ej1_pushButton.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Ej1_pushButton.elf: $(OBJS) $(USER_OBJS) /home/pato/Embebidos/CESE/PdM_workspace/Ej1_pushButton/STM32F429ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Ej1_pushButton.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/pato/Embebidos/CESE/PdM_workspace/Ej1_pushButton/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Ej1_pushButton.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

@@ -23,6 +23,7 @@ SUBDIRS := \
 Drivers/BSP/STM32F4xx_Nucleo_144 \
 Drivers/CMSIS \
 Drivers/Core/Src \
+Drivers/STM32F4xx_HAL_Driver/Src/Legacy \
 Drivers/STM32F4xx_HAL_Driver/Src \
 Src \
 Startup \
