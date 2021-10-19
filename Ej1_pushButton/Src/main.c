@@ -25,25 +25,13 @@
  * @{
  */
 
-/** @addtogroup UART_Printf
- * @{
- */
-
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/
-/* UART handler declaration */
-UART_HandleTypeDef UartHandle;
 
 /* Private function prototypes -----------------------------------------------*/
-#ifdef __GNUC__
-/* With GCC, small printf (option LD Linker->Libraries->Small printf
-   set to 'Yes') calls __io_putchar() */
-#define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
-#else
-#define PUTCHAR_PROTOTYPE int fputc(int ch, FILE *f)
-#endif /* __GNUC__ */
+
 static void SystemClock_Config(void);
 static void Error_Handler(void);
 
@@ -76,35 +64,6 @@ int main(void)
 	/* Initialize BSP PB for BUTTON_USER */
 	BSP_PB_Init(BUTTON_USER, BUTTON_MODE_GPIO);
 
-	/*##-1- Configure the UART peripheral ######################################*/
-	/* Put the USART peripheral in the Asynchronous mode (UART Mode) */
-	/* UART configured as follows:
-      - Word Length = 8 Bits (7 data bit + 1 parity bit) : 
-	                  BE CAREFUL : Program 7 data bits + 1 parity bit in PC HyperTerminal
-      - Stop Bit    = One Stop bit
-      - Parity      = ODD parity
-      - BaudRate    = 9600 baud
-      - Hardware flow control disabled (RTS and CTS signals) */
-	UartHandle.Instance        = USARTx;
-
-	UartHandle.Init.BaudRate   = 9600;
-	UartHandle.Init.WordLength = UART_WORDLENGTH_8B;
-	UartHandle.Init.StopBits   = UART_STOPBITS_1;
-	UartHandle.Init.Parity     = UART_PARITY_ODD;
-	UartHandle.Init.HwFlowCtl  = UART_HWCONTROL_NONE;
-	UartHandle.Init.Mode       = UART_MODE_TX_RX;
-	UartHandle.Init.OverSampling = UART_OVERSAMPLING_16;
-	if (HAL_UART_Init(&UartHandle) != HAL_OK)
-	{
-		/* Initialization Error */
-		Error_Handler();
-	}
-
-	/* Output a message on Hyperterminal using printf function */
-	HAL_UART_Transmit(&UartHandle, (uint8_t *)"HOLA\n\r", 7, 1000);
-	printf("\n\r UART Printf Example: retarget the C library printf function to the UART\n\r");
-	printf("** Test finished successfully. ** \n\r");
-
 
 	/* Infinite loop */
 	while (1)
@@ -119,41 +78,7 @@ int main(void)
 	}
 }
 
-/**
- * @brief  Retargets the C library printf function to the USART.
- * @param  None
- * @retval None
- */
-PUTCHAR_PROTOTYPE
-{
-	/* Place your implementation of fputc here */
-	/* e.g. write a character to the USART3 and Loop until the end of transmission */
-	HAL_UART_Transmit(&UartHandle, (uint8_t *)&ch, 1, 0xFFFF);
 
-	return ch;
-}
-
-/**
- * @brief  System Clock Configuration
- *         The system Clock is configured as follow :
- *            System Clock source            = PLL (HSE)
- *            SYSCLK(Hz)                     = 180000000
- *            HCLK(Hz)                       = 180000000
- *            AHB Prescaler                  = 1
- *            APB1 Prescaler                 = 4
- *            APB2 Prescaler                 = 2
- *            HSE Frequency(Hz)              = 8000000
- *            PLL_M                          = 8
- *            PLL_N                          = 360
- *            PLL_P                          = 2
- *            PLL_Q                          = 7
- *            PLL_R                          = 2
- *            VDD(V)                         = 3.3
- *            Main regulator output voltage  = Scale1 mode
- *            Flash Latency(WS)              = 5
- * @param  None
- * @retval None
- */
 static void SystemClock_Config(void)
 {
 	RCC_ClkInitTypeDef RCC_ClkInitStruct;
