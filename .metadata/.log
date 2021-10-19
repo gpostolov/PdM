@@ -2374,3 +2374,81 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2021-10-18 13:53:05.954
 !MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2021-10-18 15:25:19.996 -----------------------------------------------
+eclipse.buildId=Version 1.7.0
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=es_AR
+Command-line arguments:  -data /home/pato/Embebidos/CESE/PdM_workspace -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2021-10-18 15:25:30.616
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2021-10-18 15:25:30.817
+!MESSAGE Log4j initialized with config file /home/pato/Embebidos/CESE/PdM_workspace/.metadata/.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2021-10-18 15:25:45.729
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2021-10-18 15:36:14.132 -----------------------------------------------
+eclipse.buildId=Version 1.7.0
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=es_AR
+Command-line arguments:  -data /home/pato/Embebidos/CESE/PdM_workspace -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2021-10-18 15:36:24.571
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2021-10-18 15:36:24.717
+!MESSAGE Log4j initialized with config file /home/pato/Embebidos/CESE/PdM_workspace/.metadata/.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2021-10-18 15:36:32.684
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2021-10-19 09:04:51.938 -----------------------------------------------
+eclipse.buildId=Version 1.7.0
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=es_AR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2021-10-19 09:05:01.969
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2021-10-19 09:05:02.115
+!MESSAGE Log4j initialized with config file /home/pato/Embebidos/CESE/PdM_workspace/.metadata/.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2021-10-19 09:05:09.634
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2021-10-19 09:06:58.999 -----------------------------------------------
+eclipse.buildId=Version 1.7.0
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=es_AR
+Command-line arguments:  -data /home/pato/Embebidos/CESE/PdM_workspace -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2021-10-19 09:07:06.736
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2021-10-19 09:07:06.840
+!MESSAGE Log4j initialized with config file /home/pato/Embebidos/CESE/PdM_workspace/.metadata/.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2021-10-19 09:07:13.478
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2021-10-19 11:16:14.373 -----------------------------------------------
+eclipse.buildId=Version 1.7.0
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=es_AR
+Command-line arguments:  -data /home/pato/Embebidos/CESE/PdM_workspace -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2021-10-19 11:16:24.260
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2021-10-19 11:16:24.445
+!MESSAGE Log4j initialized with config file /home/pato/Embebidos/CESE/PdM_workspace/.metadata/.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2021-10-19 11:16:32.333
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-10-19 11:28:10.482
+!MESSAGE Indexed 'Practica1_template' (0 sources, 0 headers) in 0,003 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0 %)
