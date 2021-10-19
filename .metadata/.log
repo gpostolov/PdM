@@ -2452,3 +2452,18 @@ Command-line arguments:  -data /home/pato/Embebidos/CESE/PdM_workspace -os linux
 
 !ENTRY org.eclipse.cdt.core 1 0 2021-10-19 11:28:10.482
 !MESSAGE Indexed 'Practica1_template' (0 sources, 0 headers) in 0,003 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0 %)
+!SESSION 2021-10-19 13:40:59.591 -----------------------------------------------
+eclipse.buildId=Version 1.7.0
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=es_AR
+Command-line arguments:  -data /home/pato/Embebidos/CESE/PdM_workspace -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2021-10-19 13:41:09.673
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2021-10-19 13:41:09.830
+!MESSAGE Log4j initialized with config file /home/pato/Embebidos/CESE/PdM_workspace/.metadata/.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2021-10-19 13:41:17.093
+!MESSAGE Started RMI Server, listening on port 41337
