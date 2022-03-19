@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;Practica3/Drivers/API/main.c&apos; to &apos;API_delay.c&apos;" description="Rename resource &apos;main.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Drivers/API/main.c" name="API_delay.c" stamp="1647701583780" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;Practica3/Drivers/API/INC&apos; to &apos;inc&apos;" description="Rename resource &apos;INC&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Drivers/API/INC" name="inc" stamp="1647703727897" updateReferences="true"/>
+</session>

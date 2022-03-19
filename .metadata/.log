@@ -2961,3 +2961,63 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-03-14 21:42:08.158
 !MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2022-03-18 22:36:08.876 -----------------------------------------------
+eclipse.buildId=Version 1.9.0
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-03-18 22:36:43.323
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-03-18 22:36:43.607
+!MESSAGE Log4j initialized with config file C:\Users\Gabriel\Documents\GitHub\PdM\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-03-18 22:37:17.043
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-03-18 22:42:20.850
+!MESSAGE Indexed 'Practica_2' (99 sources, 209 headers) in 14,5 sec: 29.574 declarations; 93.744 references; 2 unresolved inclusions; 42 syntax errors; 147 unresolved names (0,12 %)
+!SESSION 2022-03-19 09:59:05.657 -----------------------------------------------
+eclipse.buildId=Version 1.9.0
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-03-19 09:59:20.557
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-03-19 09:59:20.728
+!MESSAGE Log4j initialized with config file C:\Users\Gabriel\Documents\GitHub\PdM\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-03-19 09:59:44.975
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-03-19 11:40:03.827
+!MESSAGE Indexed 'Practica3' (99 sources, 209 headers) in 28,3 sec: 29.833 declarations; 90.800 references; 6 unresolved inclusions; 1.836 syntax errors; 1.822 unresolved names (1,5 %)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2022-03-19 13:04:04.288
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 12 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2022-03-19 13:04:04.288
+!MESSAGE Existing sessions are:
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2022-03-19 13:04:04.290
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 12 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2022-03-19 13:04:04.291
+!MESSAGE Existing sessions are:
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2022-03-19 13:08:46.677
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 15 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2022-03-19 13:08:46.677
+!MESSAGE Existing sessions are:
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2022-03-19 13:08:46.678
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 15 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2022-03-19 13:08:46.678
+!MESSAGE Existing sessions are:
