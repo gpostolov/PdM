@@ -1,0 +1,26 @@
+12:03:50 **** Incremental Build of configuration Debug for project Practica4.1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F429ZITx -DSTM32F4 -DNUCLEO_F429ZI -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Inc -I"C:/Users/Gabriel/Documents/GitHub/PdM/practica_4.1/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/Users/Gabriel/Documents/GitHub/PdM/practica_4.1/Drivers/CMSIS/Include" -I"C:/Users/Gabriel/Documents/GitHub/PdM/practica_4.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/Gabriel/Documents/GitHub/PdM/practica_4.1/Drivers/BSP/STM32F4xx_Nucleo_144" -I"C:/Users/Gabriel/Documents/GitHub/PdM/practica_4.1/Drivers/Core/Inc" -I"C:/Users/Gabriel/Documents/GitHub/PdM/practica_4.1/Drivers/API/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:42:16: warning: 'delay_LED3' defined but not used [-Wunused-variable]
+   42 | static delay_t delay_LED3;
+      |                ^~~~~~~~~~
+../Src/main.c:41:16: warning: 'delay_LED2' defined but not used [-Wunused-variable]
+   41 | static delay_t delay_LED2;
+      |                ^~~~~~~~~~
+../Src/main.c:40:16: warning: 'delay_LED1' defined but not used [-Wunused-variable]
+   40 | static delay_t delay_LED1;
+      |                ^~~~~~~~~~
+arm-none-eabi-gcc -o "Practica4.1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Gabriel\Documents\GitHub\PdM\practica_4.1\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Practica4.1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Practica4.1.elf
+ 
+arm-none-eabi-size   Practica4.1.elf 
+arm-none-eabi-objdump -h -S  Practica4.1.elf  > "Practica4.1.list"
+   text	   data	    bss	    dec	    hex	filename
+   7044	     36	   1588	   8668	   21dc	Practica4.1.elf
+Finished building: default.size.stdout
+ 
+Finished building: Practica4.1.list
+ 
+
+12:03:52 Build Finished. 0 errors, 3 warnings. (took 2s.652ms)
+

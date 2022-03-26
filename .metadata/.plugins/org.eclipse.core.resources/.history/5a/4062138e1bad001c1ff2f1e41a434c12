@@ -1,0 +1,13 @@
+/*
+ * API_debounce.h
+ *
+ *  Created on: 26 mar. 2022
+ *      Author: Gabriel
+ */
+
+#ifndef API_INC_API_DEBOUNCE_H_
+#define API_INC_API_DEBOUNCE_H_
+
+
+
+#endif /* API_INC_API_DEBOUNCE_H_ */
