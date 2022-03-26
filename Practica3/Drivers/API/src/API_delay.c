@@ -13,6 +13,9 @@
 #include <stdio.h>
 #include "API_delay.h"
 
+#include "stm32f4xx_hal.h"  		/* <- HAL include */
+#include "stm32f4xx_nucleo_144.h" 	/* <- BSP include */
+
 /** @addtogroup STM32F4xx_HAL_Examples
  * @{
  */

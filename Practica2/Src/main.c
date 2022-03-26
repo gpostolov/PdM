@@ -79,8 +79,6 @@ int main(void) {
 	/* Initialize BSP PB for BUTTON_USER */
 	BSP_PB_Init(BUTTON_USER, BUTTON_MODE_GPIO);
 
-	uint8_t button_cnt = 0;
-
 	/* Infinite loop */
 	while (1) {
 		/*

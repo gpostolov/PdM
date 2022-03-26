@@ -1,10 +1,15 @@
-/*
- * API_debounce.c
+/**
+ ******************************************************************************
+ * @file	API_debounce.c
+ * @author	Gabriel Postolov
+ * @brief	API debounce para la Practica4
+ ******************************************************************************
+ * @attention
  *
- *  Created on: 26 mar. 2022
- *      Author: Gabriel
+ ******************************************************************************
  */
 
+/* Includes ------------------------------------------------------------------*/
 #include <stdio.h>
 #include <stdint.h>
 #include <stdbool.h>
@@ -13,21 +18,42 @@
 #include "stm32f4xx_nucleo_144.h" 	/* <- BSP include */
 #include "API_delay.h"
 #include "API_debounce.h"
-
+/* Private typedef -----------------------------------------------------------*/
+typedef enum{
+BUTTON_UP,
+BUTTON_FALLING,
+BUTTON_DOWN,
+BUTTON_RAISING,
+} debounceState_t;
+/* Private define ------------------------------------------------------------*/
+#define DEBOUNCING_DELAY 40
+/* Private macro -------------------------------------------------------------*/
+/* Private variables ---------------------------------------------------------*/
 static delay_t delay_BUTTON;
 static debounceState_t current_state;
+static bool_t pressed;
+/* Private function prototypes -----------------------------------------------*/
+void buttonPressed();
+void buttonReleased();
+/* Private functions ---------------------------------------------------------*/
 
-static bool_t press;
-
+/**
+ * @brief  Initialized FSM
+ * @param  None
+ * @retval None
+ */
 void debounceFSM_init(){
 	delayInit(&delay_BUTTON, DEBOUNCING_DELAY);
 	current_state = BUTTON_UP;
-	press = false;
+	pressed = false;
 }
 
+/**
+ * @brief  Updated FSM
+ * @param  None
+ * @retval None
+ */
 void debounceFSM_update(){
-	// debe leer las entradas, resolver la lógica de
-	// transición de estados y actualizar las salidas
 	switch (current_state) {
 	case BUTTON_UP:
 		if(BSP_PB_GetState(BUTTON_USER)){
@@ -38,8 +64,8 @@ void debounceFSM_update(){
 	case BUTTON_FALLING:
 		if (delayRead(&delay_BUTTON)){
 			if(BSP_PB_GetState(BUTTON_USER)){
-				buttonPressed();
 				current_state = BUTTON_DOWN;
+				buttonPressed();
 			}else{
 				current_state = BUTTON_UP;
 			}
@@ -56,9 +82,8 @@ void debounceFSM_update(){
 			if(BSP_PB_GetState(BUTTON_USER)){
 				current_state = BUTTON_DOWN;
 			}else{
-				buttonReleased();
 				current_state = BUTTON_UP;
-				press = true;
+				buttonReleased();
 			}
 		}
 		break;
@@ -68,17 +93,34 @@ void debounceFSM_update(){
 	}
 }
 
+/**
+ * @brief  Button User pressed
+ * @param  None
+ * @retval None
+ */
 void buttonPressed(){
-	// debe togglear el LED1
-	BSP_LED_Toggle(LED1);
-}
-void buttonReleased(){
-	// debe togglear el LED3
-	BSP_LED_Toggle(LED3);
+	pressed = true;
 }
 
-bool readKey(){
-	bool_t press_aux = press;
-	press = false;
-	return press_aux;
+/**
+ * @brief  Button User released
+ * @param  None
+ * @retval None
+ */
+void buttonReleased(){
+	;
 }
+
+/* Public functions ---------------------------------------------------------*/
+/**
+ * @brief  Read key
+ * @param  None
+ * @retval None
+ */
+bool readKey(){
+	bool_t pressed_aux = pressed;
+	pressed = false;
+	return pressed_aux;
+}
+
+/***************************************************************END OF FILE****/

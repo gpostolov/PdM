@@ -29,8 +29,9 @@
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/
 static delay_t delay_LED2;
-static tick_t delays_LED2[] = {100,500};
-static const uint8_t delay_numbers = sizeof(delays_LED2)/sizeof(delays_LED2[0]);
+// Warning! MAX elements in the sequence 256
+static tick_t delays_LED2[] = {100,200,300,400,500};                //{100,500};
+static const uint8_t delay_sequence_elements = sizeof(delays_LED2)/sizeof(delays_LED2[0]);
 
 /* UART handler declaration */
 UART_HandleTypeDef UartHandle;
@@ -69,7 +70,7 @@ int main(void) {
 	BSP_LED_Init(LED2);
 	BSP_LED_Init(LED3);
 
-	/* Initialize delay for LED1,LED2,LED3 */
+	/* Initialize delay for LED2 */
 	delayInit(&delay_LED2, delays_LED2[0]);
 
 	/* Initialize BSP PB for BUTTON_USER */
@@ -84,7 +85,7 @@ int main(void) {
 		debounceFSM_update();
 		if (readKey()){
 			index ++;
-			index = index % delay_numbers;
+			index = index % delay_sequence_elements;
 			delayWrite(&delay_LED2, delays_LED2[index]);
 		}
 		if (delayRead(&delay_LED2)) {

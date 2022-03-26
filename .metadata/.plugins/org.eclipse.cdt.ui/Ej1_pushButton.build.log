@@ -1,4 +1,4 @@
-11:35:11 **** Build of configuration Debug for project Ej1_pushButton ****
+17:04:09 **** Incremental Build of configuration Debug for project Ej1_pushButton ****
 make -j4 all 
 arm-none-eabi-size   Ej1_pushButton.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size   Ej1_pushButton.elf
 Finished building: default.size.stdout
  
 
-11:35:13 Build Finished. 0 errors, 0 warnings. (took 1s.991ms)
+17:04:10 Build Finished. 0 errors, 0 warnings. (took 718ms)
 
