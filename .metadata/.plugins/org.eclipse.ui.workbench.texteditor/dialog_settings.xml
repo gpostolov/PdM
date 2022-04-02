@@ -10,7 +10,10 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
+		<item key="selection" value="strle"/>
 		<list key="findhistory">
+			<item value="strle"/>
+			<item value="USARTx"/>
 			<item value="press"/>
 		</list>
 		<list key="replacehistory">
