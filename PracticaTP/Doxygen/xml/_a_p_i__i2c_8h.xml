@@ -1,0 +1,530 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="en-US">
+  <compounddef id="_a_p_i__i2c_8h" kind="file" language="C++">
+    <compoundname>API_i2c.h</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdbool.h</includes>
+    <includedby refid="_a_p_i__i2c_8c" local="yes">C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h</label>
+        <link refid="_a_p_i__i2c_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdbool.h</label>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h</label>
+        <link refid="_a_p_i__i2c_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c</label>
+        <link refid="_a_p_i__i2c_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_a_p_i__i2c_8h_1a01f0f8cf04d3aa99ef2addf546d6a869" prot="public" static="no">
+        <name>I2Cx</name>
+        <initializer>I2C1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" line="26" column="9" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i__i2c_8h_1a7aef7519046ed7a9b7f167002804463d" prot="public" static="no">
+        <name>I2Cx_CLK_ENABLE</name>
+        <param></param>
+        <initializer>__HAL_RCC_I2C1_CLK_ENABLE()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" line="27" column="9" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i__i2c_8h_1a91033bae83efaf72338333ed28476a21" prot="public" static="no">
+        <name>I2Cx_SDA_GPIO_CLK_ENABLE</name>
+        <param></param>
+        <initializer>__HAL_RCC_GPIOB_CLK_ENABLE()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" line="28" column="9" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i__i2c_8h_1ab8486a80ab56a03dfac399e3e6d4dba2" prot="public" static="no">
+        <name>I2Cx_SCL_GPIO_CLK_ENABLE</name>
+        <param></param>
+        <initializer>__HAL_RCC_GPIOB_CLK_ENABLE()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" line="29" column="9" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i__i2c_8h_1a5f88d5ce44f2db25e9e670d44637064b" prot="public" static="no">
+        <name>I2Cx_FORCE_RESET</name>
+        <param></param>
+        <initializer>__HAL_RCC_I2C1_FORCE_RESET()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" line="31" column="9" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i__i2c_8h_1a12b00cb1505b0117e694e7412e004f12" prot="public" static="no">
+        <name>I2Cx_RELEASE_RESET</name>
+        <param></param>
+        <initializer>__HAL_RCC_I2C1_RELEASE_RESET()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" line="32" column="9" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i__i2c_8h_1a85a7350686d979a81d6a06836ac71505" prot="public" static="no">
+        <name>I2Cx_SCL_PIN</name>
+        <initializer>GPIO_PIN_6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" line="35" column="9" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i__i2c_8h_1af9b3f778e738463f656cdca5e5653f84" prot="public" static="no">
+        <name>I2Cx_SCL_GPIO_PORT</name>
+        <initializer>GPIOB</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" line="36" column="9" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i__i2c_8h_1a483fa01fddafa6ec75616ca6c168f23b" prot="public" static="no">
+        <name>I2Cx_SCL_AF</name>
+        <initializer>GPIO_AF4_I2C1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" line="37" column="9" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i__i2c_8h_1a7948abe69eb1335f74ef5c8a9c91154f" prot="public" static="no">
+        <name>I2Cx_SDA_PIN</name>
+        <initializer>GPIO_PIN_7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" line="38" column="9" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i__i2c_8h_1a9c64aca9ffb944c695e9c13279b62fdc" prot="public" static="no">
+        <name>I2Cx_SDA_GPIO_PORT</name>
+        <initializer>GPIOB</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" line="39" column="9" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i__i2c_8h_1a4cd28159c8df40e5688a2e3312ea34b4" prot="public" static="no">
+        <name>I2Cx_SDA_AF</name>
+        <initializer>GPIO_AF4_I2C1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" line="40" column="9" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i__i2c_8h_1a8c651ff98c42106f3a14ee4225677cc8" prot="public" static="no">
+        <name>TXBUFFERSIZE</name>
+        <initializer>20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" line="43" column="9" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i__i2c_8h_1a29d12c67e4b6e0ff96d7aa793757b094" prot="public" static="no">
+        <name>RXBUFFERSIZE</name>
+        <initializer>TXBUFFERSIZE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" line="45" column="9" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i__i2c_8h_1aaaf9e8e42cbc82ceb68667006f22cd9e" prot="public" static="no">
+        <name>SLAVE_DEV_ADDRESS</name>
+        <initializer>0x44</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" line="48" column="9" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i__i2c_8h_1aa5f3b3e2f24c2c822cc1e0fe50c5ed64" prot="public" static="no">
+        <name>MAX_TEMP_ABS</name>
+        <initializer>50</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" line="51" column="9" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i__i2c_8h_1a937dc389db12b9ddfec77266154d6b81" prot="public" static="no">
+        <name>MAX_TEMP_DIFF</name>
+        <initializer>5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" line="53" column="9" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i__i2c_8h_1a978e9da6e69d6e3958485a2d3dadb99a" prot="public" static="no">
+        <name>MAX_HUM_DIFF</name>
+        <initializer>20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" line="55" column="9" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i__i2c_8h_1a84c70a8b5fd3588b6acac8382d71480d" prot="public" static="no">
+        <name>I2C_TXRX_TIMEOUT</name>
+        <initializer>100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" line="58" column="9" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="_a_p_i__i2c_8h_1acfb4e3d098b3102d5b5c3cd01a7802e6" prot="public" static="no" strong="no">
+        <type></type>
+        <name>alarmType_t</name>
+        <enumvalue id="_a_p_i__i2c_8h_1acfb4e3d098b3102d5b5c3cd01a7802e6a8e95240ac55c0ad6bbb936d22714f8b3" prot="public">
+          <name>NO_ALARM_</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_a_p_i__i2c_8h_1acfb4e3d098b3102d5b5c3cd01a7802e6a8bcbccae74509fb024fdf17e5172840b" prot="public">
+          <name>MAX_TEMP_ABS_</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_a_p_i__i2c_8h_1acfb4e3d098b3102d5b5c3cd01a7802e6ad4a537be2e26032eb36f57d412561241" prot="public">
+          <name>MAX_TEMP_DIFF_</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_a_p_i__i2c_8h_1acfb4e3d098b3102d5b5c3cd01a7802e6a4b0d1c8971feb2410909983f6eafed04" prot="public">
+          <name>MAX_HUM_DIFF_</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" line="18" column="1" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" bodystart="18" bodyend="23"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_a_p_i__i2c_8h_1ad65f4e33df67b1746135cc8fb53a6832" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool i2c_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>i2c_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize the API_I2C: I2C peripheral, Button User, Buffers, FSM alarm. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>None.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>true</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The initialization was successful. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>false</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The initialization was not successful. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" line="62" column="6" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" bodystart="170" bodyend="191" declfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" declline="62" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_a_p_i__i2c_8h_1a1937060c228988e5b891961a9518f3bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>alarmType_t</type>
+        <definition>alarmType_t alarmTH_FSM_update</definition>
+        <argsstring>(void)</argsstring>
+        <name>alarmTH_FSM_update</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Update FSM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>None.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Current alarm state. </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>NO_ALARM_</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>No Alarm. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>MAX_TEMP_ABS_</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Alarm. Maximum temperature was reached. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>MAX_TEMP_DIFF_</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Alarm. Temperature difference was reached in less than 3 minutes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>MAX_HUM_DIFF_</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Alarm. Humidity difference was reached in less than 3 minutes. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" line="63" column="13" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" bodystart="203" bodyend="236" declfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" declline="63" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="_a_p_i__i2c_8h_1ac30d66b3a336676e270508d5743980a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TH_updated</definition>
+        <argsstring>(uint32_t *, uint32_t *)</argsstring>
+        <name>TH_updated</name>
+        <param>
+          <type>uint32_t *</type>
+          <declname>temp</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>hum</declname>
+        </param>
+        <briefdescription>
+<para>Update Temperature and Humidity. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>temp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Temperature to be updated. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hum</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Humidity to be updated. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>true</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Updated successful. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>false</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Updated was not successful. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" line="64" column="6" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" bodystart="246" bodyend="258" declfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" declline="64" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>API i2c. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Gabriel Postolov </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Define<sp/>to<sp/>prevent<sp/>recursive<sp/>inclusion<sp/>-------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>API_INC_API_I2C_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>API_INC_API_I2C_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Includes<sp/>------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Exported<sp/>types<sp/>------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>NO_ALARM_,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>MAX_TEMP_ABS_,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>MAX_TEMP_DIFF_,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>MAX_HUM_DIFF_,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}<sp/>alarmType_t;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Exported<sp/>constants<sp/>--------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Definition<sp/>for<sp/>I2Cx<sp/>clock<sp/>resources<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>I2Cx<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>I2C1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>I2Cx_CLK_ENABLE()<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__HAL_RCC_I2C1_CLK_ENABLE()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>I2Cx_SDA_GPIO_CLK_ENABLE()<sp/><sp/><sp/><sp/><sp/><sp/><sp/>__HAL_RCC_GPIOB_CLK_ENABLE()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>I2Cx_SCL_GPIO_CLK_ENABLE()<sp/><sp/><sp/><sp/><sp/><sp/><sp/>__HAL_RCC_GPIOB_CLK_ENABLE()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>I2Cx_FORCE_RESET()<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__HAL_RCC_I2C1_FORCE_RESET()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>I2Cx_RELEASE_RESET()<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__HAL_RCC_I2C1_RELEASE_RESET()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Definition<sp/>for<sp/>I2Cx<sp/>Pins<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>I2Cx_SCL_PIN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GPIO_PIN_6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>I2Cx_SCL_GPIO_PORT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GPIOB</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>I2Cx_SCL_AF<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GPIO_AF4_I2C1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>I2Cx_SDA_PIN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GPIO_PIN_7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>I2Cx_SDA_GPIO_PORT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GPIOB</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>I2Cx_SDA_AF<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GPIO_AF4_I2C1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Size<sp/>of<sp/>Transmission<sp/>buffer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TXBUFFERSIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>20<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&lt;<sp/>TXBUFFERSIZE<sp/>MAX:<sp/>64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Size<sp/>of<sp/>Reception<sp/>buffer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RXBUFFERSIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TXBUFFERSIZE<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&lt;<sp/>RXBUFFERSIZE<sp/>MAX:<sp/>64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Slave<sp/>DevAddress<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SLAVE_DEV_ADDRESS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x44</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>When<sp/>this<sp/>temperature<sp/>is<sp/>reached<sp/>the<sp/>alarm<sp/>is<sp/>enabled<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX_TEMP_ABS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>50</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>When<sp/>this<sp/>temperature<sp/>difference<sp/>is<sp/>reached<sp/>in<sp/>less<sp/>than<sp/>3<sp/>minutes<sp/>the<sp/>alarm<sp/>is<sp/>enabled<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX_TEMP_DIFF<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>When<sp/>this<sp/>humidity<sp/>difference<sp/>is<sp/>reached<sp/>in<sp/>less<sp/>than<sp/>3<sp/>minutes<sp/>the<sp/>alarm<sp/>is<sp/>enabled<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX_HUM_DIFF<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Timeout<sp/>for<sp/>I2C<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>I2C_TXRX_TIMEOUT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>100</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Exported<sp/>macro<sp/>------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Exported<sp/>functions<sp/>-------------------------------------------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_a_p_i__i2c_8h_1ad65f4e33df67b1746135cc8fb53a6832" kindref="member">i2c_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">alarmType_t<sp/><ref refid="_a_p_i__i2c_8h_1a1937060c228988e5b891961a9518f3bd" kindref="member">alarmTH_FSM_update</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_a_p_i__i2c_8h_1ac30d66b3a336676e270508d5743980a8" kindref="member">TH_updated</ref>(uint32_t<sp/>*,<sp/>uint32_t<sp/>*);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>API_INC_API_I2C_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************END<sp/>OF<sp/>FILE****/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h"/>
+  </compounddef>
+</doxygen>

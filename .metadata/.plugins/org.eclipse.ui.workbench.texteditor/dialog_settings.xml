@@ -10,18 +10,30 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="strle"/>
+		<item key="selection" value="alarmType_t"/>
 		<list key="findhistory">
+			<item value="delay_LED3"/>
+			<item value="alarmTH_FSM_init"/>
+			<item value="alarmType_t"/>
+			<item value="current_alarm_state"/>
+			<item value="buttonPressed_current"/>
+			<item value="NVIC"/>
+			<item value="HAL_StatusTypeDef"/>
+			<item value="timeout"/>
+			<item value="HAL_I2C_MspInit"/>
+			<item value="I2Cx_CLK_ENABLE"/>
+			<item value="HAL_I2C_Init"/>
+			<item value="I2C_duty_cycle_in_fast_mode"/>
+			<item value="I2C_HandleTypeDef"/>
 			<item value="strle"/>
 			<item value="USARTx"/>
-			<item value="press"/>
 		</list>
 		<list key="replacehistory">
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="530"/>
-		<item key="DIALOG_Y_ORIGIN" value="112"/>
+		<item key="DIALOG_X_ORIGIN" value="1042"/>
+		<item key="DIALOG_Y_ORIGIN" value="346"/>
 		<item key="DIALOG_WIDTH" value="322"/>
 		<item key="DIALOG_HEIGHT" value="390"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>

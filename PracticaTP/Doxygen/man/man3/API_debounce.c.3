@@ -1,0 +1,161 @@
+.TH "C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_debounce.c" 3 "Sun Apr 10 2022" "PdM TP" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_debounce.c \- API debounce\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdint\&.h>\fP
+.br
+\fC#include <stdbool\&.h>\fP
+.br
+\fC#include 'stm32f4xx_hal\&.h'\fP
+.br
+\fC#include 'stm32f4xx_nucleo_144\&.h'\fP
+.br
+\fC#include 'API_delay\&.h'\fP
+.br
+\fC#include 'API_debounce\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBDEBOUNCING_DELAY\fP   40"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBdebounceState_t\fP { \fBBUTTON_UP\fP, \fBBUTTON_FALLING\fP, \fBBUTTON_DOWN\fP, \fBBUTTON_RAISING\fP }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBbuttonPressed\fP (void)"
+.br
+.RI "Button User pressed\&. "
+.ti -1c
+.RI "void \fBbuttonReleased\fP (void)"
+.br
+.RI "Button User released\&. "
+.ti -1c
+.RI "void \fBdebounceFSM_init\fP (void)"
+.br
+.RI "Initialize FSM\&. "
+.ti -1c
+.RI "void \fBdebounceFSM_update\fP (void)"
+.br
+.RI "Update FSM\&. "
+.ti -1c
+.RI "bool \fBreadKey\fP (void)"
+.br
+.RI "Read key\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+API debounce\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Gabriel Postolov 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "void buttonPressed (void)"
+
+.PP
+Button User pressed\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.SS "void buttonReleased (void)"
+
+.PP
+Button User released\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.SS "void debounceFSM_init (void)"
+
+.PP
+Initialize FSM\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.SS "void debounceFSM_update (void)"
+
+.PP
+Update FSM\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.SS "bool readKey (void)"
+
+.PP
+Read key\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fItrue\fP Button User pressed\&. 
+.br
+\fIfalse\fP Button User not pressed\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for PdM TP from the source code\&.

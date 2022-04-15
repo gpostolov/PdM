@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.3" xml:lang="en-US">
+  <compound refid="structdelay__t" kind="struct"><name>delay_t</name>
+    <member refid="structdelay__t_1a7942cc879b9d2a429b4d2e1977fa52b9" kind="variable"><name>startTime</name></member>
+    <member refid="structdelay__t_1a2efd6ae537b4af5e3413de5a8b8c2684" kind="variable"><name>duration</name></member>
+    <member refid="structdelay__t_1a51adcd9342dc17747393922120c285e4" kind="variable"><name>running</name></member>
+  </compound>
+  <compound refid="_a_p_i__debounce_8h" kind="file"><name>API_debounce.h</name>
+    <member refid="_a_p_i__debounce_8h_1ab3a205fff0350c246091ed7d529af591" kind="function"><name>debounceFSM_init</name></member>
+    <member refid="_a_p_i__debounce_8h_1ab41687f9d772b432731f47e3ac14906a" kind="function"><name>debounceFSM_update</name></member>
+    <member refid="_a_p_i__debounce_8h_1a1e3a414aec5def470add78a0ee37722c" kind="function"><name>readKey</name></member>
+  </compound>
+  <compound refid="_a_p_i__delay_8h" kind="file"><name>API_delay.h</name>
+    <member refid="_a_p_i__delay_8h_1a451a7d205dfb766727eba25c6e61c687" kind="typedef"><name>tick_t</name></member>
+    <member refid="_a_p_i__delay_8h_1a2b21255bd7f7192db778983b15089208" kind="typedef"><name>bool_t</name></member>
+    <member refid="_a_p_i__delay_8h_1a6613427678149cadd03bac79e79475f3" kind="function"><name>delayInit</name></member>
+    <member refid="_a_p_i__delay_8h_1afecaa44225b94ebfb354e4b6b7e6e9ce" kind="function"><name>delayRead</name></member>
+    <member refid="_a_p_i__delay_8h_1a2af041ac01bb3db8ecf87ce371fac67d" kind="function"><name>delayWrite</name></member>
+  </compound>
+  <compound refid="_a_p_i__i2c_8h" kind="file"><name>API_i2c.h</name>
+    <member refid="_a_p_i__i2c_8h_1a01f0f8cf04d3aa99ef2addf546d6a869" kind="define"><name>I2Cx</name></member>
+    <member refid="_a_p_i__i2c_8h_1a7aef7519046ed7a9b7f167002804463d" kind="define"><name>I2Cx_CLK_ENABLE</name></member>
+    <member refid="_a_p_i__i2c_8h_1a91033bae83efaf72338333ed28476a21" kind="define"><name>I2Cx_SDA_GPIO_CLK_ENABLE</name></member>
+    <member refid="_a_p_i__i2c_8h_1ab8486a80ab56a03dfac399e3e6d4dba2" kind="define"><name>I2Cx_SCL_GPIO_CLK_ENABLE</name></member>
+    <member refid="_a_p_i__i2c_8h_1a5f88d5ce44f2db25e9e670d44637064b" kind="define"><name>I2Cx_FORCE_RESET</name></member>
+    <member refid="_a_p_i__i2c_8h_1a12b00cb1505b0117e694e7412e004f12" kind="define"><name>I2Cx_RELEASE_RESET</name></member>
+    <member refid="_a_p_i__i2c_8h_1a85a7350686d979a81d6a06836ac71505" kind="define"><name>I2Cx_SCL_PIN</name></member>
+    <member refid="_a_p_i__i2c_8h_1af9b3f778e738463f656cdca5e5653f84" kind="define"><name>I2Cx_SCL_GPIO_PORT</name></member>
+    <member refid="_a_p_i__i2c_8h_1a483fa01fddafa6ec75616ca6c168f23b" kind="define"><name>I2Cx_SCL_AF</name></member>
+    <member refid="_a_p_i__i2c_8h_1a7948abe69eb1335f74ef5c8a9c91154f" kind="define"><name>I2Cx_SDA_PIN</name></member>
+    <member refid="_a_p_i__i2c_8h_1a9c64aca9ffb944c695e9c13279b62fdc" kind="define"><name>I2Cx_SDA_GPIO_PORT</name></member>
+    <member refid="_a_p_i__i2c_8h_1a4cd28159c8df40e5688a2e3312ea34b4" kind="define"><name>I2Cx_SDA_AF</name></member>
+    <member refid="_a_p_i__i2c_8h_1a8c651ff98c42106f3a14ee4225677cc8" kind="define"><name>TXBUFFERSIZE</name></member>
+    <member refid="_a_p_i__i2c_8h_1a29d12c67e4b6e0ff96d7aa793757b094" kind="define"><name>RXBUFFERSIZE</name></member>
+    <member refid="_a_p_i__i2c_8h_1aaaf9e8e42cbc82ceb68667006f22cd9e" kind="define"><name>SLAVE_DEV_ADDRESS</name></member>
+    <member refid="_a_p_i__i2c_8h_1aa5f3b3e2f24c2c822cc1e0fe50c5ed64" kind="define"><name>MAX_TEMP_ABS</name></member>
+    <member refid="_a_p_i__i2c_8h_1a937dc389db12b9ddfec77266154d6b81" kind="define"><name>MAX_TEMP_DIFF</name></member>
+    <member refid="_a_p_i__i2c_8h_1a978e9da6e69d6e3958485a2d3dadb99a" kind="define"><name>MAX_HUM_DIFF</name></member>
+    <member refid="_a_p_i__i2c_8h_1a84c70a8b5fd3588b6acac8382d71480d" kind="define"><name>I2C_TXRX_TIMEOUT</name></member>
+    <member refid="_a_p_i__i2c_8h_1acfb4e3d098b3102d5b5c3cd01a7802e6" kind="enum"><name>alarmType_t</name></member>
+    <member refid="_a_p_i__i2c_8h_1acfb4e3d098b3102d5b5c3cd01a7802e6a8e95240ac55c0ad6bbb936d22714f8b3" kind="enumvalue"><name>NO_ALARM_</name></member>
+    <member refid="_a_p_i__i2c_8h_1acfb4e3d098b3102d5b5c3cd01a7802e6a8bcbccae74509fb024fdf17e5172840b" kind="enumvalue"><name>MAX_TEMP_ABS_</name></member>
+    <member refid="_a_p_i__i2c_8h_1acfb4e3d098b3102d5b5c3cd01a7802e6ad4a537be2e26032eb36f57d412561241" kind="enumvalue"><name>MAX_TEMP_DIFF_</name></member>
+    <member refid="_a_p_i__i2c_8h_1acfb4e3d098b3102d5b5c3cd01a7802e6a4b0d1c8971feb2410909983f6eafed04" kind="enumvalue"><name>MAX_HUM_DIFF_</name></member>
+    <member refid="_a_p_i__i2c_8h_1ad65f4e33df67b1746135cc8fb53a6832" kind="function"><name>i2c_init</name></member>
+    <member refid="_a_p_i__i2c_8h_1a1937060c228988e5b891961a9518f3bd" kind="function"><name>alarmTH_FSM_update</name></member>
+    <member refid="_a_p_i__i2c_8h_1ac30d66b3a336676e270508d5743980a8" kind="function"><name>TH_updated</name></member>
+  </compound>
+  <compound refid="_a_p_i__uart_8h" kind="file"><name>API_uart.h</name>
+    <member refid="_a_p_i__uart_8h_1aea29ff83910db519b6c575b4e5a1db98" kind="define"><name>USARTx</name></member>
+    <member refid="_a_p_i__uart_8h_1a20e99e9ef54366d20270e7336c9425fc" kind="define"><name>USARTx_CLK_ENABLE</name></member>
+    <member refid="_a_p_i__uart_8h_1aa1df58683546bc62f3244aee6f103649" kind="define"><name>USARTx_RX_GPIO_CLK_ENABLE</name></member>
+    <member refid="_a_p_i__uart_8h_1aa22f4bb0483c2b3ee3fc662c1cd40f2b" kind="define"><name>USARTx_TX_GPIO_CLK_ENABLE</name></member>
+    <member refid="_a_p_i__uart_8h_1a3be953aa255b4873b43cdcf52ae047ec" kind="define"><name>USARTx_FORCE_RESET</name></member>
+    <member refid="_a_p_i__uart_8h_1a4bb86fb3f32edcf841946af0d3454ea2" kind="define"><name>USARTx_RELEASE_RESET</name></member>
+    <member refid="_a_p_i__uart_8h_1a7597a102c72383ee6a40a5eb5e2f4ef1" kind="define"><name>USARTx_TX_PIN</name></member>
+    <member refid="_a_p_i__uart_8h_1a634496204b64d0d9fd4d4e7b7be20842" kind="define"><name>USARTx_TX_GPIO_PORT</name></member>
+    <member refid="_a_p_i__uart_8h_1ae4ff7d3e3f08756784e13d0d9d44eb11" kind="define"><name>USARTx_TX_AF</name></member>
+    <member refid="_a_p_i__uart_8h_1aee941cfa9fadea92162c4915ee7f3a85" kind="define"><name>USARTx_RX_PIN</name></member>
+    <member refid="_a_p_i__uart_8h_1a1b5a54c22247b06ceefe42b9a2d5d174" kind="define"><name>USARTx_RX_GPIO_PORT</name></member>
+    <member refid="_a_p_i__uart_8h_1a8fe8e9b6f5881d7315bc580138ad1258" kind="define"><name>USARTx_RX_AF</name></member>
+    <member refid="_a_p_i__uart_8h_1a1ac707ea819ef2e2d31bdbb5da157566" kind="define"><name>UART_TX_TIMEOUT</name></member>
+    <member refid="_a_p_i__uart_8h_1a3d863d153720615515bd438a519b29b0" kind="define"><name>UART_RX_TIMEOUT</name></member>
+    <member refid="_a_p_i__uart_8h_1af4d71a13f5cd2001ac0eb140ec9bd084" kind="function"><name>uartinit</name></member>
+    <member refid="_a_p_i__uart_8h_1a446c11b67abd8d44ae9ae308805bf848" kind="function"><name>uartsendString</name></member>
+    <member refid="_a_p_i__uart_8h_1a5f7272d7b83bf68319beb9c9acbb3f22" kind="function"><name>uartSendStringSize</name></member>
+    <member refid="_a_p_i__uart_8h_1aeffd5a15e15e28b5261f17b864ad28c4" kind="function"><name>uartReceiveStringSize</name></member>
+  </compound>
+  <compound refid="_a_p_i__debounce_8c" kind="file"><name>API_debounce.c</name>
+    <member refid="_a_p_i__debounce_8c_1ad699d22fdce8073e425b52c4d1d1a8f8" kind="define"><name>DEBOUNCING_DELAY</name></member>
+    <member refid="_a_p_i__debounce_8c_1a2c469bba1f151ac8d334947718ecf022" kind="enum"><name>debounceState_t</name></member>
+    <member refid="_a_p_i__debounce_8c_1a2c469bba1f151ac8d334947718ecf022a37666936297216dce293b0aa31c474b8" kind="enumvalue"><name>BUTTON_UP</name></member>
+    <member refid="_a_p_i__debounce_8c_1a2c469bba1f151ac8d334947718ecf022a4c5560be280ccf3e4ef5a385a6dd62dc" kind="enumvalue"><name>BUTTON_FALLING</name></member>
+    <member refid="_a_p_i__debounce_8c_1a2c469bba1f151ac8d334947718ecf022a0c7746cfbcac16484b2266e6f51e5e0b" kind="enumvalue"><name>BUTTON_DOWN</name></member>
+    <member refid="_a_p_i__debounce_8c_1a2c469bba1f151ac8d334947718ecf022a500751a83a5d2958bc7616c644919474" kind="enumvalue"><name>BUTTON_RAISING</name></member>
+    <member refid="_a_p_i__debounce_8c_1ae778c8f2bf3396a9536bd659d8d073f9" kind="variable"><name>delay_BUTTON</name></member>
+    <member refid="_a_p_i__debounce_8c_1a12a4b303bb73225312da4cd661e91037" kind="variable"><name>current_state</name></member>
+    <member refid="_a_p_i__debounce_8c_1a0413704167c7b96ac35705b4f7b5866e" kind="variable"><name>pressed</name></member>
+    <member refid="_a_p_i__debounce_8c_1a1d5035b5f3a37d5e437115ac5bf6a321" kind="function"><name>buttonPressed</name></member>
+    <member refid="_a_p_i__debounce_8c_1a132c00c2cac9e23ad2211e2f6dcdf336" kind="function"><name>buttonReleased</name></member>
+    <member refid="_a_p_i__debounce_8c_1ab3a205fff0350c246091ed7d529af591" kind="function"><name>debounceFSM_init</name></member>
+    <member refid="_a_p_i__debounce_8c_1ab41687f9d772b432731f47e3ac14906a" kind="function"><name>debounceFSM_update</name></member>
+    <member refid="_a_p_i__debounce_8c_1a1e3a414aec5def470add78a0ee37722c" kind="function"><name>readKey</name></member>
+  </compound>
+  <compound refid="_a_p_i__delay_8c" kind="file"><name>API_delay.c</name>
+    <member refid="_a_p_i__delay_8c_1a6613427678149cadd03bac79e79475f3" kind="function"><name>delayInit</name></member>
+    <member refid="_a_p_i__delay_8c_1afecaa44225b94ebfb354e4b6b7e6e9ce" kind="function"><name>delayRead</name></member>
+    <member refid="_a_p_i__delay_8c_1a2af041ac01bb3db8ecf87ce371fac67d" kind="function"><name>delayWrite</name></member>
+  </compound>
+  <compound refid="_a_p_i__i2c_8c" kind="file"><name>API_i2c.c</name>
+    <member refid="_a_p_i__i2c_8c_1a8afd4cc7bc4b0e060af062e5e1a9ac1f" kind="define"><name>I2C_CLOCKSPEED_100K</name></member>
+    <member refid="_a_p_i__i2c_8c_1a427d4c5afff6d2ffe371b5a9c4183eec" kind="define"><name>I2C_OWN_ADDRESS1</name></member>
+    <member refid="_a_p_i__i2c_8c_1a70448969aaa3aa1fe87c5223f42d0394" kind="define"><name>I2C_OWN_ADDRESS2</name></member>
+    <member refid="_a_p_i__i2c_8c_1a84977424b647dd9248ebf1436aaa1cc8" kind="define"><name>MAXBUFFERSIZE</name></member>
+    <member refid="_a_p_i__i2c_8c_1ac5864035fa18d2bf3f4e88b548711f84" kind="define"><name>ARRAY_TH</name></member>
+    <member refid="_a_p_i__i2c_8c_1a7244763ebe44d4070815f3e3a01abe37" kind="enum"><name>alarmState_t</name></member>
+    <member refid="_a_p_i__i2c_8c_1a7244763ebe44d4070815f3e3a01abe37acb9be765f361bb7efb9073730aac92c6" kind="enumvalue"><name>READ</name></member>
+    <member refid="_a_p_i__i2c_8c_1a7244763ebe44d4070815f3e3a01abe37a70319396f85c1b9b17c8c05648df90cd" kind="enumvalue"><name>DATA_ANALYSIS</name></member>
+    <member refid="_a_p_i__i2c_8c_1a7244763ebe44d4070815f3e3a01abe37a79a322ccb4b29b85b3cab52dbccefd17" kind="enumvalue"><name>WAIT</name></member>
+    <member refid="_a_p_i__i2c_8c_1a7244763ebe44d4070815f3e3a01abe37ac4212312865bd8ac6810b9651d9e80df" kind="enumvalue"><name>ALARM</name></member>
+    <member refid="_a_p_i__i2c_8c_1ac969e9fc650b7e92a8378abad5778c0e" kind="variable"><name>I2cHandle</name></member>
+    <member refid="_a_p_i__i2c_8c_1a02121e106f2bbb049d805160ac2aa36d" kind="variable"><name>tx_buffer</name></member>
+    <member refid="_a_p_i__i2c_8c_1a40728fd528a1881eb641223bba19c763" kind="variable"><name>rx_buffer</name></member>
+    <member refid="_a_p_i__i2c_8c_1a12ffe12121df84db9592f330551d4889" kind="variable"><name>current_state</name></member>
+    <member refid="_a_p_i__i2c_8c_1a4d1b48e12ea4f1f4aef2b1b378159a81" kind="variable"><name>current_alarm_state</name></member>
+    <member refid="_a_p_i__i2c_8c_1a6460ae4ad1bf348486378ed1456f1cfa" kind="variable"><name>temperature</name></member>
+    <member refid="_a_p_i__i2c_8c_1a50c9fa7d72a92ac100303875e378d55c" kind="variable"><name>humidity</name></member>
+    <member refid="_a_p_i__i2c_8c_1aea5faaabcfe427edc3e94163545b9bd1" kind="variable"><name>read_counter</name></member>
+    <member refid="_a_p_i__i2c_8c_1a7b22de5825dd3701891bb5a408e70c17" kind="variable"><name>temperature_array</name></member>
+    <member refid="_a_p_i__i2c_8c_1a51a68c2bb1c7a0c6a5bd1402a12a804c" kind="variable"><name>humidity_array</name></member>
+    <member refid="_a_p_i__i2c_8c_1a5a4ba60143c31271df0f72bf0e503876" kind="variable"><name>new_data</name></member>
+    <member refid="_a_p_i__i2c_8c_1a203e2ee832666bc68e233a27f3135434" kind="function"><name>i2c_config</name></member>
+    <member refid="_a_p_i__i2c_8c_1a04d4ce38c7e873bd5d0609511afeb125" kind="function"><name>dataAnalysis</name></member>
+    <member refid="_a_p_i__i2c_8c_1aed85aa125f440f0950781a4070db597a" kind="function"><name>readTH</name></member>
+    <member refid="_a_p_i__i2c_8c_1afa5df72ad6ad253231de49eb98773fa8" kind="function"><name>alarmTH_FSM_init</name></member>
+    <member refid="_a_p_i__i2c_8c_1ad65f4e33df67b1746135cc8fb53a6832" kind="function"><name>i2c_init</name></member>
+    <member refid="_a_p_i__i2c_8c_1a1937060c228988e5b891961a9518f3bd" kind="function"><name>alarmTH_FSM_update</name></member>
+    <member refid="_a_p_i__i2c_8c_1ae96275439ee26024bbb9ce29bc8f8c69" kind="function"><name>TH_updated</name></member>
+  </compound>
+  <compound refid="_a_p_i__uart_8c" kind="file"><name>API_uart.c</name>
+    <member refid="_a_p_i__uart_8c_1a2d3238638f25fd8e78b21dc8e5efd348" kind="variable"><name>UartHandle</name></member>
+    <member refid="_a_p_i__uart_8c_1abfbdd8adbb72953f36e75761dd9be44c" kind="variable"><name>UART_CONFIG_M01</name></member>
+    <member refid="_a_p_i__uart_8c_1a42ed1900a61cd0e0ae4aa712053305dc" kind="variable"><name>UART_CONFIG_M02</name></member>
+    <member refid="_a_p_i__uart_8c_1a5c281b990f2dde244702fb0cd4f48fc0" kind="variable"><name>UART_CONFIG_M03</name></member>
+    <member refid="_a_p_i__uart_8c_1ac5f6ee304394b9da6dd6c8deeffc1ff4" kind="variable"><name>UART_CONFIG_M04</name></member>
+    <member refid="_a_p_i__uart_8c_1ad0e1cff9475cf4ce07f25ff20a717c7d" kind="variable"><name>UART_CONFIG_M05</name></member>
+    <member refid="_a_p_i__uart_8c_1a96a7c0b0df40cfe73743655b390ff26b" kind="variable"><name>UART_CONFIG_M06</name></member>
+    <member refid="_a_p_i__uart_8c_1a3f43b6f33209526005a10324aec6bc7f" kind="variable"><name>UART_CONFIG_M07</name></member>
+    <member refid="_a_p_i__uart_8c_1adddfe5ea761a98d73128b097f1288689" kind="variable"><name>UART_CONFIG_M08</name></member>
+    <member refid="_a_p_i__uart_8c_1a9ba829968f07993829171cb1dc807706" kind="variable"><name>UART_CONFIG_M09</name></member>
+    <member refid="_a_p_i__uart_8c_1af4d71a13f5cd2001ac0eb140ec9bd084" kind="function"><name>uartinit</name></member>
+    <member refid="_a_p_i__uart_8c_1a446c11b67abd8d44ae9ae308805bf848" kind="function"><name>uartsendString</name></member>
+    <member refid="_a_p_i__uart_8c_1a5f7272d7b83bf68319beb9c9acbb3f22" kind="function"><name>uartSendStringSize</name></member>
+    <member refid="_a_p_i__uart_8c_1aeffd5a15e15e28b5261f17b864ad28c4" kind="function"><name>uartReceiveStringSize</name></member>
+  </compound>
+  <compound refid="dir_9c636daed8643477636976788dd786b5" kind="dir"><name>C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API</name>
+  </compound>
+  <compound refid="dir_60925fc218da8ca7908795bf5f624060" kind="dir"><name>C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers</name>
+  </compound>
+  <compound refid="dir_3687d230d630a5ddd385a272243b3a24" kind="dir"><name>C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc</name>
+  </compound>
+  <compound refid="dir_2c8e5931748a0f2d62cc6a84991ef1bb" kind="dir"><name>C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src</name>
+  </compound>
+</doxygenindex>

@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__a_p_i__i2c_8h_source" xml:lang="en-US">
+<title>API_i2c.h</title>
+<indexterm><primary>C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+9 <emphasis role="comment">/*&#32;Define&#32;to&#32;prevent&#32;recursive&#32;inclusion&#32;-------------------------------------*/</emphasis>
+10 <emphasis role="preprocessor">#ifndef&#32;API_INC_API_I2C_H_</emphasis>
+11 <emphasis role="preprocessor">#define&#32;API_INC_API_I2C_H_</emphasis>
+12 
+13 <emphasis role="comment">/*&#32;Includes&#32;------------------------------------------------------------------*/</emphasis>
+14 <emphasis role="preprocessor">#include&#32;&lt;stdio.h&gt;</emphasis>
+15 <emphasis role="preprocessor">#include&#32;&lt;stdbool.h&gt;</emphasis>
+16 
+17 <emphasis role="comment">/*&#32;Exported&#32;types&#32;------------------------------------------------------------*/</emphasis>
+18 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;{
+19 &#32;&#32;&#32;&#32;NO_ALARM_,
+20 &#32;&#32;&#32;&#32;MAX_TEMP_ABS_,
+21 &#32;&#32;&#32;&#32;MAX_TEMP_DIFF_,
+22 &#32;&#32;&#32;&#32;MAX_HUM_DIFF_,
+23 }&#32;alarmType_t;
+24 <emphasis role="comment">/*&#32;Exported&#32;constants&#32;--------------------------------------------------------*/</emphasis>
+25 <emphasis role="comment">/*&#32;Definition&#32;for&#32;I2Cx&#32;clock&#32;resources&#32;*/</emphasis>
+26 <emphasis role="preprocessor">#define&#32;I2Cx&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;I2C1</emphasis>
+27 <emphasis role="preprocessor">#define&#32;I2Cx_CLK_ENABLE()&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__HAL_RCC_I2C1_CLK_ENABLE()</emphasis>
+28 <emphasis role="preprocessor">#define&#32;I2Cx_SDA_GPIO_CLK_ENABLE()&#32;&#32;&#32;&#32;&#32;&#32;&#32;__HAL_RCC_GPIOB_CLK_ENABLE()</emphasis>
+29 <emphasis role="preprocessor">#define&#32;I2Cx_SCL_GPIO_CLK_ENABLE()&#32;&#32;&#32;&#32;&#32;&#32;&#32;__HAL_RCC_GPIOB_CLK_ENABLE()</emphasis>
+30 
+31 <emphasis role="preprocessor">#define&#32;I2Cx_FORCE_RESET()&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__HAL_RCC_I2C1_FORCE_RESET()</emphasis>
+32 <emphasis role="preprocessor">#define&#32;I2Cx_RELEASE_RESET()&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__HAL_RCC_I2C1_RELEASE_RESET()</emphasis>
+33 
+34 <emphasis role="comment">/*&#32;Definition&#32;for&#32;I2Cx&#32;Pins&#32;*/</emphasis>
+35 <emphasis role="preprocessor">#define&#32;I2Cx_SCL_PIN&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GPIO_PIN_6</emphasis>
+36 <emphasis role="preprocessor">#define&#32;I2Cx_SCL_GPIO_PORT&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GPIOB</emphasis>
+37 <emphasis role="preprocessor">#define&#32;I2Cx_SCL_AF&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GPIO_AF4_I2C1</emphasis>
+38 <emphasis role="preprocessor">#define&#32;I2Cx_SDA_PIN&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GPIO_PIN_7</emphasis>
+39 <emphasis role="preprocessor">#define&#32;I2Cx_SDA_GPIO_PORT&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GPIOB</emphasis>
+40 <emphasis role="preprocessor">#define&#32;I2Cx_SDA_AF&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GPIO_AF4_I2C1</emphasis>
+41 
+42 <emphasis role="comment">/*&#32;Size&#32;of&#32;Transmission&#32;buffer&#32;*/</emphasis>
+43 <emphasis role="preprocessor">#define&#32;TXBUFFERSIZE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;20&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="comment">//&lt;&#32;TXBUFFERSIZE&#32;MAX:&#32;64</emphasis>
+44 <emphasis role="comment">/*&#32;Size&#32;of&#32;Reception&#32;buffer&#32;*/</emphasis>
+45 <emphasis role="preprocessor">#define&#32;RXBUFFERSIZE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;TXBUFFERSIZE&#32;&#32;&#32;&#32;</emphasis><emphasis role="comment">//&lt;&#32;RXBUFFERSIZE&#32;MAX:&#32;64</emphasis>
+46 
+47 <emphasis role="comment">/*&#32;Slave&#32;DevAddress&#32;*/</emphasis>
+48 <emphasis role="preprocessor">#define&#32;SLAVE_DEV_ADDRESS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x44</emphasis>
+49 
+50 <emphasis role="comment">/*&#32;When&#32;this&#32;temperature&#32;is&#32;reached&#32;the&#32;alarm&#32;is&#32;enabled&#32;*/</emphasis>
+51 <emphasis role="preprocessor">#define&#32;MAX_TEMP_ABS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;50</emphasis>
+52 <emphasis role="comment">/*&#32;When&#32;this&#32;temperature&#32;difference&#32;is&#32;reached&#32;in&#32;less&#32;than&#32;3&#32;minutes&#32;the&#32;alarm&#32;is&#32;enabled&#32;*/</emphasis>
+53 <emphasis role="preprocessor">#define&#32;MAX_TEMP_DIFF&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;5</emphasis>
+54 <emphasis role="comment">/*&#32;When&#32;this&#32;humidity&#32;difference&#32;is&#32;reached&#32;in&#32;less&#32;than&#32;3&#32;minutes&#32;the&#32;alarm&#32;is&#32;enabled&#32;*/</emphasis>
+55 <emphasis role="preprocessor">#define&#32;MAX_HUM_DIFF&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;20</emphasis>
+56 
+57 <emphasis role="comment">/*&#32;Timeout&#32;for&#32;I2C&#32;*/</emphasis>
+58 <emphasis role="preprocessor">#define&#32;I2C_TXRX_TIMEOUT&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;100</emphasis>
+59 
+60 <emphasis role="comment">/*&#32;Exported&#32;macro&#32;------------------------------------------------------------*/</emphasis>
+61 <emphasis role="comment">/*&#32;Exported&#32;functions&#32;-------------------------------------------------------&#32;*/</emphasis>
+62 <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="__a_p_i__i2c_8h_1ad65f4e33df67b1746135cc8fb53a6832">i2c_init</link>(<emphasis role="keywordtype">void</emphasis>);
+63 alarmType_t&#32;<link linkend="__a_p_i__i2c_8h_1a1937060c228988e5b891961a9518f3bd">alarmTH_FSM_update</link>(<emphasis role="keywordtype">void</emphasis>);
+64 <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="__a_p_i__i2c_8h_1ac30d66b3a336676e270508d5743980a8">TH_updated</link>(uint32_t&#32;*,&#32;uint32_t&#32;*);
+65 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;API_INC_API_I2C_H_&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+66 
+67 <emphasis role="comment">/***************************************************************END&#32;OF&#32;FILE****/</emphasis>
+</programlisting></section>

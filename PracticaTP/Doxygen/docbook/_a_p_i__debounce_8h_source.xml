@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__a_p_i__debounce_8h_source" xml:lang="en-US">
+<title>API_debounce.h</title>
+<indexterm><primary>C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_debounce.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+9 <emphasis role="comment">/*&#32;Define&#32;to&#32;prevent&#32;recursive&#32;inclusion&#32;-------------------------------------*/</emphasis>
+10 <emphasis role="preprocessor">#ifndef&#32;API_INC_API_DEBOUNCE_H_</emphasis>
+11 <emphasis role="preprocessor">#define&#32;API_INC_API_DEBOUNCE_H_</emphasis>
+12 
+13 <emphasis role="comment">/*&#32;Includes&#32;------------------------------------------------------------------*/</emphasis>
+14 <emphasis role="comment">/*&#32;Exported&#32;types&#32;------------------------------------------------------------*/</emphasis>
+15 <emphasis role="comment">/*&#32;Exported&#32;constants&#32;--------------------------------------------------------*/</emphasis>
+16 <emphasis role="comment">/*&#32;Exported&#32;macro&#32;------------------------------------------------------------*/</emphasis>
+17 <emphasis role="comment">/*&#32;Exported&#32;functions&#32;-------------------------------------------------------&#32;*/</emphasis>
+18 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__a_p_i__debounce_8h_1ab3a205fff0350c246091ed7d529af591">debounceFSM_init</link>(<emphasis role="keywordtype">void</emphasis>);
+19 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__a_p_i__debounce_8h_1ab41687f9d772b432731f47e3ac14906a">debounceFSM_update</link>(<emphasis role="keywordtype">void</emphasis>);
+20 <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="__a_p_i__debounce_8h_1a1e3a414aec5def470add78a0ee37722c">readKey</link>(<emphasis role="keywordtype">void</emphasis>);
+21 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;API_INC_API_DEBOUNCE_H_&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+22 
+23 <emphasis role="comment">/***************************************************************END&#32;OF&#32;FILE****/</emphasis>
+</programlisting></section>

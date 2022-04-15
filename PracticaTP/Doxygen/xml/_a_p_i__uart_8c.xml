@@ -1,0 +1,536 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="en-US">
+  <compounddef id="_a_p_i__uart_8c" kind="file" language="C++">
+    <compoundname>API_uart.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">stdbool.h</includes>
+    <includes local="yes">stm32f4xx_hal.h</includes>
+    <includes local="yes">stm32f4xx_nucleo_144.h</includes>
+    <includes refid="_a_p_i__uart_8h" local="yes">API_uart.h</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>API_uart.h</label>
+        <link refid="_a_p_i__uart_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_uart.c</label>
+        <link refid="_a_p_i__uart_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdbool.h</label>
+      </node>
+      <node id="3">
+        <label>stdint.h</label>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+      <node id="6">
+        <label>stm32f4xx_hal.h</label>
+      </node>
+      <node id="7">
+        <label>stm32f4xx_nucleo_144.h</label>
+      </node>
+      <node id="4">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_a_p_i__uart_8c_1a2d3238638f25fd8e78b21dc8e5efd348" prot="public" static="no" mutable="no">
+        <type>UART_HandleTypeDef</type>
+        <definition>UART_HandleTypeDef UartHandle</definition>
+        <argsstring></argsstring>
+        <name>UartHandle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_uart.c" line="25" column="20" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_uart.c" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_a_p_i__uart_8c_1abfbdd8adbb72953f36e75761dd9be44c" prot="public" static="yes" mutable="no">
+        <type>const char *</type>
+        <definition>const char* UART_CONFIG_M01</definition>
+        <argsstring></argsstring>
+        <name>UART_CONFIG_M01</name>
+        <initializer>= &quot;\n\rUART CONFIGURATION\n\r&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_uart.c" line="27" column="19" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_uart.c" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_a_p_i__uart_8c_1a42ed1900a61cd0e0ae4aa712053305dc" prot="public" static="yes" mutable="no">
+        <type>const char *</type>
+        <definition>const char* UART_CONFIG_M02</definition>
+        <argsstring></argsstring>
+        <name>UART_CONFIG_M02</name>
+        <initializer>= &quot;UART Instance: USART3\n\r&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_uart.c" line="28" column="19" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_uart.c" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_a_p_i__uart_8c_1a5c281b990f2dde244702fb0cd4f48fc0" prot="public" static="yes" mutable="no">
+        <type>const char *</type>
+        <definition>const char* UART_CONFIG_M03</definition>
+        <argsstring></argsstring>
+        <name>UART_CONFIG_M03</name>
+        <initializer>= &quot;UART BaudRate: 9600\n\r&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_uart.c" line="29" column="19" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_uart.c" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_a_p_i__uart_8c_1ac5f6ee304394b9da6dd6c8deeffc1ff4" prot="public" static="yes" mutable="no">
+        <type>const char *</type>
+        <definition>const char* UART_CONFIG_M04</definition>
+        <argsstring></argsstring>
+        <name>UART_CONFIG_M04</name>
+        <initializer>= &quot;UART WordLength: UART_WORDLENGTH_8B\n\r&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_uart.c" line="30" column="19" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_uart.c" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_a_p_i__uart_8c_1ad0e1cff9475cf4ce07f25ff20a717c7d" prot="public" static="yes" mutable="no">
+        <type>const char *</type>
+        <definition>const char* UART_CONFIG_M05</definition>
+        <argsstring></argsstring>
+        <name>UART_CONFIG_M05</name>
+        <initializer>= &quot;UART StopBits: UART_STOPBITS_1\n\r&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_uart.c" line="31" column="19" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_uart.c" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_a_p_i__uart_8c_1a96a7c0b0df40cfe73743655b390ff26b" prot="public" static="yes" mutable="no">
+        <type>const char *</type>
+        <definition>const char* UART_CONFIG_M06</definition>
+        <argsstring></argsstring>
+        <name>UART_CONFIG_M06</name>
+        <initializer>= &quot;UART Parity: UART_PARITY_ODD\n\r&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_uart.c" line="32" column="19" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_uart.c" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_a_p_i__uart_8c_1a3f43b6f33209526005a10324aec6bc7f" prot="public" static="yes" mutable="no">
+        <type>const char *</type>
+        <definition>const char* UART_CONFIG_M07</definition>
+        <argsstring></argsstring>
+        <name>UART_CONFIG_M07</name>
+        <initializer>= &quot;UART HwFlowCtl: UART_HWCONTROL_NONE\n\r&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_uart.c" line="33" column="19" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_uart.c" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_a_p_i__uart_8c_1adddfe5ea761a98d73128b097f1288689" prot="public" static="yes" mutable="no">
+        <type>const char *</type>
+        <definition>const char* UART_CONFIG_M08</definition>
+        <argsstring></argsstring>
+        <name>UART_CONFIG_M08</name>
+        <initializer>= &quot;UART Mode: UART_MODE_TX_RX\n\r&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_uart.c" line="34" column="19" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_uart.c" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_a_p_i__uart_8c_1a9ba829968f07993829171cb1dc807706" prot="public" static="yes" mutable="no">
+        <type>const char *</type>
+        <definition>const char* UART_CONFIG_M09</definition>
+        <argsstring></argsstring>
+        <name>UART_CONFIG_M09</name>
+        <initializer>= &quot;UART OverSampling: UART_OVERSAMPLING_16\n\r&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_uart.c" line="35" column="19" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_uart.c" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_a_p_i__uart_8c_1af4d71a13f5cd2001ac0eb140ec9bd084" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool uartinit</definition>
+        <argsstring>(void)</argsstring>
+        <name>uartinit</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize UART and send the configuration by UART. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>None.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>true</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>UART initialized successfully. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>false</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>UART was not initialized successfully. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_uart.c" line="47" column="6" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_uart.c" bodystart="47" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="_a_p_i__uart_8c_1a446c11b67abd8d44ae9ae308805bf848" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uartsendString</definition>
+        <argsstring>(uint8_t *pstring)</argsstring>
+        <name>uartsendString</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>pstring</declname>
+        </param>
+        <briefdescription>
+<para>Send a string by UART. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pstring</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String to be sent. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_uart.c" line="88" column="6" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_uart.c" bodystart="88" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="_a_p_i__uart_8c_1a5f7272d7b83bf68319beb9c9acbb3f22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uartSendStringSize</definition>
+        <argsstring>(uint8_t *pstring, uint16_t size)</argsstring>
+        <name>uartSendStringSize</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>pstring</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Send a part of string by UART. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pstring</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String to be sent. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of the string to be sent. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_uart.c" line="118" column="6" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_uart.c" bodystart="118" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="_a_p_i__uart_8c_1aeffd5a15e15e28b5261f17b864ad28c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uartReceiveStringSize</definition>
+        <argsstring>(uint8_t *pstring, uint16_t size)</argsstring>
+        <name>uartReceiveStringSize</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>pstring</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Receive a string by UART. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pstring</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String to be received. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of characters to receive. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_uart.c" line="151" column="6" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_uart.c" bodystart="151" bodyend="174"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>API uart. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Gabriel Postolov </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Includes<sp/>------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;stm32f4xx_hal.h&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>&lt;-<sp/>HAL<sp/>include<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;stm32f4xx_nucleo_144.h&quot;</highlight><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>&lt;-<sp/>BSP<sp/>include<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_a_p_i__uart_8h" kindref="compound">API_uart.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Private<sp/>typedef<sp/>-----------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Private<sp/>define<sp/>------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Private<sp/>macro<sp/>-------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Private<sp/>variables<sp/>---------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>UART<sp/>handler<sp/>declaration<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">UART_HandleTypeDef<sp/>UartHandle;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*UART_CONFIG_M01<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;\n\rUART<sp/>CONFIGURATION\n\r&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*UART_CONFIG_M02<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;UART<sp/>Instance:<sp/>USART3\n\r&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*UART_CONFIG_M03<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;UART<sp/>BaudRate:<sp/>9600\n\r&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*UART_CONFIG_M04<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;UART<sp/>WordLength:<sp/>UART_WORDLENGTH_8B\n\r&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*UART_CONFIG_M05<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;UART<sp/>StopBits:<sp/>UART_STOPBITS_1\n\r&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*UART_CONFIG_M06<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;UART<sp/>Parity:<sp/>UART_PARITY_ODD\n\r&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*UART_CONFIG_M07<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;UART<sp/>HwFlowCtl:<sp/>UART_HWCONTROL_NONE\n\r&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*UART_CONFIG_M08<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;UART<sp/>Mode:<sp/>UART_MODE_TX_RX\n\r&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*UART_CONFIG_M09<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;UART<sp/>OverSampling:<sp/>UART_OVERSAMPLING_16\n\r&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Private<sp/>function<sp/>prototypes<sp/>-----------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Private<sp/>functions<sp/>---------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Public<sp/>functions<sp/>----------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_a_p_i__uart_8c_1af4d71a13f5cd2001ac0eb140ec9bd084" kindref="member">uartinit</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Put<sp/>the<sp/>USART<sp/>peripheral<sp/>in<sp/>the<sp/>Asynchronous<sp/>mode<sp/>(UART<sp/>Mode)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>UART<sp/>configured<sp/>as<sp/>follows:</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>-<sp/>Word<sp/>Length<sp/>=<sp/>8<sp/>Bits<sp/>(7<sp/>data<sp/>bit<sp/>+<sp/>1<sp/>parity<sp/>bit)<sp/>:</highlight></codeline>
+<codeline lineno="51"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>BE<sp/>CAREFUL<sp/>:<sp/>Program<sp/>7<sp/>data<sp/>bits<sp/>+<sp/>1<sp/>parity<sp/>bit<sp/>in<sp/>PC<sp/>HyperTerminal</highlight></codeline>
+<codeline lineno="52"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>-<sp/>Stop<sp/>Bit<sp/><sp/><sp/><sp/>=<sp/>One<sp/>Stop<sp/>bit</highlight></codeline>
+<codeline lineno="53"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>-<sp/>Parity<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>ODD<sp/>parity</highlight></codeline>
+<codeline lineno="54"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>-<sp/>BaudRate<sp/><sp/><sp/><sp/>=<sp/>9600<sp/>baud</highlight></codeline>
+<codeline lineno="55"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>-<sp/>Hardware<sp/>flow<sp/>control<sp/>disabled<sp/>(RTS<sp/>and<sp/>CTS<sp/>signals)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>UartHandle.Instance<sp/>=<sp/>USARTx;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>UartHandle.Init.BaudRate<sp/>=<sp/>9600;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>UartHandle.Init.WordLength<sp/>=<sp/>UART_WORDLENGTH_8B;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>UartHandle.Init.StopBits<sp/>=<sp/>UART_STOPBITS_1;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>UartHandle.Init.Parity<sp/>=<sp/>UART_PARITY_ODD;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>UartHandle.Init.HwFlowCtl<sp/>=<sp/>UART_HWCONTROL_NONE;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>UartHandle.Init.Mode<sp/>=<sp/>UART_MODE_TX_RX;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>UartHandle.Init.OverSampling<sp/>=<sp/>UART_OVERSAMPLING_16;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(HAL_UART_Init(&amp;UartHandle)<sp/>!=<sp/>HAL_OK)<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Output<sp/>a<sp/>message<sp/>on<sp/>Hyperterminal<sp/>using<sp/>printf<sp/>function<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_a_p_i__uart_8c_1a446c11b67abd8d44ae9ae308805bf848" kindref="member">uartsendString</ref>((uint8_t*)<sp/>UART_CONFIG_M01);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_a_p_i__uart_8c_1a446c11b67abd8d44ae9ae308805bf848" kindref="member">uartsendString</ref>((uint8_t*)<sp/>UART_CONFIG_M02);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_a_p_i__uart_8c_1a446c11b67abd8d44ae9ae308805bf848" kindref="member">uartsendString</ref>((uint8_t*)<sp/>UART_CONFIG_M03);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_a_p_i__uart_8c_1a446c11b67abd8d44ae9ae308805bf848" kindref="member">uartsendString</ref>((uint8_t*)<sp/>UART_CONFIG_M04);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_a_p_i__uart_8c_1a446c11b67abd8d44ae9ae308805bf848" kindref="member">uartsendString</ref>((uint8_t*)<sp/>UART_CONFIG_M05);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_a_p_i__uart_8c_1a446c11b67abd8d44ae9ae308805bf848" kindref="member">uartsendString</ref>((uint8_t*)<sp/>UART_CONFIG_M06);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_a_p_i__uart_8c_1a446c11b67abd8d44ae9ae308805bf848" kindref="member">uartsendString</ref>((uint8_t*)<sp/>UART_CONFIG_M07);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_a_p_i__uart_8c_1a446c11b67abd8d44ae9ae308805bf848" kindref="member">uartsendString</ref>((uint8_t*)<sp/>UART_CONFIG_M08);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_a_p_i__uart_8c_1a446c11b67abd8d44ae9ae308805bf848" kindref="member">uartsendString</ref>((uint8_t*)<sp/>UART_CONFIG_M09);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_a_p_i__uart_8c_1a446c11b67abd8d44ae9ae308805bf848" kindref="member">uartsendString</ref>(uint8_t<sp/>*pstring)<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pstring<sp/>==<sp/>NULL)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>str_long<sp/>=<sp/>strlen((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)<sp/>pstring);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(str_long<sp/>==<sp/>0)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>HAL_StatusTypeDef<sp/>tx_status;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>tx_status<sp/>=<sp/>HAL_UART_Transmit(&amp;UartHandle,<sp/>pstring,<sp/>str_long,<sp/>UART_TX_TIMEOUT);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TODO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(tx_status)<sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>HAL_OK:</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>HAL_ERROR:</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>HAL_BUSY:</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>HAL_TIMEOUT:</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_a_p_i__uart_8c_1a5f7272d7b83bf68319beb9c9acbb3f22" kindref="member">uartSendStringSize</ref>(uint8_t<sp/>*pstring,<sp/>uint16_t<sp/>size)<sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pstring<sp/>==<sp/>NULL)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size<sp/>==<sp/>0)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>str_long<sp/>=<sp/>strlen((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)<sp/>pstring);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(str_long<sp/>==<sp/>0)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>HAL_StatusTypeDef<sp/>tx_status;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//*As<sp/>a<sp/>maximum,<sp/>the<sp/>length<sp/>of<sp/>the<sp/>word<sp/>is<sp/>sent.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size<sp/>&lt;<sp/>str_long)<sp/>str_long<sp/>=<sp/>size;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>tx_status<sp/>=<sp/>HAL_UART_Transmit(&amp;UartHandle,<sp/>pstring,<sp/>str_long,<sp/>UART_TX_TIMEOUT);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TODO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(tx_status)<sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>HAL_OK:</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>HAL_ERROR:</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>HAL_BUSY:</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>HAL_TIMEOUT:</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_a_p_i__uart_8c_1aeffd5a15e15e28b5261f17b864ad28c4" kindref="member">uartReceiveStringSize</ref>(uint8_t<sp/>*pstring,<sp/>uint16_t<sp/>size)<sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>HAL_StatusTypeDef<sp/>rx_status;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pstring<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>rx_status<sp/>=<sp/>HAL_UART_Receive(&amp;UartHandle,<sp/>pstring,<sp/>size,<sp/>UART_RX_TIMEOUT);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TODO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(rx_status)<sp/>{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>HAL_OK:</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>HAL_ERROR:</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>HAL_BUSY:</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>HAL_TIMEOUT:</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************END<sp/>OF<sp/>FILE****/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_uart.c"/>
+  </compounddef>
+</doxygen>

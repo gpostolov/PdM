@@ -1,0 +1,227 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__a_p_i__delay_8h" xml:lang="en-US">
+<title>C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_delay.h File Reference</title>
+<indexterm><primary>C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_delay.h</primary></indexterm>
+<para>
+
+<para>API_delay. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;stdio.h&gt;
+#include &lt;stdbool.h&gt;
+</programlisting><simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structdelay__t">delay_t</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="__a_p_i__delay_8h_1a451a7d205dfb766727eba25c6e61c687"/>typedef uint32_t <emphasis role="strong">tick_t</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="__a_p_i__delay_8h_1a2b21255bd7f7192db778983b15089208"/>typedef bool <emphasis role="strong">bool_t</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="__a_p_i__delay_8h_1a6613427678149cadd03bac79e79475f3">delayInit</link> (<link linkend="_structdelay__t">delay_t</link> *delay, tick_t duration)</para>
+
+<para>Initialize the led delays. </para>
+</listitem>
+            <listitem><para>bool_t <link linkend="__a_p_i__delay_8h_1afecaa44225b94ebfb354e4b6b7e6e9ce">delayRead</link> (<link linkend="_structdelay__t">delay_t</link> *delay)</para>
+
+<para>The state of the running flag is checked. If false, it takes the timestamp and changes the execution flag to &apos;true&apos;. If it is true, it makes the account to know if the delay time has been fulfilled or not. Returns a boolean value indicating whether or not the time has expired. </para>
+</listitem>
+            <listitem><para>void <link linkend="__a_p_i__delay_8h_1a2af041ac01bb3db8ecf87ce371fac67d">delayWrite</link> (<link linkend="_structdelay__t">delay_t</link> *delay, tick_t duration)</para>
+
+<para>The function allows to change the duration time of an existing delay. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>API_delay. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Gabriel Postolov </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__a_p_i__delay_8h_1a6613427678149cadd03bac79e79475f3"/><section>
+    <title>delayInit()</title>
+<indexterm><primary>delayInit</primary><secondary>API_delay.h</secondary></indexterm>
+<indexterm><primary>API_delay.h</primary><secondary>delayInit</secondary></indexterm>
+<para><computeroutput>void delayInit (<link linkend="_structdelay__t">delay_t</link> * delay, tick_t duration)</computeroutput></para><para>
+
+<para>Initialize the led delays. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>delay</entry><entry>
+<para>delay to be initialized. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>duration</entry><entry>
+<para>duration in milliseconds of the delay. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None.</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="__a_p_i__delay_8h_1afecaa44225b94ebfb354e4b6b7e6e9ce"/><section>
+    <title>delayRead()</title>
+<indexterm><primary>delayRead</primary><secondary>API_delay.h</secondary></indexterm>
+<indexterm><primary>API_delay.h</primary><secondary>delayRead</secondary></indexterm>
+<para><computeroutput>bool_t delayRead (<link linkend="_structdelay__t">delay_t</link> * delay)</computeroutput></para><para>
+
+<para>The state of the running flag is checked. If false, it takes the timestamp and changes the execution flag to &apos;true&apos;. If it is true, it makes the account to know if the delay time has been fulfilled or not. Returns a boolean value indicating whether or not the time has expired. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>delay</entry><entry>
+<para>delay to be checked. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>true</entry><entry>
+<para>the time has expired. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>false</entry><entry>
+<para>the time has not expired. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="__a_p_i__delay_8h_1a2af041ac01bb3db8ecf87ce371fac67d"/><section>
+    <title>delayWrite()</title>
+<indexterm><primary>delayWrite</primary><secondary>API_delay.h</secondary></indexterm>
+<indexterm><primary>API_delay.h</primary><secondary>delayWrite</secondary></indexterm>
+<para><computeroutput>void delayWrite (<link linkend="_structdelay__t">delay_t</link> * delay, tick_t duration)</computeroutput></para><para>
+
+<para>The function allows to change the duration time of an existing delay. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>delay</entry><entry>
+<para>delay has to be modified. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>duration</entry><entry>
+<para>duration in milliseconds of the delay. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None.</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+</section>

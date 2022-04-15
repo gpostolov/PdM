@@ -1,0 +1,162 @@
+\hypertarget{_a_p_i__uart_8h}{}\doxysection{C\+:/\+Users/\+Gabriel/\+Documents/\+Git\+Hub/\+Pd\+M/\+Practica\+TP/\+Drivers/\+API/inc/\+API\+\_\+uart.h File Reference}
+\label{_a_p_i__uart_8h}\index{C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API\_uart.h@{C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API\_uart.h}}
+
+
+API uart.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_a_p_i__uart_8h_aea29ff83910db519b6c575b4e5a1db98}\label{_a_p_i__uart_8h_aea29ff83910db519b6c575b4e5a1db98}} 
+\#define {\bfseries USARTx}~USART3
+\item 
+\mbox{\Hypertarget{_a_p_i__uart_8h_a20e99e9ef54366d20270e7336c9425fc}\label{_a_p_i__uart_8h_a20e99e9ef54366d20270e7336c9425fc}} 
+\#define {\bfseries USARTx\+\_\+\+CLK\+\_\+\+ENABLE}()~\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+USART3\+\_\+\+CLK\+\_\+\+ENABLE();
+\item 
+\mbox{\Hypertarget{_a_p_i__uart_8h_aa1df58683546bc62f3244aee6f103649}\label{_a_p_i__uart_8h_aa1df58683546bc62f3244aee6f103649}} 
+\#define {\bfseries USARTx\+\_\+\+RX\+\_\+\+GPIO\+\_\+\+CLK\+\_\+\+ENABLE}()~\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOD\+\_\+\+CLK\+\_\+\+ENABLE()
+\item 
+\mbox{\Hypertarget{_a_p_i__uart_8h_aa22f4bb0483c2b3ee3fc662c1cd40f2b}\label{_a_p_i__uart_8h_aa22f4bb0483c2b3ee3fc662c1cd40f2b}} 
+\#define {\bfseries USARTx\+\_\+\+TX\+\_\+\+GPIO\+\_\+\+CLK\+\_\+\+ENABLE}()~\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOD\+\_\+\+CLK\+\_\+\+ENABLE()
+\item 
+\mbox{\Hypertarget{_a_p_i__uart_8h_a3be953aa255b4873b43cdcf52ae047ec}\label{_a_p_i__uart_8h_a3be953aa255b4873b43cdcf52ae047ec}} 
+\#define {\bfseries USARTx\+\_\+\+FORCE\+\_\+\+RESET}()~\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+USART3\+\_\+\+FORCE\+\_\+\+RESET()
+\item 
+\mbox{\Hypertarget{_a_p_i__uart_8h_a4bb86fb3f32edcf841946af0d3454ea2}\label{_a_p_i__uart_8h_a4bb86fb3f32edcf841946af0d3454ea2}} 
+\#define {\bfseries USARTx\+\_\+\+RELEASE\+\_\+\+RESET}()~\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+USART3\+\_\+\+RELEASE\+\_\+\+RESET()
+\item 
+\mbox{\Hypertarget{_a_p_i__uart_8h_a7597a102c72383ee6a40a5eb5e2f4ef1}\label{_a_p_i__uart_8h_a7597a102c72383ee6a40a5eb5e2f4ef1}} 
+\#define {\bfseries USARTx\+\_\+\+TX\+\_\+\+PIN}~GPIO\+\_\+\+PIN\+\_\+8
+\item 
+\mbox{\Hypertarget{_a_p_i__uart_8h_a634496204b64d0d9fd4d4e7b7be20842}\label{_a_p_i__uart_8h_a634496204b64d0d9fd4d4e7b7be20842}} 
+\#define {\bfseries USARTx\+\_\+\+TX\+\_\+\+GPIO\+\_\+\+PORT}~GPIOD
+\item 
+\mbox{\Hypertarget{_a_p_i__uart_8h_ae4ff7d3e3f08756784e13d0d9d44eb11}\label{_a_p_i__uart_8h_ae4ff7d3e3f08756784e13d0d9d44eb11}} 
+\#define {\bfseries USARTx\+\_\+\+TX\+\_\+\+AF}~GPIO\+\_\+\+AF7\+\_\+\+USART3
+\item 
+\mbox{\Hypertarget{_a_p_i__uart_8h_aee941cfa9fadea92162c4915ee7f3a85}\label{_a_p_i__uart_8h_aee941cfa9fadea92162c4915ee7f3a85}} 
+\#define {\bfseries USARTx\+\_\+\+RX\+\_\+\+PIN}~GPIO\+\_\+\+PIN\+\_\+9
+\item 
+\mbox{\Hypertarget{_a_p_i__uart_8h_a1b5a54c22247b06ceefe42b9a2d5d174}\label{_a_p_i__uart_8h_a1b5a54c22247b06ceefe42b9a2d5d174}} 
+\#define {\bfseries USARTx\+\_\+\+RX\+\_\+\+GPIO\+\_\+\+PORT}~GPIOD
+\item 
+\mbox{\Hypertarget{_a_p_i__uart_8h_a8fe8e9b6f5881d7315bc580138ad1258}\label{_a_p_i__uart_8h_a8fe8e9b6f5881d7315bc580138ad1258}} 
+\#define {\bfseries USARTx\+\_\+\+RX\+\_\+\+AF}~GPIO\+\_\+\+AF7\+\_\+\+USART3
+\item 
+\mbox{\Hypertarget{_a_p_i__uart_8h_a1ac707ea819ef2e2d31bdbb5da157566}\label{_a_p_i__uart_8h_a1ac707ea819ef2e2d31bdbb5da157566}} 
+\#define {\bfseries UART\+\_\+\+TX\+\_\+\+TIMEOUT}~200
+\item 
+\mbox{\Hypertarget{_a_p_i__uart_8h_a3d863d153720615515bd438a519b29b0}\label{_a_p_i__uart_8h_a3d863d153720615515bd438a519b29b0}} 
+\#define {\bfseries UART\+\_\+\+RX\+\_\+\+TIMEOUT}~0x\+FFFF
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_a_p_i__uart_8h_af4d71a13f5cd2001ac0eb140ec9bd084}{uartinit}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize UART and send the configuration by UART. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_a_p_i__uart_8h_a446c11b67abd8d44ae9ae308805bf848}{uartsend\+String}} (uint8\+\_\+t $\ast$pstring)
+\begin{DoxyCompactList}\small\item\em Send a string by UART. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_a_p_i__uart_8h_a5f7272d7b83bf68319beb9c9acbb3f22}{uart\+Send\+String\+Size}} (uint8\+\_\+t $\ast$pstring, uint16\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Send a part of string by UART. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_a_p_i__uart_8h_aeffd5a15e15e28b5261f17b864ad28c4}{uart\+Receive\+String\+Size}} (uint8\+\_\+t $\ast$pstring, uint16\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Receive a string by UART. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+API uart. 
+
+\begin{DoxyAuthor}{Author}
+Gabriel Postolov 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_a_p_i__uart_8h_af4d71a13f5cd2001ac0eb140ec9bd084}\label{_a_p_i__uart_8h_af4d71a13f5cd2001ac0eb140ec9bd084}} 
+\index{API\_uart.h@{API\_uart.h}!uartinit@{uartinit}}
+\index{uartinit@{uartinit}!API\_uart.h@{API\_uart.h}}
+\doxysubsubsection{\texorpdfstring{uartinit()}{uartinit()}}
+{\footnotesize\ttfamily bool uartinit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize UART and send the configuration by UART. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & UART initialized successfully. \\
+\hline
+{\em false} & UART was not initialized successfully. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{_a_p_i__uart_8h_aeffd5a15e15e28b5261f17b864ad28c4}\label{_a_p_i__uart_8h_aeffd5a15e15e28b5261f17b864ad28c4}} 
+\index{API\_uart.h@{API\_uart.h}!uartReceiveStringSize@{uartReceiveStringSize}}
+\index{uartReceiveStringSize@{uartReceiveStringSize}!API\_uart.h@{API\_uart.h}}
+\doxysubsubsection{\texorpdfstring{uartReceiveStringSize()}{uartReceiveStringSize()}}
+{\footnotesize\ttfamily void uart\+Receive\+String\+Size (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{pstring,  }\item[{uint16\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Receive a string by UART. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pstring} & String to be received. \\
+\hline
+{\em size} & Number of characters to receive. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{_a_p_i__uart_8h_a446c11b67abd8d44ae9ae308805bf848}\label{_a_p_i__uart_8h_a446c11b67abd8d44ae9ae308805bf848}} 
+\index{API\_uart.h@{API\_uart.h}!uartsendString@{uartsendString}}
+\index{uartsendString@{uartsendString}!API\_uart.h@{API\_uart.h}}
+\doxysubsubsection{\texorpdfstring{uartsendString()}{uartsendString()}}
+{\footnotesize\ttfamily void uartsend\+String (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{pstring }\end{DoxyParamCaption})}
+
+
+
+Send a string by UART. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pstring} & String to be sent. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{_a_p_i__uart_8h_a5f7272d7b83bf68319beb9c9acbb3f22}\label{_a_p_i__uart_8h_a5f7272d7b83bf68319beb9c9acbb3f22}} 
+\index{API\_uart.h@{API\_uart.h}!uartSendStringSize@{uartSendStringSize}}
+\index{uartSendStringSize@{uartSendStringSize}!API\_uart.h@{API\_uart.h}}
+\doxysubsubsection{\texorpdfstring{uartSendStringSize()}{uartSendStringSize()}}
+{\footnotesize\ttfamily void uart\+Send\+String\+Size (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{pstring,  }\item[{uint16\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Send a part of string by UART. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pstring} & String to be sent. \\
+\hline
+{\em size} & size of the string to be sent. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}

@@ -1,0 +1,153 @@
+.TH "C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" 3 "Sun Apr 10 2022" "PdM TP" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c \- API i2c\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include 'stm32f4xx_hal\&.h'\fP
+.br
+\fC#include 'stm32f4xx_nucleo_144\&.h'\fP
+.br
+\fC#include 'API_i2c\&.h'\fP
+.br
+\fC#include 'API_debounce\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBI2C_CLOCKSPEED_100K\fP   100000U"
+.br
+.ti -1c
+.RI "#define \fBI2C_OWN_ADDRESS1\fP   0x01U"
+.br
+.ti -1c
+.RI "#define \fBI2C_OWN_ADDRESS2\fP   0xFFU"
+.br
+.ti -1c
+.RI "#define \fBMAXBUFFERSIZE\fP   64"
+.br
+.ti -1c
+.RI "#define \fBARRAY_TH\fP   9"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBalarmState_t\fP { \fBREAD\fP, \fBDATA_ANALYSIS\fP, \fBWAIT\fP, \fBALARM\fP }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBi2c_init\fP (void)"
+.br
+.RI "Initialize the API_I2C: I2C peripheral, Button User, Buffers, FSM alarm\&. "
+.ti -1c
+.RI "alarmType_t \fBalarmTH_FSM_update\fP (void)"
+.br
+.RI "Update FSM\&. "
+.ti -1c
+.RI "bool \fBTH_updated\fP (uint32_t *temp, uint32_t *hum)"
+.br
+.RI "Update Temperature and Humidity\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "I2C_HandleTypeDef \fBI2cHandle\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+API i2c\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Gabriel Postolov 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "alarmType_t alarmTH_FSM_update (void)"
+
+.PP
+Update FSM\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Current alarm state\&. 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINO_ALARM_\fP No Alarm\&. 
+.br
+\fIMAX_TEMP_ABS_\fP Alarm\&. Maximum temperature was reached\&. 
+.br
+\fIMAX_TEMP_DIFF_\fP Alarm\&. Temperature difference was reached in less than 3 minutes\&. 
+.br
+\fIMAX_HUM_DIFF_\fP Alarm\&. Humidity difference was reached in less than 3 minutes\&. 
+.RE
+.PP
+
+.SS "bool i2c_init (void)"
+
+.PP
+Initialize the API_I2C: I2C peripheral, Button User, Buffers, FSM alarm\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fItrue\fP The initialization was successful\&. 
+.br
+\fIfalse\fP The initialization was not successful\&. 
+.RE
+.PP
+
+.SS "bool TH_updated (uint32_t * temp, uint32_t * hum)"
+
+.PP
+Update Temperature and Humidity\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItemp\fP Temperature to be updated\&. 
+.br
+\fIhum\fP Humidity to be updated\&. 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fItrue\fP Updated successful\&. 
+.br
+\fIfalse\fP Updated was not successful\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for PdM TP from the source code\&.

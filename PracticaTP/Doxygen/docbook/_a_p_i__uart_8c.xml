@@ -1,0 +1,278 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__a_p_i__uart_8c" xml:lang="en-US">
+<title>C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_uart.c File Reference</title>
+<indexterm><primary>C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_uart.c</primary></indexterm>
+<para>
+
+<para>API uart. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;stdio.h&gt;
+#include &lt;stdint.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdbool.h&gt;
+#include &quot;stm32f4xx_hal.h&quot;
+#include &quot;stm32f4xx_nucleo_144.h&quot;
+#include &quot;API_uart.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="__a_p_i__uart_8c_1af4d71a13f5cd2001ac0eb140ec9bd084">uartinit</link> (void)</para>
+
+<para>Initialize UART and send the configuration by UART. </para>
+</listitem>
+            <listitem><para>void <link linkend="__a_p_i__uart_8c_1a446c11b67abd8d44ae9ae308805bf848">uartsendString</link> (uint8_t *pstring)</para>
+
+<para>Send a string by UART. </para>
+</listitem>
+            <listitem><para>void <link linkend="__a_p_i__uart_8c_1a5f7272d7b83bf68319beb9c9acbb3f22">uartSendStringSize</link> (uint8_t *pstring, uint16_t size)</para>
+
+<para>Send a part of string by UART. </para>
+</listitem>
+            <listitem><para>void <link linkend="__a_p_i__uart_8c_1aeffd5a15e15e28b5261f17b864ad28c4">uartReceiveStringSize</link> (uint8_t *pstring, uint16_t size)</para>
+
+<para>Receive a string by UART. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="__a_p_i__uart_8c_1a2d3238638f25fd8e78b21dc8e5efd348"/>UART_HandleTypeDef <emphasis role="strong">UartHandle</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>API uart. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Gabriel Postolov </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__a_p_i__uart_8c_1af4d71a13f5cd2001ac0eb140ec9bd084"/><section>
+    <title>uartinit()</title>
+<indexterm><primary>uartinit</primary><secondary>API_uart.c</secondary></indexterm>
+<indexterm><primary>API_uart.c</primary><secondary>uartinit</secondary></indexterm>
+<para><computeroutput>bool uartinit (void )</computeroutput></para><para>
+
+<para>Initialize UART and send the configuration by UART. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None.</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>true</entry><entry>
+<para>UART initialized successfully. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>false</entry><entry>
+<para>UART was not initialized successfully. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="__a_p_i__uart_8c_1aeffd5a15e15e28b5261f17b864ad28c4"/><section>
+    <title>uartReceiveStringSize()</title>
+<indexterm><primary>uartReceiveStringSize</primary><secondary>API_uart.c</secondary></indexterm>
+<indexterm><primary>API_uart.c</primary><secondary>uartReceiveStringSize</secondary></indexterm>
+<para><computeroutput>void uartReceiveStringSize (uint8_t * pstring, uint16_t size)</computeroutput></para><para>
+
+<para>Receive a string by UART. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>pstring</entry><entry>
+<para>String to be received. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>size</entry><entry>
+<para>Number of characters to receive. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None.</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="__a_p_i__uart_8c_1a446c11b67abd8d44ae9ae308805bf848"/><section>
+    <title>uartsendString()</title>
+<indexterm><primary>uartsendString</primary><secondary>API_uart.c</secondary></indexterm>
+<indexterm><primary>API_uart.c</primary><secondary>uartsendString</secondary></indexterm>
+<para><computeroutput>void uartsendString (uint8_t * pstring)</computeroutput></para><para>
+
+<para>Send a string by UART. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>pstring</entry><entry>
+<para>String to be sent. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None.</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="__a_p_i__uart_8c_1a5f7272d7b83bf68319beb9c9acbb3f22"/><section>
+    <title>uartSendStringSize()</title>
+<indexterm><primary>uartSendStringSize</primary><secondary>API_uart.c</secondary></indexterm>
+<indexterm><primary>API_uart.c</primary><secondary>uartSendStringSize</secondary></indexterm>
+<para><computeroutput>void uartSendStringSize (uint8_t * pstring, uint16_t size)</computeroutput></para><para>
+
+<para>Send a part of string by UART. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>pstring</entry><entry>
+<para>String to be sent. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>size</entry><entry>
+<para>size of the string to be sent. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None.</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+</section>

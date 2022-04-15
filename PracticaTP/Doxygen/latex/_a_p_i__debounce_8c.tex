@@ -1,0 +1,156 @@
+\hypertarget{_a_p_i__debounce_8c}{}\doxysection{C\+:/\+Users/\+Gabriel/\+Documents/\+Git\+Hub/\+Pd\+M/\+Practica\+TP/\+Drivers/\+API/src/\+API\+\_\+debounce.c File Reference}
+\label{_a_p_i__debounce_8c}\index{C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API\_debounce.c@{C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API\_debounce.c}}
+
+
+API debounce.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+hal.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+nucleo\+\_\+144.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}API\+\_\+delay.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}API\+\_\+debounce.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_a_p_i__debounce_8c_ad699d22fdce8073e425b52c4d1d1a8f8}\label{_a_p_i__debounce_8c_ad699d22fdce8073e425b52c4d1d1a8f8}} 
+\#define {\bfseries DEBOUNCING\+\_\+\+DELAY}~40
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_a_p_i__debounce_8c_a2c469bba1f151ac8d334947718ecf022}\label{_a_p_i__debounce_8c_a2c469bba1f151ac8d334947718ecf022}} 
+enum {\bfseries debounce\+State\+\_\+t} \{ {\bfseries BUTTON\+\_\+\+UP}
+, {\bfseries BUTTON\+\_\+\+FALLING}
+, {\bfseries BUTTON\+\_\+\+DOWN}
+, {\bfseries BUTTON\+\_\+\+RAISING}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_a_p_i__debounce_8c_a1d5035b5f3a37d5e437115ac5bf6a321}{button\+Pressed}} (void)
+\begin{DoxyCompactList}\small\item\em Button User pressed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_a_p_i__debounce_8c_a132c00c2cac9e23ad2211e2f6dcdf336}{button\+Released}} (void)
+\begin{DoxyCompactList}\small\item\em Button User released. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_a_p_i__debounce_8c_ab3a205fff0350c246091ed7d529af591}{debounce\+FSM\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize FSM. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_a_p_i__debounce_8c_ab41687f9d772b432731f47e3ac14906a}{debounce\+FSM\+\_\+update}} (void)
+\begin{DoxyCompactList}\small\item\em Update FSM. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_a_p_i__debounce_8c_a1e3a414aec5def470add78a0ee37722c}{read\+Key}} (void)
+\begin{DoxyCompactList}\small\item\em Read key. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+API debounce. 
+
+\begin{DoxyAuthor}{Author}
+Gabriel Postolov 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_a_p_i__debounce_8c_a1d5035b5f3a37d5e437115ac5bf6a321}\label{_a_p_i__debounce_8c_a1d5035b5f3a37d5e437115ac5bf6a321}} 
+\index{API\_debounce.c@{API\_debounce.c}!buttonPressed@{buttonPressed}}
+\index{buttonPressed@{buttonPressed}!API\_debounce.c@{API\_debounce.c}}
+\doxysubsubsection{\texorpdfstring{buttonPressed()}{buttonPressed()}}
+{\footnotesize\ttfamily void button\+Pressed (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Button User pressed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{_a_p_i__debounce_8c_a132c00c2cac9e23ad2211e2f6dcdf336}\label{_a_p_i__debounce_8c_a132c00c2cac9e23ad2211e2f6dcdf336}} 
+\index{API\_debounce.c@{API\_debounce.c}!buttonReleased@{buttonReleased}}
+\index{buttonReleased@{buttonReleased}!API\_debounce.c@{API\_debounce.c}}
+\doxysubsubsection{\texorpdfstring{buttonReleased()}{buttonReleased()}}
+{\footnotesize\ttfamily void button\+Released (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Button User released. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{_a_p_i__debounce_8c_ab3a205fff0350c246091ed7d529af591}\label{_a_p_i__debounce_8c_ab3a205fff0350c246091ed7d529af591}} 
+\index{API\_debounce.c@{API\_debounce.c}!debounceFSM\_init@{debounceFSM\_init}}
+\index{debounceFSM\_init@{debounceFSM\_init}!API\_debounce.c@{API\_debounce.c}}
+\doxysubsubsection{\texorpdfstring{debounceFSM\_init()}{debounceFSM\_init()}}
+{\footnotesize\ttfamily void debounce\+FSM\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize FSM. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{_a_p_i__debounce_8c_ab41687f9d772b432731f47e3ac14906a}\label{_a_p_i__debounce_8c_ab41687f9d772b432731f47e3ac14906a}} 
+\index{API\_debounce.c@{API\_debounce.c}!debounceFSM\_update@{debounceFSM\_update}}
+\index{debounceFSM\_update@{debounceFSM\_update}!API\_debounce.c@{API\_debounce.c}}
+\doxysubsubsection{\texorpdfstring{debounceFSM\_update()}{debounceFSM\_update()}}
+{\footnotesize\ttfamily void debounce\+FSM\+\_\+update (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Update FSM. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{_a_p_i__debounce_8c_a1e3a414aec5def470add78a0ee37722c}\label{_a_p_i__debounce_8c_a1e3a414aec5def470add78a0ee37722c}} 
+\index{API\_debounce.c@{API\_debounce.c}!readKey@{readKey}}
+\index{readKey@{readKey}!API\_debounce.c@{API\_debounce.c}}
+\doxysubsubsection{\texorpdfstring{readKey()}{readKey()}}
+{\footnotesize\ttfamily bool read\+Key (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Read key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & Button User pressed. \\
+\hline
+{\em false} & Button User not pressed. \\
+\hline
+\end{DoxyRetVals}

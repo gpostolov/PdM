@@ -1,0 +1,284 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__a_p_i__i2c_8h" xml:lang="en-US">
+<title>C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h File Reference</title>
+<indexterm><primary>C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h</primary></indexterm>
+<para>
+
+<para>API i2c. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;stdio.h&gt;
+#include &lt;stdbool.h&gt;
+</programlisting><simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="__a_p_i__i2c_8h_1a01f0f8cf04d3aa99ef2addf546d6a869"/>#define <emphasis role="strong">I2Cx</emphasis>   I2C1</para>
+</listitem>
+            <listitem><para><anchor xml:id="__a_p_i__i2c_8h_1a7aef7519046ed7a9b7f167002804463d"/>#define <emphasis role="strong">I2Cx_CLK_ENABLE</emphasis>()   __HAL_RCC_I2C1_CLK_ENABLE()</para>
+</listitem>
+            <listitem><para><anchor xml:id="__a_p_i__i2c_8h_1a91033bae83efaf72338333ed28476a21"/>#define <emphasis role="strong">I2Cx_SDA_GPIO_CLK_ENABLE</emphasis>()   __HAL_RCC_GPIOB_CLK_ENABLE()</para>
+</listitem>
+            <listitem><para><anchor xml:id="__a_p_i__i2c_8h_1ab8486a80ab56a03dfac399e3e6d4dba2"/>#define <emphasis role="strong">I2Cx_SCL_GPIO_CLK_ENABLE</emphasis>()   __HAL_RCC_GPIOB_CLK_ENABLE()</para>
+</listitem>
+            <listitem><para><anchor xml:id="__a_p_i__i2c_8h_1a5f88d5ce44f2db25e9e670d44637064b"/>#define <emphasis role="strong">I2Cx_FORCE_RESET</emphasis>()   __HAL_RCC_I2C1_FORCE_RESET()</para>
+</listitem>
+            <listitem><para><anchor xml:id="__a_p_i__i2c_8h_1a12b00cb1505b0117e694e7412e004f12"/>#define <emphasis role="strong">I2Cx_RELEASE_RESET</emphasis>()   __HAL_RCC_I2C1_RELEASE_RESET()</para>
+</listitem>
+            <listitem><para><anchor xml:id="__a_p_i__i2c_8h_1a85a7350686d979a81d6a06836ac71505"/>#define <emphasis role="strong">I2Cx_SCL_PIN</emphasis>   GPIO_PIN_6</para>
+</listitem>
+            <listitem><para><anchor xml:id="__a_p_i__i2c_8h_1af9b3f778e738463f656cdca5e5653f84"/>#define <emphasis role="strong">I2Cx_SCL_GPIO_PORT</emphasis>   GPIOB</para>
+</listitem>
+            <listitem><para><anchor xml:id="__a_p_i__i2c_8h_1a483fa01fddafa6ec75616ca6c168f23b"/>#define <emphasis role="strong">I2Cx_SCL_AF</emphasis>   GPIO_AF4_I2C1</para>
+</listitem>
+            <listitem><para><anchor xml:id="__a_p_i__i2c_8h_1a7948abe69eb1335f74ef5c8a9c91154f"/>#define <emphasis role="strong">I2Cx_SDA_PIN</emphasis>   GPIO_PIN_7</para>
+</listitem>
+            <listitem><para><anchor xml:id="__a_p_i__i2c_8h_1a9c64aca9ffb944c695e9c13279b62fdc"/>#define <emphasis role="strong">I2Cx_SDA_GPIO_PORT</emphasis>   GPIOB</para>
+</listitem>
+            <listitem><para><anchor xml:id="__a_p_i__i2c_8h_1a4cd28159c8df40e5688a2e3312ea34b4"/>#define <emphasis role="strong">I2Cx_SDA_AF</emphasis>   GPIO_AF4_I2C1</para>
+</listitem>
+            <listitem><para><anchor xml:id="__a_p_i__i2c_8h_1a8c651ff98c42106f3a14ee4225677cc8"/>#define <emphasis role="strong">TXBUFFERSIZE</emphasis>   20</para>
+</listitem>
+            <listitem><para><anchor xml:id="__a_p_i__i2c_8h_1a29d12c67e4b6e0ff96d7aa793757b094"/>#define <emphasis role="strong">RXBUFFERSIZE</emphasis>   TXBUFFERSIZE</para>
+</listitem>
+            <listitem><para><anchor xml:id="__a_p_i__i2c_8h_1aaaf9e8e42cbc82ceb68667006f22cd9e"/>#define <emphasis role="strong">SLAVE_DEV_ADDRESS</emphasis>   0x44</para>
+</listitem>
+            <listitem><para><anchor xml:id="__a_p_i__i2c_8h_1aa5f3b3e2f24c2c822cc1e0fe50c5ed64"/>#define <emphasis role="strong">MAX_TEMP_ABS</emphasis>   50</para>
+</listitem>
+            <listitem><para><anchor xml:id="__a_p_i__i2c_8h_1a937dc389db12b9ddfec77266154d6b81"/>#define <emphasis role="strong">MAX_TEMP_DIFF</emphasis>   5</para>
+</listitem>
+            <listitem><para><anchor xml:id="__a_p_i__i2c_8h_1a978e9da6e69d6e3958485a2d3dadb99a"/>#define <emphasis role="strong">MAX_HUM_DIFF</emphasis>   20</para>
+</listitem>
+            <listitem><para><anchor xml:id="__a_p_i__i2c_8h_1a84c70a8b5fd3588b6acac8382d71480d"/>#define <emphasis role="strong">I2C_TXRX_TIMEOUT</emphasis>   100</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="__a_p_i__i2c_8h_1acfb4e3d098b3102d5b5c3cd01a7802e6"/>enum <emphasis role="strong">alarmType_t</emphasis> { <emphasis role="strong">NO_ALARM_</emphasis>
+, <emphasis role="strong">MAX_TEMP_ABS_</emphasis>
+, <emphasis role="strong">MAX_TEMP_DIFF_</emphasis>
+, <emphasis role="strong">MAX_HUM_DIFF_</emphasis>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="__a_p_i__i2c_8h_1ad65f4e33df67b1746135cc8fb53a6832">i2c_init</link> (void)</para>
+
+<para>Initialize the API_I2C: I2C peripheral, Button User, Buffers, FSM alarm. </para>
+</listitem>
+            <listitem><para>alarmType_t <link linkend="__a_p_i__i2c_8h_1a1937060c228988e5b891961a9518f3bd">alarmTH_FSM_update</link> (void)</para>
+
+<para>Update FSM. </para>
+</listitem>
+            <listitem><para>bool <link linkend="__a_p_i__i2c_8h_1ac30d66b3a336676e270508d5743980a8">TH_updated</link> (uint32_t *, uint32_t *)</para>
+
+<para>Update Temperature and Humidity. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>API i2c. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Gabriel Postolov </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__a_p_i__i2c_8h_1a1937060c228988e5b891961a9518f3bd"/><section>
+    <title>alarmTH_FSM_update()</title>
+<indexterm><primary>alarmTH_FSM_update</primary><secondary>API_i2c.h</secondary></indexterm>
+<indexterm><primary>API_i2c.h</primary><secondary>alarmTH_FSM_update</secondary></indexterm>
+<para><computeroutput>alarmType_t alarmTH_FSM_update (void )</computeroutput></para><para>
+
+<para>Update FSM. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None.</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Current alarm state. </para>
+</formalpara>
+
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>NO_ALARM_</entry><entry>
+<para>No Alarm. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>MAX_TEMP_ABS_</entry><entry>
+<para>Alarm. Maximum temperature was reached. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>MAX_TEMP_DIFF_</entry><entry>
+<para>Alarm. Temperature difference was reached in less than 3 minutes. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>MAX_HUM_DIFF_</entry><entry>
+<para>Alarm. Humidity difference was reached in less than 3 minutes. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="__a_p_i__i2c_8h_1ad65f4e33df67b1746135cc8fb53a6832"/><section>
+    <title>i2c_init()</title>
+<indexterm><primary>i2c_init</primary><secondary>API_i2c.h</secondary></indexterm>
+<indexterm><primary>API_i2c.h</primary><secondary>i2c_init</secondary></indexterm>
+<para><computeroutput>bool i2c_init (void )</computeroutput></para><para>
+
+<para>Initialize the API_I2C: I2C peripheral, Button User, Buffers, FSM alarm. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None.</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>true</entry><entry>
+<para>The initialization was successful. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>false</entry><entry>
+<para>The initialization was not successful. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="__a_p_i__i2c_8h_1ac30d66b3a336676e270508d5743980a8"/><section>
+    <title>TH_updated()</title>
+<indexterm><primary>TH_updated</primary><secondary>API_i2c.h</secondary></indexterm>
+<indexterm><primary>API_i2c.h</primary><secondary>TH_updated</secondary></indexterm>
+<para><computeroutput>bool TH_updated (uint32_t * temp, uint32_t * hum)</computeroutput></para><para>
+
+<para>Update Temperature and Humidity. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>temp</entry><entry>
+<para>Temperature to be updated. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>hum</entry><entry>
+<para>Humidity to be updated. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>true</entry><entry>
+<para>Updated successful. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>false</entry><entry>
+<para>Updated was not successful. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+</section>

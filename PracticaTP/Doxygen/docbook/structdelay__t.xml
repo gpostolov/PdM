@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structdelay__t" xml:lang="en-US">
+<title>delay_t Struct Reference</title>
+<indexterm><primary>delay_t</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_structdelay__t_1a7942cc879b9d2a429b4d2e1977fa52b9"/>tick_t <emphasis role="strong">startTime</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_structdelay__t_1a2efd6ae537b4af5e3413de5a8b8c2684"/>tick_t <emphasis role="strong">duration</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_structdelay__t_1a51adcd9342dc17747393922120c285e4"/>bool_t <emphasis role="strong">running</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this struct was generated from the following file:</para>
+C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/<link linkend="__a_p_i__delay_8h">API_delay.h</link></section>

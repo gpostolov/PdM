@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="en-US">
+  <compounddef id="dir_3687d230d630a5ddd385a272243b3a24" kind="dir">
+    <compoundname>C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc</compoundname>
+    <innerfile refid="_a_p_i__debounce_8h">API_debounce.h</innerfile>
+    <innerfile refid="_a_p_i__delay_8h">API_delay.h</innerfile>
+    <innerfile refid="_a_p_i__i2c_8h">API_i2c.h</innerfile>
+    <innerfile refid="_a_p_i__uart_8h">API_uart.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/"/>
+  </compounddef>
+</doxygen>

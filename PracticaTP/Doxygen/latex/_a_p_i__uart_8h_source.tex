@@ -1,0 +1,48 @@
+\hypertarget{_a_p_i__uart_8h_source}{}\doxysection{API\+\_\+uart.\+h}
+\label{_a_p_i__uart_8h_source}\index{C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API\_uart.h@{C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API\_uart.h}}
+\mbox{\hyperlink{_a_p_i__uart_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{9 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#ifndef API\_INC\_API\_UART\_H\_}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#define API\_INC\_API\_UART\_H\_}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <stdbool.h>}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{18 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{19 \textcolor{comment}{/* User can use this section to tailor USARTx/UARTx instance used and associated}}
+\DoxyCodeLine{20 \textcolor{comment}{   resources */}}
+\DoxyCodeLine{21 \textcolor{comment}{/* Definition for USARTx clock resources */}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#define USARTx                           USART3}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#define USARTx\_CLK\_ENABLE()              \_\_HAL\_RCC\_USART3\_CLK\_ENABLE();}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#define USARTx\_RX\_GPIO\_CLK\_ENABLE()      \_\_HAL\_RCC\_GPIOD\_CLK\_ENABLE()}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#define USARTx\_TX\_GPIO\_CLK\_ENABLE()      \_\_HAL\_RCC\_GPIOD\_CLK\_ENABLE()}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#define USARTx\_FORCE\_RESET()             \_\_HAL\_RCC\_USART3\_FORCE\_RESET()}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#define USARTx\_RELEASE\_RESET()           \_\_HAL\_RCC\_USART3\_RELEASE\_RESET()}}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{comment}{/* Definition for USARTx Pins */}}
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#define USARTx\_TX\_PIN                    GPIO\_PIN\_8}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#define USARTx\_TX\_GPIO\_PORT              GPIOD}}
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#define USARTx\_TX\_AF                     GPIO\_AF7\_USART3}}
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#define USARTx\_RX\_PIN                    GPIO\_PIN\_9}}
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#define USARTx\_RX\_GPIO\_PORT              GPIOD}}
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#define USARTx\_RX\_AF                     GPIO\_AF7\_USART3}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#define UART\_TX\_TIMEOUT 200}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define UART\_RX\_TIMEOUT 0xFFFF}}
+\DoxyCodeLine{41 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ */}}
+\DoxyCodeLine{42 \textcolor{keywordtype}{bool} \mbox{\hyperlink{_a_p_i__uart_8h_af4d71a13f5cd2001ac0eb140ec9bd084}{uartinit}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{43 \textcolor{keywordtype}{void} \mbox{\hyperlink{_a_p_i__uart_8h_a446c11b67abd8d44ae9ae308805bf848}{uartsendString}}(uint8\_t * pstring);}
+\DoxyCodeLine{44 \textcolor{keywordtype}{void} \mbox{\hyperlink{_a_p_i__uart_8h_a5f7272d7b83bf68319beb9c9acbb3f22}{uartSendStringSize}}(uint8\_t * pstring, uint16\_t size);}
+\DoxyCodeLine{45 \textcolor{keywordtype}{void} \mbox{\hyperlink{_a_p_i__uart_8h_aeffd5a15e15e28b5261f17b864ad28c4}{uartReceiveStringSize}}(uint8\_t * pstring, uint16\_t size);}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* API\_INC\_API\_UART\_H\_ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \textcolor{comment}{/***************************************************************END OF FILE****/}}
+
+\end{DoxyCode}

@@ -1,0 +1,877 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="en-US">
+  <compounddef id="_a_p_i__i2c_8c" kind="file" language="C++">
+    <compoundname>API_i2c.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="yes">stm32f4xx_hal.h</includes>
+    <includes local="yes">stm32f4xx_nucleo_144.h</includes>
+    <includes refid="_a_p_i__i2c_8h" local="yes">API_i2c.h</includes>
+    <includes refid="_a_p_i__debounce_8h" local="yes">API_debounce.h</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>API_debounce.h</label>
+        <link refid="_a_p_i__debounce_8h"/>
+      </node>
+      <node id="6">
+        <label>API_i2c.h</label>
+        <link refid="_a_p_i__i2c_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c</label>
+        <link refid="_a_p_i__i2c_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>stdbool.h</label>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+      <node id="4">
+        <label>stm32f4xx_hal.h</label>
+      </node>
+      <node id="5">
+        <label>stm32f4xx_nucleo_144.h</label>
+      </node>
+      <node id="3">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_a_p_i__i2c_8c_1a8afd4cc7bc4b0e060af062e5e1a9ac1f" prot="public" static="no">
+        <name>I2C_CLOCKSPEED_100K</name>
+        <initializer>100000U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" line="30" column="9" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i__i2c_8c_1a427d4c5afff6d2ffe371b5a9c4183eec" prot="public" static="no">
+        <name>I2C_OWN_ADDRESS1</name>
+        <initializer>0x01U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" line="31" column="9" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i__i2c_8c_1a70448969aaa3aa1fe87c5223f42d0394" prot="public" static="no">
+        <name>I2C_OWN_ADDRESS2</name>
+        <initializer>0xFFU</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" line="32" column="9" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i__i2c_8c_1a84977424b647dd9248ebf1436aaa1cc8" prot="public" static="no">
+        <name>MAXBUFFERSIZE</name>
+        <initializer>64</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" line="33" column="9" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i__i2c_8c_1ac5864035fa18d2bf3f4e88b548711f84" prot="public" static="no">
+        <name>ARRAY_TH</name>
+        <initializer>9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" line="34" column="9" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="_a_p_i__i2c_8c_1a7244763ebe44d4070815f3e3a01abe37" prot="public" static="no" strong="no">
+        <type></type>
+        <name>alarmState_t</name>
+        <enumvalue id="_a_p_i__i2c_8c_1a7244763ebe44d4070815f3e3a01abe37acb9be765f361bb7efb9073730aac92c6" prot="public">
+          <name>READ</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_a_p_i__i2c_8c_1a7244763ebe44d4070815f3e3a01abe37a70319396f85c1b9b17c8c05648df90cd" prot="public">
+          <name>DATA_ANALYSIS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_a_p_i__i2c_8c_1a7244763ebe44d4070815f3e3a01abe37a79a322ccb4b29b85b3cab52dbccefd17" prot="public">
+          <name>WAIT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_a_p_i__i2c_8c_1a7244763ebe44d4070815f3e3a01abe37ac4212312865bd8ac6810b9651d9e80df" prot="public">
+          <name>ALARM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" line="21" column="1" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" bodystart="21" bodyend="26"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_a_p_i__i2c_8c_1ac969e9fc650b7e92a8378abad5778c0e" prot="public" static="no" mutable="no">
+        <type>I2C_HandleTypeDef</type>
+        <definition>I2C_HandleTypeDef I2cHandle</definition>
+        <argsstring></argsstring>
+        <name>I2cHandle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" line="37" column="19" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_a_p_i__i2c_8c_1a02121e106f2bbb049d805160ac2aa36d" prot="public" static="yes" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t tx_buffer[TXBUFFERSIZE]</definition>
+        <argsstring>[TXBUFFERSIZE]</argsstring>
+        <name>tx_buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" line="38" column="16" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_a_p_i__i2c_8c_1a40728fd528a1881eb641223bba19c763" prot="public" static="yes" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t rx_buffer[RXBUFFERSIZE]</definition>
+        <argsstring>[RXBUFFERSIZE]</argsstring>
+        <name>rx_buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" line="39" column="16" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_a_p_i__i2c_8c_1a12ffe12121df84db9592f330551d4889" prot="public" static="yes" mutable="no">
+        <type>alarmState_t</type>
+        <definition>alarmState_t current_state</definition>
+        <argsstring></argsstring>
+        <name>current_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" line="40" column="21" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_a_p_i__i2c_8c_1a4d1b48e12ea4f1f4aef2b1b378159a81" prot="public" static="yes" mutable="no">
+        <type>alarmType_t</type>
+        <definition>alarmType_t current_alarm_state</definition>
+        <argsstring></argsstring>
+        <name>current_alarm_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" line="41" column="20" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_a_p_i__i2c_8c_1a6460ae4ad1bf348486378ed1456f1cfa" prot="public" static="yes" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t temperature</definition>
+        <argsstring></argsstring>
+        <name>temperature</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" line="42" column="17" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_a_p_i__i2c_8c_1a50c9fa7d72a92ac100303875e378d55c" prot="public" static="yes" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t humidity</definition>
+        <argsstring></argsstring>
+        <name>humidity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" line="43" column="17" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_a_p_i__i2c_8c_1aea5faaabcfe427edc3e94163545b9bd1" prot="public" static="yes" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t read_counter</definition>
+        <argsstring></argsstring>
+        <name>read_counter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" line="44" column="16" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_a_p_i__i2c_8c_1a7b22de5825dd3701891bb5a408e70c17" prot="public" static="yes" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t temperature_array[ARRAY_TH9]</definition>
+        <argsstring>[ARRAY_TH9]</argsstring>
+        <name>temperature_array</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" line="45" column="17" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_a_p_i__i2c_8c_1a51a68c2bb1c7a0c6a5bd1402a12a804c" prot="public" static="yes" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t humidity_array[ARRAY_TH]</definition>
+        <argsstring>[ARRAY_TH]</argsstring>
+        <name>humidity_array</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" line="46" column="17" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_a_p_i__i2c_8c_1a5a4ba60143c31271df0f72bf0e503876" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool new_data</definition>
+        <argsstring></argsstring>
+        <name>new_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" line="47" column="13" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_a_p_i__i2c_8c_1a203e2ee832666bc68e233a27f3135434" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool i2c_config</definition>
+        <argsstring>(void)</argsstring>
+        <name>i2c_config</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Configuration of the I2C peripheral. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>None.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>true</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The configuration was successful. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>false</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The configuration was not successful. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" line="61" column="13" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" bodystart="61" bodyend="77" declfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" declline="50" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="_a_p_i__i2c_8c_1a04d4ce38c7e873bd5d0609511afeb125" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>alarmType_t</type>
+        <definition>alarmType_t dataAnalysis</definition>
+        <argsstring>(void)</argsstring>
+        <name>dataAnalysis</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>It analyzes the data received and returns the status of the alarm. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>None.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Alarm status for received data. </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>NO_ALARM_</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>No Alarm. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>MAX_TEMP_ABS_</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Alarm. Maximum temperature was reached. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>MAX_TEMP_DIFF_</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Alarm. Temperature difference was reached in less than 3 minutes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>MAX_HUM_DIFF_</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Alarm. Humidity difference was reached in less than 3 minutes. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" line="89" column="13" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" bodystart="89" bodyend="109" declfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" declline="51" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="_a_p_i__i2c_8c_1aed85aa125f440f0950781a4070db597a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool readTH</definition>
+        <argsstring>(uint32_t *temp, uint32_t *hum)</argsstring>
+        <name>readTH</name>
+        <param>
+          <type>uint32_t *</type>
+          <defname>temp</defname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <defname>hum</defname>
+        </param>
+        <briefdescription>
+<para>Read Temperature and Humidity by I2C. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>temp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Temperature to be read. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hum</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Humidity to be read. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>true</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The reading was successful.. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>false</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The reading was not successful. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" line="119" column="13" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" bodystart="119" bodyend="138" declfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" declline="52" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="_a_p_i__i2c_8c_1afa5df72ad6ad253231de49eb98773fa8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void alarmTH_FSM_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>alarmTH_FSM_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize FSM (alarmTH_FSM). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>None.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" line="146" column="13" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" bodystart="146" bodyend="160" declfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" declline="53" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="_a_p_i__i2c_8c_1ad65f4e33df67b1746135cc8fb53a6832" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool i2c_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>i2c_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize the API_I2C: I2C peripheral, Button User, Buffers, FSM alarm. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>None.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>true</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The initialization was successful. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>false</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The initialization was not successful. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" line="170" column="6" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" bodystart="170" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="_a_p_i__i2c_8c_1a1937060c228988e5b891961a9518f3bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>alarmType_t</type>
+        <definition>alarmType_t alarmTH_FSM_update</definition>
+        <argsstring>(void)</argsstring>
+        <name>alarmTH_FSM_update</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Update FSM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>None.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Current alarm state. </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>NO_ALARM_</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>No Alarm. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>MAX_TEMP_ABS_</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Alarm. Maximum temperature was reached. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>MAX_TEMP_DIFF_</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Alarm. Temperature difference was reached in less than 3 minutes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>MAX_HUM_DIFF_</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Alarm. Humidity difference was reached in less than 3 minutes. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" line="203" column="13" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" bodystart="203" bodyend="236"/>
+      </memberdef>
+      <memberdef kind="function" id="_a_p_i__i2c_8c_1ae96275439ee26024bbb9ce29bc8f8c69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TH_updated</definition>
+        <argsstring>(uint32_t *temp, uint32_t *hum)</argsstring>
+        <name>TH_updated</name>
+        <param>
+          <type>uint32_t *</type>
+          <declname>temp</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>hum</declname>
+        </param>
+        <briefdescription>
+<para>Update Temperature and Humidity. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>temp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Temperature to be updated. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hum</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Humidity to be updated. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>true</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Updated successful. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>false</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Updated was not successful. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" line="246" column="6" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c" bodystart="246" bodyend="258"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>API i2c. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Gabriel Postolov </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//COMENTARIO:<sp/>Se<sp/>crean<sp/>archivos<sp/>separados<sp/>y<sp/>modularizados<sp/>API</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Includes<sp/>------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;stm32f4xx_hal.h&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>&lt;-<sp/>HAL<sp/>include<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;stm32f4xx_nucleo_144.h&quot;</highlight><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>&lt;-<sp/>BSP<sp/>include<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//COMENTARIO:<sp/>Se<sp/>hace<sp/>uso<sp/>de<sp/>la<sp/>API_debounce</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_a_p_i__i2c_8h" kindref="compound">API_i2c.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_a_p_i__debounce_8h" kindref="compound">API_debounce.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Private<sp/>typedef<sp/>-----------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>READ,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>DATA_ANALYSIS,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>WAIT,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>ALARM,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}<sp/>alarmState_t;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Private<sp/>define<sp/>------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//COMENTARIO:<sp/>No<sp/>se<sp/>hardcodean<sp/>valores</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>I2C_CLOCKSPEED_100K<sp/>100000U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>I2C_OWN_ADDRESS1<sp/>0x01U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>I2C_OWN_ADDRESS2<sp/>0xFFU</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAXBUFFERSIZE<sp/>64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ARRAY_TH<sp/>9</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Private<sp/>macro<sp/>-------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Private<sp/>variables<sp/>---------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">I2C_HandleTypeDef<sp/>I2cHandle;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/>tx_buffer[TXBUFFERSIZE];</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/>rx_buffer[RXBUFFERSIZE];</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>alarmState_t<sp/>current_state;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>alarmType_t<sp/>current_alarm_state;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint32_t<sp/>temperature;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint32_t<sp/>humidity;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/>read_counter;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint32_t<sp/>temperature_array[ARRAY_TH9];</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint32_t<sp/>humidity_array[ARRAY_TH];</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>new_data;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Private<sp/>function<sp/>prototypes<sp/>-----------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>i2c_config(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>alarmType_t<sp/>dataAnalysis(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>readTH(uint32_t<sp/>*,<sp/>uint32_t<sp/>*);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>alarmTH_FSM_init(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Private<sp/>functions<sp/>---------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>i2c_config(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{<sp/></highlight><highlight class="comment">//COMENTARIO:<sp/>Separo<sp/>en<sp/>funciones<sp/>privadas<sp/>y<sp/>publicas</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>I2cHandle.Instance<sp/>=<sp/>I2Cx;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>I2cHandle.Init.ClockSpeed<sp/>=<sp/>I2C_CLOCKSPEED_100K;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>I2cHandle.Init.OwnAddress1<sp/>=<sp/>I2C_OWN_ADDRESS1;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>I2cHandle.Init.AddressingMode<sp/>=<sp/>I2C_ADDRESSINGMODE_7BIT;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>I2cHandle.Init.DualAddressMode<sp/>=<sp/>I2C_DUALADDRESS_DISABLE;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>I2cHandle.Init.OwnAddress2<sp/>=<sp/>I2C_OWN_ADDRESS2;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>I2cHandle.Init.GeneralCallMode<sp/>=<sp/>I2C_GENERALCALL_DISABLE;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>I2cHandle.Init.NoStretchMode<sp/>=<sp/>I2C_NOSTRETCH_DISABLE;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(HAL_I2C_Init(&amp;I2cHandle)<sp/>!=<sp/>HAL_OK)<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Configuration<sp/>Error<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>Error_Handler();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal">alarmType_t<sp/>dataAnalysis(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>i;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>temp_diff<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>hum_diff<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(temperature<sp/>&gt;<sp/>MAX_TEMP_ABS)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>MAX_TEMP_ABS_;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(read_counter&gt;=ARRAY_TH)<sp/>read_counter=0;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>temperature_array[read_counter]=temperature;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>humidity_array[read_counter]=humidity;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>read_counter++;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i=0;i&lt;ARRAY_TH;i++){</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp_diff<sp/>=<sp/>(temperature&gt;temperature_array[i])?(temperature-temperature_array[i]):(temperature_array[i]-temperature);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(temp_diff<sp/>&gt;<sp/>MAX_TEMP_DIFF)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>MAX_TEMP_DIFF_;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hum_diff<sp/>=<sp/>(humidity&gt;humidity_array[i])?(humidity-humidity_array[i]):(humidity_array[i]-humidity);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(hum_diff<sp/>&gt;<sp/>MAX_HUM_DIFF)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>MAX_HUM_DIFF_;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NO_ALARM_;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>readTH(uint32_t<sp/>*temp,<sp/>uint32_t<sp/>*hum)<sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(temp<sp/>==<sp/>NULL)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(hum<sp/>==<sp/>NULL)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Command<sp/>to<sp/>read<sp/>from<sp/>SHT3X-DIS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>tx_buffer[0]<sp/>=<sp/>0x32;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>tx_buffer[1]<sp/>=<sp/>0x64;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(rx_buffer,<sp/>0,<sp/>RXBUFFERSIZE);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((HAL_I2C_Master_Transmit(&amp;I2cHandle,<sp/>SLAVE_DEV_ADDRESS,<sp/>tx_buffer,<sp/>2,</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>I2C_TXRX_TIMEOUT))<sp/>!=<sp/>HAL_OK)</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((HAL_I2C_Master_Receive(&amp;I2cHandle,<sp/>SLAVE_DEV_ADDRESS,<sp/>rx_buffer,<sp/>6,</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>I2C_TXRX_TIMEOUT))<sp/>!=<sp/>HAL_OK)</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>*temp<sp/>=<sp/>(uint32_t)(rx_buffer[0]*8<sp/>+<sp/>rx_buffer[1]*8);<sp/></highlight><highlight class="comment">//revisar<sp/>la<sp/>cuenta</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>*hum<sp/>=<sp/>(uint32_t)(rx_buffer[2]*8<sp/>+<sp/>rx_buffer[3]*8);<sp/></highlight><highlight class="comment">//revisar<sp/>la<sp/>cuenta</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>alarmTH_FSM_init(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>i;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>temperature<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>humidity<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>read_counter<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i=0;<sp/>i&lt;ARRAY_TH;<sp/>i++){</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temperature_array[i]=0;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>humidity_array[i]=0;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>current_state<sp/>=<sp/>READ;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>current_alarm_state<sp/>=<sp/>NO_ALARM_;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Public<sp/>functions<sp/>----------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_a_p_i__i2c_8c_1ad65f4e33df67b1746135cc8fb53a6832" kindref="member">i2c_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(TXBUFFERSIZE<sp/>&gt;<sp/>MAXBUFFERSIZE)</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/><sp/><sp/></highlight><highlight class="comment">//COMENTARIO:<sp/>Chequeo<sp/>valores</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(RXBUFFERSIZE<sp/>&gt;<sp/>MAXBUFFERSIZE)</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(tx_buffer,<sp/>0,<sp/>TXBUFFERSIZE);<sp/></highlight><highlight class="comment">//COMENTARIO:<sp/>Inicializo<sp/>todas<sp/>las<sp/>variables<sp/>que<sp/>se<sp/>van<sp/>a<sp/>usar.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(rx_buffer,<sp/>0,<sp/>RXBUFFERSIZE);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>alarmTH_FSM_init();</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>new_data<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Initialize<sp/>BSP<sp/>PB<sp/>for<sp/>BUTTON_USER<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>BSP_PB_Init(BUTTON_USER,<sp/>BUTTON_MODE_GPIO);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_a_p_i__debounce_8h_1ab3a205fff0350c246091ed7d529af591" kindref="member">debounceFSM_init</ref>();</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>i2c_config();</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Initialization<sp/>Error<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>Error_Handler();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal">alarmType_t<sp/><ref refid="_a_p_i__i2c_8c_1a1937060c228988e5b891961a9518f3bd" kindref="member">alarmTH_FSM_update</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(current_state)<sp/>{</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>READ:</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(readTH(&amp;temperature,&amp;humidity))<sp/>{</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>new_data<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>current_state<sp/>=<sp/>DATA_ANALYSIS;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>DATA_ANALYSIS:</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>current_alarm_state<sp/>=<sp/>dataAnalysis();</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(current_alarm_state<sp/>!=<sp/>NO_ALARM_)<sp/>{</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>current_state<sp/>=<sp/>ALARM;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>current_state<sp/>=<sp/>WAIT;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>WAIT:</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(1)<sp/>{<sp/></highlight><highlight class="comment">//<sp/>&lt;&lt;--<sp/>pasaron<sp/>20<sp/>segundos<sp/>desde<sp/>la<sp/>ultima<sp/>medicion?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>current_state<sp/>=<sp/>READ;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>ALARM:</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="_a_p_i__debounce_8h_1a1e3a414aec5def470add78a0ee37722c" kindref="member">readKey</ref>()){</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>alarmTH_FSM_init();</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>alarmTH_FSM_init();</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>current_alarm_state;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_a_p_i__i2c_8c_1ae96275439ee26024bbb9ce29bc8f8c69" kindref="member">TH_updated</ref>(uint32_t<sp/>*temp,<sp/>uint32_t<sp/>*hum){</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(temp<sp/>==<sp/>NULL)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(hum<sp/>==<sp/>NULL)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(new_data){</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>new_data<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*temp=temperature;</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*hum=humidity;</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="258"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c"/>
+  </compounddef>
+</doxygen>

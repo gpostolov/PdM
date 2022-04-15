@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="en-US">
+  <compounddef id="structdelay__t" kind="struct" language="C++" prot="public">
+    <compoundname>delay_t</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdelay__t_1a7942cc879b9d2a429b4d2e1977fa52b9" prot="public" static="no" mutable="no">
+        <type>tick_t</type>
+        <definition>tick_t delay_t::startTime</definition>
+        <argsstring></argsstring>
+        <name>startTime</name>
+        <qualifiedname>delay_t::startTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_delay.h" line="20" column="11" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_delay.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdelay__t_1a2efd6ae537b4af5e3413de5a8b8c2684" prot="public" static="no" mutable="no">
+        <type>tick_t</type>
+        <definition>tick_t delay_t::duration</definition>
+        <argsstring></argsstring>
+        <name>duration</name>
+        <qualifiedname>delay_t::duration</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_delay.h" line="21" column="11" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_delay.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdelay__t_1a51adcd9342dc17747393922120c285e4" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t delay_t::running</definition>
+        <argsstring></argsstring>
+        <name>running</name>
+        <qualifiedname>delay_t::running</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_delay.h" line="22" column="11" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_delay.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_delay.h" line="19" column="1" bodyfile="C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_delay.h" bodystart="19" bodyend="23"/>
+    <listofallmembers>
+      <member refid="structdelay__t_1a2efd6ae537b4af5e3413de5a8b8c2684" prot="public" virt="non-virtual"><scope>delay_t</scope><name>duration</name></member>
+      <member refid="structdelay__t_1a51adcd9342dc17747393922120c285e4" prot="public" virt="non-virtual"><scope>delay_t</scope><name>running</name></member>
+      <member refid="structdelay__t_1a7942cc879b9d2a429b4d2e1977fa52b9" prot="public" virt="non-virtual"><scope>delay_t</scope><name>startTime</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

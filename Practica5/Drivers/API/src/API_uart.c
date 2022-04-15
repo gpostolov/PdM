@@ -40,6 +40,13 @@ static const char * UART_CONFIG_M09 = "UART OverSampling: UART_OVERSAMPLING_16\n
 /* Private functions ---------------------------------------------------------*/
 
 /* Public functions ----------------------------------------------------------*/
+/**
+ * @brief  Initialize UART and send the configuration by UART.
+ * @param  None.
+ * @retval true: UART initialized successfully.
+ * @retval false: UART was not initialized successfully.
+ *
+ */
 bool uartinit() {
 	/* Put the USART peripheral in the Asynchronous mode (UART Mode) */
 	/* UART configured as follows:
@@ -76,6 +83,11 @@ bool uartinit() {
 	return true;
 }
 
+/**
+ * @brief  Send a string by UART.
+ * @param  pstring: String to be sent.
+ * @retval None.
+ */
 void uartsendString(uint8_t *pstring) {
 	if (pstring == NULL)
 		return;
@@ -86,18 +98,31 @@ void uartsendString(uint8_t *pstring) {
 	}
 }
 
-void uartSendStringSize(uint8_t * pstring, uint16_t size){
+/**
+ * @brief  Send a part of string by UART.
+ * @param  pstring: String to be sent.
+ * @param  size: size of the string to be sent.
+ * @retval None.
+ */
+void uartSendStringSize(uint8_t *pstring, uint16_t size) {
 	if (pstring == NULL) return;
 	if (size == 0) return;
 
 	uint16_t str_long = strlen((const char*) pstring);
+	if (str_long == 0) return;
 
-	if (str_long > 0) {
-		if(size<str_long) str_long = size; //Como maximo mando el largo de la cadena.
-		HAL_UART_Transmit(&UartHandle, pstring, str_long, UART_TX_TIMEOUT);
-	}
+	HAL_StatusTypeDef tx_status;
+	//*As a maximum, the length of the word is sent.
+	if (size < str_long) str_long = size;
+	tx_status = HAL_UART_Transmit(&UartHandle, pstring, str_long, UART_TX_TIMEOUT);
 }
 
+/**
+ * @brief  Receive a string by UART.
+ * @param  pstring: String to be received.
+ * @param  size: Number of characters to receive.
+ * @retval None.
+ */
 void uartReceiveStringSize(uint8_t * pstring, uint16_t size){
 	HAL_StatusTypeDef rx_status;
 

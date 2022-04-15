@@ -1,0 +1,267 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__a_p_i__i2c_8c" xml:lang="en-US">
+<title>C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c File Reference</title>
+<indexterm><primary>C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_i2c.c</primary></indexterm>
+<para>
+
+<para>API i2c. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#include &quot;stm32f4xx_hal.h&quot;
+#include &quot;stm32f4xx_nucleo_144.h&quot;
+#include &quot;API_i2c.h&quot;
+#include &quot;API_debounce.h&quot;
+</programlisting><simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="__a_p_i__i2c_8c_1a8afd4cc7bc4b0e060af062e5e1a9ac1f"/>#define <emphasis role="strong">I2C_CLOCKSPEED_100K</emphasis>   100000U</para>
+</listitem>
+            <listitem><para><anchor xml:id="__a_p_i__i2c_8c_1a427d4c5afff6d2ffe371b5a9c4183eec"/>#define <emphasis role="strong">I2C_OWN_ADDRESS1</emphasis>   0x01U</para>
+</listitem>
+            <listitem><para><anchor xml:id="__a_p_i__i2c_8c_1a70448969aaa3aa1fe87c5223f42d0394"/>#define <emphasis role="strong">I2C_OWN_ADDRESS2</emphasis>   0xFFU</para>
+</listitem>
+            <listitem><para><anchor xml:id="__a_p_i__i2c_8c_1a84977424b647dd9248ebf1436aaa1cc8"/>#define <emphasis role="strong">MAXBUFFERSIZE</emphasis>   64</para>
+</listitem>
+            <listitem><para><anchor xml:id="__a_p_i__i2c_8c_1ac5864035fa18d2bf3f4e88b548711f84"/>#define <emphasis role="strong">ARRAY_TH</emphasis>   9</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="__a_p_i__i2c_8c_1a7244763ebe44d4070815f3e3a01abe37"/>enum <emphasis role="strong">alarmState_t</emphasis> { <emphasis role="strong">READ</emphasis>
+, <emphasis role="strong">DATA_ANALYSIS</emphasis>
+, <emphasis role="strong">WAIT</emphasis>
+, <emphasis role="strong">ALARM</emphasis>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="__a_p_i__i2c_8c_1ad65f4e33df67b1746135cc8fb53a6832">i2c_init</link> (void)</para>
+
+<para>Initialize the API_I2C: I2C peripheral, Button User, Buffers, FSM alarm. </para>
+</listitem>
+            <listitem><para>alarmType_t <link linkend="__a_p_i__i2c_8c_1a1937060c228988e5b891961a9518f3bd">alarmTH_FSM_update</link> (void)</para>
+
+<para>Update FSM. </para>
+</listitem>
+            <listitem><para>bool <link linkend="__a_p_i__i2c_8c_1ae96275439ee26024bbb9ce29bc8f8c69">TH_updated</link> (uint32_t *temp, uint32_t *hum)</para>
+
+<para>Update Temperature and Humidity. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="__a_p_i__i2c_8c_1ac969e9fc650b7e92a8378abad5778c0e"/>I2C_HandleTypeDef <emphasis role="strong">I2cHandle</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>API i2c. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Gabriel Postolov </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__a_p_i__i2c_8c_1a1937060c228988e5b891961a9518f3bd"/><section>
+    <title>alarmTH_FSM_update()</title>
+<indexterm><primary>alarmTH_FSM_update</primary><secondary>API_i2c.c</secondary></indexterm>
+<indexterm><primary>API_i2c.c</primary><secondary>alarmTH_FSM_update</secondary></indexterm>
+<para><computeroutput>alarmType_t alarmTH_FSM_update (void )</computeroutput></para><para>
+
+<para>Update FSM. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None.</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Current alarm state. </para>
+</formalpara>
+
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>NO_ALARM_</entry><entry>
+<para>No Alarm. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>MAX_TEMP_ABS_</entry><entry>
+<para>Alarm. Maximum temperature was reached. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>MAX_TEMP_DIFF_</entry><entry>
+<para>Alarm. Temperature difference was reached in less than 3 minutes. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>MAX_HUM_DIFF_</entry><entry>
+<para>Alarm. Humidity difference was reached in less than 3 minutes. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="__a_p_i__i2c_8c_1ad65f4e33df67b1746135cc8fb53a6832"/><section>
+    <title>i2c_init()</title>
+<indexterm><primary>i2c_init</primary><secondary>API_i2c.c</secondary></indexterm>
+<indexterm><primary>API_i2c.c</primary><secondary>i2c_init</secondary></indexterm>
+<para><computeroutput>bool i2c_init (void )</computeroutput></para><para>
+
+<para>Initialize the API_I2C: I2C peripheral, Button User, Buffers, FSM alarm. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None.</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>true</entry><entry>
+<para>The initialization was successful. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>false</entry><entry>
+<para>The initialization was not successful. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="__a_p_i__i2c_8c_1ae96275439ee26024bbb9ce29bc8f8c69"/><section>
+    <title>TH_updated()</title>
+<indexterm><primary>TH_updated</primary><secondary>API_i2c.c</secondary></indexterm>
+<indexterm><primary>API_i2c.c</primary><secondary>TH_updated</secondary></indexterm>
+<para><computeroutput>bool TH_updated (uint32_t * temp, uint32_t * hum)</computeroutput></para><para>
+
+<para>Update Temperature and Humidity. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>temp</entry><entry>
+<para>Temperature to be updated. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>hum</entry><entry>
+<para>Humidity to be updated. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>true</entry><entry>
+<para>Updated successful. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>false</entry><entry>
+<para>Updated was not successful. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+</section>

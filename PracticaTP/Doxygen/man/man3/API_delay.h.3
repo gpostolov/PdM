@@ -1,0 +1,118 @@
+.TH "C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_delay.h" 3 "Sun Apr 10 2022" "PdM TP" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_delay.h \- API_delay\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdbool\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBdelay_t\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef uint32_t \fBtick_t\fP"
+.br
+.ti -1c
+.RI "typedef bool \fBbool_t\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBdelayInit\fP (\fBdelay_t\fP *delay, tick_t duration)"
+.br
+.RI "Initialize the led delays\&. "
+.ti -1c
+.RI "bool_t \fBdelayRead\fP (\fBdelay_t\fP *delay)"
+.br
+.RI "The state of the running flag is checked\&. If false, it takes the timestamp and changes the execution flag to 'true'\&. If it is true, it makes the account to know if the delay time has been fulfilled or not\&. Returns a boolean value indicating whether or not the time has expired\&. "
+.ti -1c
+.RI "void \fBdelayWrite\fP (\fBdelay_t\fP *delay, tick_t duration)"
+.br
+.RI "The function allows to change the duration time of an existing delay\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+API_delay\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Gabriel Postolov 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "void delayInit (\fBdelay_t\fP * delay, tick_t duration)"
+
+.PP
+Initialize the led delays\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdelay\fP delay to be initialized\&. 
+.br
+\fIduration\fP duration in milliseconds of the delay\&. 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.SS "bool_t delayRead (\fBdelay_t\fP * delay)"
+
+.PP
+The state of the running flag is checked\&. If false, it takes the timestamp and changes the execution flag to 'true'\&. If it is true, it makes the account to know if the delay time has been fulfilled or not\&. Returns a boolean value indicating whether or not the time has expired\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdelay\fP delay to be checked\&. 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fItrue\fP the time has expired\&. 
+.br
+\fIfalse\fP the time has not expired\&. 
+.RE
+.PP
+
+.SS "void delayWrite (\fBdelay_t\fP * delay, tick_t duration)"
+
+.PP
+The function allows to change the duration time of an existing delay\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdelay\fP delay has to be modified\&. 
+.br
+\fIduration\fP duration in milliseconds of the delay\&. 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for PdM TP from the source code\&.

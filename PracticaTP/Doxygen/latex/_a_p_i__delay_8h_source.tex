@@ -1,0 +1,30 @@
+\hypertarget{_a_p_i__delay_8h_source}{}\doxysection{API\+\_\+delay.\+h}
+\label{_a_p_i__delay_8h_source}\index{C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API\_delay.h@{C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API\_delay.h}}
+\mbox{\hyperlink{_a_p_i__delay_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{9 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#ifndef API\_API\_DELAY\_H\_}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#define API\_API\_DELAY\_H\_}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <stdbool.h>}}
+\DoxyCodeLine{16 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{17 \textcolor{keyword}{typedef} uint32\_t tick\_t;}
+\DoxyCodeLine{18 \textcolor{keyword}{typedef} \textcolor{keywordtype}{bool} bool\_t;}
+\DoxyCodeLine{19 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{20    tick\_t startTime;}
+\DoxyCodeLine{21    tick\_t duration;}
+\DoxyCodeLine{22    bool\_t running;}
+\DoxyCodeLine{23 \} \mbox{\hyperlink{structdelay__t}{delay\_t}};}
+\DoxyCodeLine{24 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{25 \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{26 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ */}}
+\DoxyCodeLine{27 \textcolor{keywordtype}{void} \mbox{\hyperlink{_a_p_i__delay_8h_a6613427678149cadd03bac79e79475f3}{delayInit}}( \mbox{\hyperlink{structdelay__t}{delay\_t}} * delay, tick\_t duration );}
+\DoxyCodeLine{28 bool\_t \mbox{\hyperlink{_a_p_i__delay_8h_afecaa44225b94ebfb354e4b6b7e6e9ce}{delayRead}}( \mbox{\hyperlink{structdelay__t}{delay\_t}} * delay );}
+\DoxyCodeLine{29 \textcolor{keywordtype}{void} \mbox{\hyperlink{_a_p_i__delay_8h_a2af041ac01bb3db8ecf87ce371fac67d}{delayWrite}}( \mbox{\hyperlink{structdelay__t}{delay\_t}} * delay, tick\_t duration );}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* API\_API\_DELAY\_H\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

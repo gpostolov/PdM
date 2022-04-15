@@ -1,0 +1,109 @@
+\hypertarget{_a_p_i__delay_8h}{}\doxysection{C\+:/\+Users/\+Gabriel/\+Documents/\+Git\+Hub/\+Pd\+M/\+Practica\+TP/\+Drivers/\+API/inc/\+API\+\_\+delay.h File Reference}
+\label{_a_p_i__delay_8h}\index{C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API\_delay.h@{C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API\_delay.h}}
+
+
+API\+\_\+delay.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structdelay__t}{delay\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_a_p_i__delay_8h_a451a7d205dfb766727eba25c6e61c687}\label{_a_p_i__delay_8h_a451a7d205dfb766727eba25c6e61c687}} 
+typedef uint32\+\_\+t {\bfseries tick\+\_\+t}
+\item 
+\mbox{\Hypertarget{_a_p_i__delay_8h_a2b21255bd7f7192db778983b15089208}\label{_a_p_i__delay_8h_a2b21255bd7f7192db778983b15089208}} 
+typedef bool {\bfseries bool\+\_\+t}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_a_p_i__delay_8h_a6613427678149cadd03bac79e79475f3}{delay\+Init}} (\mbox{\hyperlink{structdelay__t}{delay\+\_\+t}} $\ast$delay, tick\+\_\+t duration)
+\begin{DoxyCompactList}\small\item\em Initialize the led delays. \end{DoxyCompactList}\item 
+bool\+\_\+t \mbox{\hyperlink{_a_p_i__delay_8h_afecaa44225b94ebfb354e4b6b7e6e9ce}{delay\+Read}} (\mbox{\hyperlink{structdelay__t}{delay\+\_\+t}} $\ast$delay)
+\begin{DoxyCompactList}\small\item\em The state of the running flag is checked. If false, it takes the timestamp and changes the execution flag to \textquotesingle{}true\textquotesingle{}. If it is true, it makes the account to know if the delay time has been fulfilled or not. Returns a boolean value indicating whether or not the time has expired. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_a_p_i__delay_8h_a2af041ac01bb3db8ecf87ce371fac67d}{delay\+Write}} (\mbox{\hyperlink{structdelay__t}{delay\+\_\+t}} $\ast$delay, tick\+\_\+t duration)
+\begin{DoxyCompactList}\small\item\em The function allows to change the duration time of an existing delay. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+API\+\_\+delay. 
+
+\begin{DoxyAuthor}{Author}
+Gabriel Postolov 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_a_p_i__delay_8h_a6613427678149cadd03bac79e79475f3}\label{_a_p_i__delay_8h_a6613427678149cadd03bac79e79475f3}} 
+\index{API\_delay.h@{API\_delay.h}!delayInit@{delayInit}}
+\index{delayInit@{delayInit}!API\_delay.h@{API\_delay.h}}
+\doxysubsubsection{\texorpdfstring{delayInit()}{delayInit()}}
+{\footnotesize\ttfamily void delay\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdelay__t}{delay\+\_\+t}} $\ast$}]{delay,  }\item[{tick\+\_\+t}]{duration }\end{DoxyParamCaption})}
+
+
+
+Initialize the led delays. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delay} & delay to be initialized. \\
+\hline
+{\em duration} & duration in milliseconds of the delay. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{_a_p_i__delay_8h_afecaa44225b94ebfb354e4b6b7e6e9ce}\label{_a_p_i__delay_8h_afecaa44225b94ebfb354e4b6b7e6e9ce}} 
+\index{API\_delay.h@{API\_delay.h}!delayRead@{delayRead}}
+\index{delayRead@{delayRead}!API\_delay.h@{API\_delay.h}}
+\doxysubsubsection{\texorpdfstring{delayRead()}{delayRead()}}
+{\footnotesize\ttfamily bool\+\_\+t delay\+Read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdelay__t}{delay\+\_\+t}} $\ast$}]{delay }\end{DoxyParamCaption})}
+
+
+
+The state of the running flag is checked. If false, it takes the timestamp and changes the execution flag to \textquotesingle{}true\textquotesingle{}. If it is true, it makes the account to know if the delay time has been fulfilled or not. Returns a boolean value indicating whether or not the time has expired. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delay} & delay to be checked. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & the time has expired. \\
+\hline
+{\em false} & the time has not expired. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{_a_p_i__delay_8h_a2af041ac01bb3db8ecf87ce371fac67d}\label{_a_p_i__delay_8h_a2af041ac01bb3db8ecf87ce371fac67d}} 
+\index{API\_delay.h@{API\_delay.h}!delayWrite@{delayWrite}}
+\index{delayWrite@{delayWrite}!API\_delay.h@{API\_delay.h}}
+\doxysubsubsection{\texorpdfstring{delayWrite()}{delayWrite()}}
+{\footnotesize\ttfamily void delay\+Write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdelay__t}{delay\+\_\+t}} $\ast$}]{delay,  }\item[{tick\+\_\+t}]{duration }\end{DoxyParamCaption})}
+
+
+
+The function allows to change the duration time of an existing delay. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delay} & delay has to be modified. \\
+\hline
+{\em duration} & duration in milliseconds of the delay. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}

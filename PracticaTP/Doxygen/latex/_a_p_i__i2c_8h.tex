@@ -1,0 +1,174 @@
+\hypertarget{_a_p_i__i2c_8h}{}\doxysection{C\+:/\+Users/\+Gabriel/\+Documents/\+Git\+Hub/\+Pd\+M/\+Practica\+TP/\+Drivers/\+API/inc/\+API\+\_\+i2c.h File Reference}
+\label{_a_p_i__i2c_8h}\index{C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API\_i2c.h@{C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API\_i2c.h}}
+
+
+API i2c.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_a_p_i__i2c_8h_a01f0f8cf04d3aa99ef2addf546d6a869}\label{_a_p_i__i2c_8h_a01f0f8cf04d3aa99ef2addf546d6a869}} 
+\#define {\bfseries I2\+Cx}~I2\+C1
+\item 
+\mbox{\Hypertarget{_a_p_i__i2c_8h_a7aef7519046ed7a9b7f167002804463d}\label{_a_p_i__i2c_8h_a7aef7519046ed7a9b7f167002804463d}} 
+\#define {\bfseries I2\+Cx\+\_\+\+CLK\+\_\+\+ENABLE}()~\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+I2\+C1\+\_\+\+CLK\+\_\+\+ENABLE()
+\item 
+\mbox{\Hypertarget{_a_p_i__i2c_8h_a91033bae83efaf72338333ed28476a21}\label{_a_p_i__i2c_8h_a91033bae83efaf72338333ed28476a21}} 
+\#define {\bfseries I2\+Cx\+\_\+\+SDA\+\_\+\+GPIO\+\_\+\+CLK\+\_\+\+ENABLE}()~\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOB\+\_\+\+CLK\+\_\+\+ENABLE()
+\item 
+\mbox{\Hypertarget{_a_p_i__i2c_8h_ab8486a80ab56a03dfac399e3e6d4dba2}\label{_a_p_i__i2c_8h_ab8486a80ab56a03dfac399e3e6d4dba2}} 
+\#define {\bfseries I2\+Cx\+\_\+\+SCL\+\_\+\+GPIO\+\_\+\+CLK\+\_\+\+ENABLE}()~\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOB\+\_\+\+CLK\+\_\+\+ENABLE()
+\item 
+\mbox{\Hypertarget{_a_p_i__i2c_8h_a5f88d5ce44f2db25e9e670d44637064b}\label{_a_p_i__i2c_8h_a5f88d5ce44f2db25e9e670d44637064b}} 
+\#define {\bfseries I2\+Cx\+\_\+\+FORCE\+\_\+\+RESET}()~\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+I2\+C1\+\_\+\+FORCE\+\_\+\+RESET()
+\item 
+\mbox{\Hypertarget{_a_p_i__i2c_8h_a12b00cb1505b0117e694e7412e004f12}\label{_a_p_i__i2c_8h_a12b00cb1505b0117e694e7412e004f12}} 
+\#define {\bfseries I2\+Cx\+\_\+\+RELEASE\+\_\+\+RESET}()~\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+I2\+C1\+\_\+\+RELEASE\+\_\+\+RESET()
+\item 
+\mbox{\Hypertarget{_a_p_i__i2c_8h_a85a7350686d979a81d6a06836ac71505}\label{_a_p_i__i2c_8h_a85a7350686d979a81d6a06836ac71505}} 
+\#define {\bfseries I2\+Cx\+\_\+\+SCL\+\_\+\+PIN}~GPIO\+\_\+\+PIN\+\_\+6
+\item 
+\mbox{\Hypertarget{_a_p_i__i2c_8h_af9b3f778e738463f656cdca5e5653f84}\label{_a_p_i__i2c_8h_af9b3f778e738463f656cdca5e5653f84}} 
+\#define {\bfseries I2\+Cx\+\_\+\+SCL\+\_\+\+GPIO\+\_\+\+PORT}~GPIOB
+\item 
+\mbox{\Hypertarget{_a_p_i__i2c_8h_a483fa01fddafa6ec75616ca6c168f23b}\label{_a_p_i__i2c_8h_a483fa01fddafa6ec75616ca6c168f23b}} 
+\#define {\bfseries I2\+Cx\+\_\+\+SCL\+\_\+\+AF}~GPIO\+\_\+\+AF4\+\_\+\+I2\+C1
+\item 
+\mbox{\Hypertarget{_a_p_i__i2c_8h_a7948abe69eb1335f74ef5c8a9c91154f}\label{_a_p_i__i2c_8h_a7948abe69eb1335f74ef5c8a9c91154f}} 
+\#define {\bfseries I2\+Cx\+\_\+\+SDA\+\_\+\+PIN}~GPIO\+\_\+\+PIN\+\_\+7
+\item 
+\mbox{\Hypertarget{_a_p_i__i2c_8h_a9c64aca9ffb944c695e9c13279b62fdc}\label{_a_p_i__i2c_8h_a9c64aca9ffb944c695e9c13279b62fdc}} 
+\#define {\bfseries I2\+Cx\+\_\+\+SDA\+\_\+\+GPIO\+\_\+\+PORT}~GPIOB
+\item 
+\mbox{\Hypertarget{_a_p_i__i2c_8h_a4cd28159c8df40e5688a2e3312ea34b4}\label{_a_p_i__i2c_8h_a4cd28159c8df40e5688a2e3312ea34b4}} 
+\#define {\bfseries I2\+Cx\+\_\+\+SDA\+\_\+\+AF}~GPIO\+\_\+\+AF4\+\_\+\+I2\+C1
+\item 
+\mbox{\Hypertarget{_a_p_i__i2c_8h_a8c651ff98c42106f3a14ee4225677cc8}\label{_a_p_i__i2c_8h_a8c651ff98c42106f3a14ee4225677cc8}} 
+\#define {\bfseries TXBUFFERSIZE}~20
+\item 
+\mbox{\Hypertarget{_a_p_i__i2c_8h_a29d12c67e4b6e0ff96d7aa793757b094}\label{_a_p_i__i2c_8h_a29d12c67e4b6e0ff96d7aa793757b094}} 
+\#define {\bfseries RXBUFFERSIZE}~TXBUFFERSIZE
+\item 
+\mbox{\Hypertarget{_a_p_i__i2c_8h_aaaf9e8e42cbc82ceb68667006f22cd9e}\label{_a_p_i__i2c_8h_aaaf9e8e42cbc82ceb68667006f22cd9e}} 
+\#define {\bfseries SLAVE\+\_\+\+DEV\+\_\+\+ADDRESS}~0x44
+\item 
+\mbox{\Hypertarget{_a_p_i__i2c_8h_aa5f3b3e2f24c2c822cc1e0fe50c5ed64}\label{_a_p_i__i2c_8h_aa5f3b3e2f24c2c822cc1e0fe50c5ed64}} 
+\#define {\bfseries MAX\+\_\+\+TEMP\+\_\+\+ABS}~50
+\item 
+\mbox{\Hypertarget{_a_p_i__i2c_8h_a937dc389db12b9ddfec77266154d6b81}\label{_a_p_i__i2c_8h_a937dc389db12b9ddfec77266154d6b81}} 
+\#define {\bfseries MAX\+\_\+\+TEMP\+\_\+\+DIFF}~5
+\item 
+\mbox{\Hypertarget{_a_p_i__i2c_8h_a978e9da6e69d6e3958485a2d3dadb99a}\label{_a_p_i__i2c_8h_a978e9da6e69d6e3958485a2d3dadb99a}} 
+\#define {\bfseries MAX\+\_\+\+HUM\+\_\+\+DIFF}~20
+\item 
+\mbox{\Hypertarget{_a_p_i__i2c_8h_a84c70a8b5fd3588b6acac8382d71480d}\label{_a_p_i__i2c_8h_a84c70a8b5fd3588b6acac8382d71480d}} 
+\#define {\bfseries I2\+C\+\_\+\+TXRX\+\_\+\+TIMEOUT}~100
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_a_p_i__i2c_8h_acfb4e3d098b3102d5b5c3cd01a7802e6}\label{_a_p_i__i2c_8h_acfb4e3d098b3102d5b5c3cd01a7802e6}} 
+enum {\bfseries alarm\+Type\+\_\+t} \{ {\bfseries NO\+\_\+\+ALARM\+\_\+}
+, {\bfseries MAX\+\_\+\+TEMP\+\_\+\+ABS\+\_\+}
+, {\bfseries MAX\+\_\+\+TEMP\+\_\+\+DIFF\+\_\+}
+, {\bfseries MAX\+\_\+\+HUM\+\_\+\+DIFF\+\_\+}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_a_p_i__i2c_8h_ad65f4e33df67b1746135cc8fb53a6832}{i2c\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the API\+\_\+\+I2C\+: I2C peripheral, Button User, Buffers, FSM alarm. \end{DoxyCompactList}\item 
+alarm\+Type\+\_\+t \mbox{\hyperlink{_a_p_i__i2c_8h_a1937060c228988e5b891961a9518f3bd}{alarm\+TH\+\_\+\+FSM\+\_\+update}} (void)
+\begin{DoxyCompactList}\small\item\em Update FSM. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_a_p_i__i2c_8h_ac30d66b3a336676e270508d5743980a8}{TH\+\_\+updated}} (uint32\+\_\+t $\ast$, uint32\+\_\+t $\ast$)
+\begin{DoxyCompactList}\small\item\em Update Temperature and Humidity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+API i2c. 
+
+\begin{DoxyAuthor}{Author}
+Gabriel Postolov 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_a_p_i__i2c_8h_a1937060c228988e5b891961a9518f3bd}\label{_a_p_i__i2c_8h_a1937060c228988e5b891961a9518f3bd}} 
+\index{API\_i2c.h@{API\_i2c.h}!alarmTH\_FSM\_update@{alarmTH\_FSM\_update}}
+\index{alarmTH\_FSM\_update@{alarmTH\_FSM\_update}!API\_i2c.h@{API\_i2c.h}}
+\doxysubsubsection{\texorpdfstring{alarmTH\_FSM\_update()}{alarmTH\_FSM\_update()}}
+{\footnotesize\ttfamily alarm\+Type\+\_\+t alarm\+TH\+\_\+\+FSM\+\_\+update (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Update FSM. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Current alarm state. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em NO\+\_\+\+ALARM\+\_\+} & No Alarm. \\
+\hline
+{\em MAX\+\_\+\+TEMP\+\_\+\+ABS\+\_\+} & Alarm. Maximum temperature was reached. \\
+\hline
+{\em MAX\+\_\+\+TEMP\+\_\+\+DIFF\+\_\+} & Alarm. Temperature difference was reached in less than 3 minutes. \\
+\hline
+{\em MAX\+\_\+\+HUM\+\_\+\+DIFF\+\_\+} & Alarm. Humidity difference was reached in less than 3 minutes. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{_a_p_i__i2c_8h_ad65f4e33df67b1746135cc8fb53a6832}\label{_a_p_i__i2c_8h_ad65f4e33df67b1746135cc8fb53a6832}} 
+\index{API\_i2c.h@{API\_i2c.h}!i2c\_init@{i2c\_init}}
+\index{i2c\_init@{i2c\_init}!API\_i2c.h@{API\_i2c.h}}
+\doxysubsubsection{\texorpdfstring{i2c\_init()}{i2c\_init()}}
+{\footnotesize\ttfamily bool i2c\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize the API\+\_\+\+I2C\+: I2C peripheral, Button User, Buffers, FSM alarm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & The initialization was successful. \\
+\hline
+{\em false} & The initialization was not successful. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{_a_p_i__i2c_8h_ac30d66b3a336676e270508d5743980a8}\label{_a_p_i__i2c_8h_ac30d66b3a336676e270508d5743980a8}} 
+\index{API\_i2c.h@{API\_i2c.h}!TH\_updated@{TH\_updated}}
+\index{TH\_updated@{TH\_updated}!API\_i2c.h@{API\_i2c.h}}
+\doxysubsubsection{\texorpdfstring{TH\_updated()}{TH\_updated()}}
+{\footnotesize\ttfamily bool TH\+\_\+updated (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{temp,  }\item[{uint32\+\_\+t $\ast$}]{hum }\end{DoxyParamCaption})}
+
+
+
+Update Temperature and Humidity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em temp} & Temperature to be updated. \\
+\hline
+{\em hum} & Humidity to be updated. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & Updated successful. \\
+\hline
+{\em false} & Updated was not successful. \\
+\hline
+\end{DoxyRetVals}

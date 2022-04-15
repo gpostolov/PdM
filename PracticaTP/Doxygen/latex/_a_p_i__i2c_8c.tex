@@ -1,0 +1,142 @@
+\hypertarget{_a_p_i__i2c_8c}{}\doxysection{C\+:/\+Users/\+Gabriel/\+Documents/\+Git\+Hub/\+Pd\+M/\+Practica\+TP/\+Drivers/\+API/src/\+API\+\_\+i2c.c File Reference}
+\label{_a_p_i__i2c_8c}\index{C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API\_i2c.c@{C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API\_i2c.c}}
+
+
+API i2c.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+hal.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+nucleo\+\_\+144.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}API\+\_\+i2c.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}API\+\_\+debounce.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_a_p_i__i2c_8c_a8afd4cc7bc4b0e060af062e5e1a9ac1f}\label{_a_p_i__i2c_8c_a8afd4cc7bc4b0e060af062e5e1a9ac1f}} 
+\#define {\bfseries I2\+C\+\_\+\+CLOCKSPEED\+\_\+100K}~100000U
+\item 
+\mbox{\Hypertarget{_a_p_i__i2c_8c_a427d4c5afff6d2ffe371b5a9c4183eec}\label{_a_p_i__i2c_8c_a427d4c5afff6d2ffe371b5a9c4183eec}} 
+\#define {\bfseries I2\+C\+\_\+\+OWN\+\_\+\+ADDRESS1}~0x01U
+\item 
+\mbox{\Hypertarget{_a_p_i__i2c_8c_a70448969aaa3aa1fe87c5223f42d0394}\label{_a_p_i__i2c_8c_a70448969aaa3aa1fe87c5223f42d0394}} 
+\#define {\bfseries I2\+C\+\_\+\+OWN\+\_\+\+ADDRESS2}~0x\+FFU
+\item 
+\mbox{\Hypertarget{_a_p_i__i2c_8c_a84977424b647dd9248ebf1436aaa1cc8}\label{_a_p_i__i2c_8c_a84977424b647dd9248ebf1436aaa1cc8}} 
+\#define {\bfseries MAXBUFFERSIZE}~64
+\item 
+\mbox{\Hypertarget{_a_p_i__i2c_8c_ac5864035fa18d2bf3f4e88b548711f84}\label{_a_p_i__i2c_8c_ac5864035fa18d2bf3f4e88b548711f84}} 
+\#define {\bfseries ARRAY\+\_\+\+TH}~9
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_a_p_i__i2c_8c_a7244763ebe44d4070815f3e3a01abe37}\label{_a_p_i__i2c_8c_a7244763ebe44d4070815f3e3a01abe37}} 
+enum {\bfseries alarm\+State\+\_\+t} \{ {\bfseries READ}
+, {\bfseries DATA\+\_\+\+ANALYSIS}
+, {\bfseries WAIT}
+, {\bfseries ALARM}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_a_p_i__i2c_8c_ad65f4e33df67b1746135cc8fb53a6832}{i2c\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the API\+\_\+\+I2C\+: I2C peripheral, Button User, Buffers, FSM alarm. \end{DoxyCompactList}\item 
+alarm\+Type\+\_\+t \mbox{\hyperlink{_a_p_i__i2c_8c_a1937060c228988e5b891961a9518f3bd}{alarm\+TH\+\_\+\+FSM\+\_\+update}} (void)
+\begin{DoxyCompactList}\small\item\em Update FSM. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_a_p_i__i2c_8c_ae96275439ee26024bbb9ce29bc8f8c69}{TH\+\_\+updated}} (uint32\+\_\+t $\ast$temp, uint32\+\_\+t $\ast$hum)
+\begin{DoxyCompactList}\small\item\em Update Temperature and Humidity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_a_p_i__i2c_8c_ac969e9fc650b7e92a8378abad5778c0e}\label{_a_p_i__i2c_8c_ac969e9fc650b7e92a8378abad5778c0e}} 
+I2\+C\+\_\+\+Handle\+Type\+Def {\bfseries I2c\+Handle}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+API i2c. 
+
+\begin{DoxyAuthor}{Author}
+Gabriel Postolov 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_a_p_i__i2c_8c_a1937060c228988e5b891961a9518f3bd}\label{_a_p_i__i2c_8c_a1937060c228988e5b891961a9518f3bd}} 
+\index{API\_i2c.c@{API\_i2c.c}!alarmTH\_FSM\_update@{alarmTH\_FSM\_update}}
+\index{alarmTH\_FSM\_update@{alarmTH\_FSM\_update}!API\_i2c.c@{API\_i2c.c}}
+\doxysubsubsection{\texorpdfstring{alarmTH\_FSM\_update()}{alarmTH\_FSM\_update()}}
+{\footnotesize\ttfamily alarm\+Type\+\_\+t alarm\+TH\+\_\+\+FSM\+\_\+update (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Update FSM. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Current alarm state. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em NO\+\_\+\+ALARM\+\_\+} & No Alarm. \\
+\hline
+{\em MAX\+\_\+\+TEMP\+\_\+\+ABS\+\_\+} & Alarm. Maximum temperature was reached. \\
+\hline
+{\em MAX\+\_\+\+TEMP\+\_\+\+DIFF\+\_\+} & Alarm. Temperature difference was reached in less than 3 minutes. \\
+\hline
+{\em MAX\+\_\+\+HUM\+\_\+\+DIFF\+\_\+} & Alarm. Humidity difference was reached in less than 3 minutes. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{_a_p_i__i2c_8c_ad65f4e33df67b1746135cc8fb53a6832}\label{_a_p_i__i2c_8c_ad65f4e33df67b1746135cc8fb53a6832}} 
+\index{API\_i2c.c@{API\_i2c.c}!i2c\_init@{i2c\_init}}
+\index{i2c\_init@{i2c\_init}!API\_i2c.c@{API\_i2c.c}}
+\doxysubsubsection{\texorpdfstring{i2c\_init()}{i2c\_init()}}
+{\footnotesize\ttfamily bool i2c\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize the API\+\_\+\+I2C\+: I2C peripheral, Button User, Buffers, FSM alarm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & The initialization was successful. \\
+\hline
+{\em false} & The initialization was not successful. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{_a_p_i__i2c_8c_ae96275439ee26024bbb9ce29bc8f8c69}\label{_a_p_i__i2c_8c_ae96275439ee26024bbb9ce29bc8f8c69}} 
+\index{API\_i2c.c@{API\_i2c.c}!TH\_updated@{TH\_updated}}
+\index{TH\_updated@{TH\_updated}!API\_i2c.c@{API\_i2c.c}}
+\doxysubsubsection{\texorpdfstring{TH\_updated()}{TH\_updated()}}
+{\footnotesize\ttfamily bool TH\+\_\+updated (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{temp,  }\item[{uint32\+\_\+t $\ast$}]{hum }\end{DoxyParamCaption})}
+
+
+
+Update Temperature and Humidity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em temp} & Temperature to be updated. \\
+\hline
+{\em hum} & Humidity to be updated. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & Updated successful. \\
+\hline
+{\em false} & Updated was not successful. \\
+\hline
+\end{DoxyRetVals}

@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__a_p_i__uart_8h_source" xml:lang="en-US">
+<title>API_uart.h</title>
+<indexterm><primary>C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_uart.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+9 <emphasis role="comment">/*&#32;Define&#32;to&#32;prevent&#32;recursive&#32;inclusion&#32;-------------------------------------*/</emphasis>
+10 <emphasis role="preprocessor">#ifndef&#32;API_INC_API_UART_H_</emphasis>
+11 <emphasis role="preprocessor">#define&#32;API_INC_API_UART_H_</emphasis>
+12 
+13 <emphasis role="comment">/*&#32;Includes&#32;------------------------------------------------------------------*/</emphasis>
+14 <emphasis role="preprocessor">#include&#32;&lt;stdio.h&gt;</emphasis>
+15 <emphasis role="preprocessor">#include&#32;&lt;stdbool.h&gt;</emphasis>
+16 
+17 <emphasis role="comment">/*&#32;Exported&#32;types&#32;------------------------------------------------------------*/</emphasis>
+18 <emphasis role="comment">/*&#32;Exported&#32;constants&#32;--------------------------------------------------------*/</emphasis>
+19 <emphasis role="comment">/*&#32;User&#32;can&#32;use&#32;this&#32;section&#32;to&#32;tailor&#32;USARTx/UARTx&#32;instance&#32;used&#32;and&#32;associated</emphasis>
+20 <emphasis role="comment">&#32;&#32;&#32;resources&#32;*/</emphasis>
+21 <emphasis role="comment">/*&#32;Definition&#32;for&#32;USARTx&#32;clock&#32;resources&#32;*/</emphasis>
+22 <emphasis role="preprocessor">#define&#32;USARTx&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;USART3</emphasis>
+23 <emphasis role="preprocessor">#define&#32;USARTx_CLK_ENABLE()&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__HAL_RCC_USART3_CLK_ENABLE();</emphasis>
+24 <emphasis role="preprocessor">#define&#32;USARTx_RX_GPIO_CLK_ENABLE()&#32;&#32;&#32;&#32;&#32;&#32;__HAL_RCC_GPIOD_CLK_ENABLE()</emphasis>
+25 <emphasis role="preprocessor">#define&#32;USARTx_TX_GPIO_CLK_ENABLE()&#32;&#32;&#32;&#32;&#32;&#32;__HAL_RCC_GPIOD_CLK_ENABLE()</emphasis>
+26 
+27 <emphasis role="preprocessor">#define&#32;USARTx_FORCE_RESET()&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__HAL_RCC_USART3_FORCE_RESET()</emphasis>
+28 <emphasis role="preprocessor">#define&#32;USARTx_RELEASE_RESET()&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__HAL_RCC_USART3_RELEASE_RESET()</emphasis>
+29 
+30 <emphasis role="comment">/*&#32;Definition&#32;for&#32;USARTx&#32;Pins&#32;*/</emphasis>
+31 <emphasis role="preprocessor">#define&#32;USARTx_TX_PIN&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GPIO_PIN_8</emphasis>
+32 <emphasis role="preprocessor">#define&#32;USARTx_TX_GPIO_PORT&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GPIOD</emphasis>
+33 <emphasis role="preprocessor">#define&#32;USARTx_TX_AF&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GPIO_AF7_USART3</emphasis>
+34 <emphasis role="preprocessor">#define&#32;USARTx_RX_PIN&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GPIO_PIN_9</emphasis>
+35 <emphasis role="preprocessor">#define&#32;USARTx_RX_GPIO_PORT&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GPIOD</emphasis>
+36 <emphasis role="preprocessor">#define&#32;USARTx_RX_AF&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GPIO_AF7_USART3</emphasis>
+37 
+38 <emphasis role="comment">/*&#32;Exported&#32;macro&#32;------------------------------------------------------------*/</emphasis>
+39 <emphasis role="preprocessor">#define&#32;UART_TX_TIMEOUT&#32;200</emphasis>
+40 <emphasis role="preprocessor">#define&#32;UART_RX_TIMEOUT&#32;0xFFFF</emphasis>
+41 <emphasis role="comment">/*&#32;Exported&#32;functions&#32;-------------------------------------------------------&#32;*/</emphasis>
+42 <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="__a_p_i__uart_8h_1af4d71a13f5cd2001ac0eb140ec9bd084">uartinit</link>(<emphasis role="keywordtype">void</emphasis>);
+43 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__a_p_i__uart_8h_1a446c11b67abd8d44ae9ae308805bf848">uartsendString</link>(uint8_t&#32;*&#32;pstring);
+44 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__a_p_i__uart_8h_1a5f7272d7b83bf68319beb9c9acbb3f22">uartSendStringSize</link>(uint8_t&#32;*&#32;pstring,&#32;uint16_t&#32;size);
+45 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__a_p_i__uart_8h_1aeffd5a15e15e28b5261f17b864ad28c4">uartReceiveStringSize</link>(uint8_t&#32;*&#32;pstring,&#32;uint16_t&#32;size);
+46 
+47 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;API_INC_API_UART_H_&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+48 
+49 <emphasis role="comment">/***************************************************************END&#32;OF&#32;FILE****/</emphasis>
+</programlisting></section>

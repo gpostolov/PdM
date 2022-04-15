@@ -1,0 +1,334 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__a_p_i__debounce_8c" xml:lang="en-US">
+<title>C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_debounce.c File Reference</title>
+<indexterm><primary>C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API_debounce.c</primary></indexterm>
+<para>
+
+<para>API debounce. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;stdio.h&gt;
+#include &lt;stdint.h&gt;
+#include &lt;stdbool.h&gt;
+#include &quot;stm32f4xx_hal.h&quot;
+#include &quot;stm32f4xx_nucleo_144.h&quot;
+#include &quot;API_delay.h&quot;
+#include &quot;API_debounce.h&quot;
+</programlisting><simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="__a_p_i__debounce_8c_1ad699d22fdce8073e425b52c4d1d1a8f8"/>#define <emphasis role="strong">DEBOUNCING_DELAY</emphasis>   40</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="__a_p_i__debounce_8c_1a2c469bba1f151ac8d334947718ecf022"/>enum <emphasis role="strong">debounceState_t</emphasis> { <emphasis role="strong">BUTTON_UP</emphasis>
+, <emphasis role="strong">BUTTON_FALLING</emphasis>
+, <emphasis role="strong">BUTTON_DOWN</emphasis>
+, <emphasis role="strong">BUTTON_RAISING</emphasis>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="__a_p_i__debounce_8c_1a1d5035b5f3a37d5e437115ac5bf6a321">buttonPressed</link> (void)</para>
+
+<para>Button User pressed. </para>
+</listitem>
+            <listitem><para>void <link linkend="__a_p_i__debounce_8c_1a132c00c2cac9e23ad2211e2f6dcdf336">buttonReleased</link> (void)</para>
+
+<para>Button User released. </para>
+</listitem>
+            <listitem><para>void <link linkend="__a_p_i__debounce_8c_1ab3a205fff0350c246091ed7d529af591">debounceFSM_init</link> (void)</para>
+
+<para>Initialize FSM. </para>
+</listitem>
+            <listitem><para>void <link linkend="__a_p_i__debounce_8c_1ab41687f9d772b432731f47e3ac14906a">debounceFSM_update</link> (void)</para>
+
+<para>Update FSM. </para>
+</listitem>
+            <listitem><para>bool <link linkend="__a_p_i__debounce_8c_1a1e3a414aec5def470add78a0ee37722c">readKey</link> (void)</para>
+
+<para>Read key. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>API debounce. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Gabriel Postolov </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__a_p_i__debounce_8c_1a1d5035b5f3a37d5e437115ac5bf6a321"/><section>
+    <title>buttonPressed()</title>
+<indexterm><primary>buttonPressed</primary><secondary>API_debounce.c</secondary></indexterm>
+<indexterm><primary>API_debounce.c</primary><secondary>buttonPressed</secondary></indexterm>
+<para><computeroutput>void buttonPressed (void )</computeroutput></para><para>
+
+<para>Button User pressed. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None.</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None.</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="__a_p_i__debounce_8c_1a132c00c2cac9e23ad2211e2f6dcdf336"/><section>
+    <title>buttonReleased()</title>
+<indexterm><primary>buttonReleased</primary><secondary>API_debounce.c</secondary></indexterm>
+<indexterm><primary>API_debounce.c</primary><secondary>buttonReleased</secondary></indexterm>
+<para><computeroutput>void buttonReleased (void )</computeroutput></para><para>
+
+<para>Button User released. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None.</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None.</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="__a_p_i__debounce_8c_1ab3a205fff0350c246091ed7d529af591"/><section>
+    <title>debounceFSM_init()</title>
+<indexterm><primary>debounceFSM_init</primary><secondary>API_debounce.c</secondary></indexterm>
+<indexterm><primary>API_debounce.c</primary><secondary>debounceFSM_init</secondary></indexterm>
+<para><computeroutput>void debounceFSM_init (void )</computeroutput></para><para>
+
+<para>Initialize FSM. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None.</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None.</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="__a_p_i__debounce_8c_1ab41687f9d772b432731f47e3ac14906a"/><section>
+    <title>debounceFSM_update()</title>
+<indexterm><primary>debounceFSM_update</primary><secondary>API_debounce.c</secondary></indexterm>
+<indexterm><primary>API_debounce.c</primary><secondary>debounceFSM_update</secondary></indexterm>
+<para><computeroutput>void debounceFSM_update (void )</computeroutput></para><para>
+
+<para>Update FSM. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None.</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None.</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="__a_p_i__debounce_8c_1a1e3a414aec5def470add78a0ee37722c"/><section>
+    <title>readKey()</title>
+<indexterm><primary>readKey</primary><secondary>API_debounce.c</secondary></indexterm>
+<indexterm><primary>API_debounce.c</primary><secondary>readKey</secondary></indexterm>
+<para><computeroutput>bool readKey (void )</computeroutput></para><para>
+
+<para>Read key. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None.</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>true</entry><entry>
+<para>Button User pressed. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>false</entry><entry>
+<para>Button User not pressed. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+</section>

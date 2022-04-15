@@ -1,0 +1,180 @@
+.TH "C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h" 3 "Sun Apr 10 2022" "PdM TP" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_i2c.h \- API i2c\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdbool\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBI2Cx\fP   I2C1"
+.br
+.ti -1c
+.RI "#define \fBI2Cx_CLK_ENABLE\fP()   __HAL_RCC_I2C1_CLK_ENABLE()"
+.br
+.ti -1c
+.RI "#define \fBI2Cx_SDA_GPIO_CLK_ENABLE\fP()   __HAL_RCC_GPIOB_CLK_ENABLE()"
+.br
+.ti -1c
+.RI "#define \fBI2Cx_SCL_GPIO_CLK_ENABLE\fP()   __HAL_RCC_GPIOB_CLK_ENABLE()"
+.br
+.ti -1c
+.RI "#define \fBI2Cx_FORCE_RESET\fP()   __HAL_RCC_I2C1_FORCE_RESET()"
+.br
+.ti -1c
+.RI "#define \fBI2Cx_RELEASE_RESET\fP()   __HAL_RCC_I2C1_RELEASE_RESET()"
+.br
+.ti -1c
+.RI "#define \fBI2Cx_SCL_PIN\fP   GPIO_PIN_6"
+.br
+.ti -1c
+.RI "#define \fBI2Cx_SCL_GPIO_PORT\fP   GPIOB"
+.br
+.ti -1c
+.RI "#define \fBI2Cx_SCL_AF\fP   GPIO_AF4_I2C1"
+.br
+.ti -1c
+.RI "#define \fBI2Cx_SDA_PIN\fP   GPIO_PIN_7"
+.br
+.ti -1c
+.RI "#define \fBI2Cx_SDA_GPIO_PORT\fP   GPIOB"
+.br
+.ti -1c
+.RI "#define \fBI2Cx_SDA_AF\fP   GPIO_AF4_I2C1"
+.br
+.ti -1c
+.RI "#define \fBTXBUFFERSIZE\fP   20"
+.br
+.ti -1c
+.RI "#define \fBRXBUFFERSIZE\fP   TXBUFFERSIZE"
+.br
+.ti -1c
+.RI "#define \fBSLAVE_DEV_ADDRESS\fP   0x44"
+.br
+.ti -1c
+.RI "#define \fBMAX_TEMP_ABS\fP   50"
+.br
+.ti -1c
+.RI "#define \fBMAX_TEMP_DIFF\fP   5"
+.br
+.ti -1c
+.RI "#define \fBMAX_HUM_DIFF\fP   20"
+.br
+.ti -1c
+.RI "#define \fBI2C_TXRX_TIMEOUT\fP   100"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBalarmType_t\fP { \fBNO_ALARM_\fP, \fBMAX_TEMP_ABS_\fP, \fBMAX_TEMP_DIFF_\fP, \fBMAX_HUM_DIFF_\fP }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBi2c_init\fP (void)"
+.br
+.RI "Initialize the API_I2C: I2C peripheral, Button User, Buffers, FSM alarm\&. "
+.ti -1c
+.RI "alarmType_t \fBalarmTH_FSM_update\fP (void)"
+.br
+.RI "Update FSM\&. "
+.ti -1c
+.RI "bool \fBTH_updated\fP (uint32_t *, uint32_t *)"
+.br
+.RI "Update Temperature and Humidity\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+API i2c\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Gabriel Postolov 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "alarmType_t alarmTH_FSM_update (void)"
+
+.PP
+Update FSM\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Current alarm state\&. 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINO_ALARM_\fP No Alarm\&. 
+.br
+\fIMAX_TEMP_ABS_\fP Alarm\&. Maximum temperature was reached\&. 
+.br
+\fIMAX_TEMP_DIFF_\fP Alarm\&. Temperature difference was reached in less than 3 minutes\&. 
+.br
+\fIMAX_HUM_DIFF_\fP Alarm\&. Humidity difference was reached in less than 3 minutes\&. 
+.RE
+.PP
+
+.SS "bool i2c_init (void)"
+
+.PP
+Initialize the API_I2C: I2C peripheral, Button User, Buffers, FSM alarm\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fItrue\fP The initialization was successful\&. 
+.br
+\fIfalse\fP The initialization was not successful\&. 
+.RE
+.PP
+
+.SS "bool TH_updated (uint32_t * temp, uint32_t * hum)"
+
+.PP
+Update Temperature and Humidity\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItemp\fP Temperature to be updated\&. 
+.br
+\fIhum\fP Humidity to be updated\&. 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fItrue\fP Updated successful\&. 
+.br
+\fIfalse\fP Updated was not successful\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for PdM TP from the source code\&.

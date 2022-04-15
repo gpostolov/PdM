@@ -1,0 +1,128 @@
+\hypertarget{_a_p_i__uart_8c}{}\doxysection{C\+:/\+Users/\+Gabriel/\+Documents/\+Git\+Hub/\+Pd\+M/\+Practica\+TP/\+Drivers/\+API/src/\+API\+\_\+uart.c File Reference}
+\label{_a_p_i__uart_8c}\index{C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API\_uart.c@{C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/src/API\_uart.c}}
+
+
+API uart.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+hal.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+nucleo\+\_\+144.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}API\+\_\+uart.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_a_p_i__uart_8c_af4d71a13f5cd2001ac0eb140ec9bd084}{uartinit}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize UART and send the configuration by UART. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_a_p_i__uart_8c_a446c11b67abd8d44ae9ae308805bf848}{uartsend\+String}} (uint8\+\_\+t $\ast$pstring)
+\begin{DoxyCompactList}\small\item\em Send a string by UART. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_a_p_i__uart_8c_a5f7272d7b83bf68319beb9c9acbb3f22}{uart\+Send\+String\+Size}} (uint8\+\_\+t $\ast$pstring, uint16\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Send a part of string by UART. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_a_p_i__uart_8c_aeffd5a15e15e28b5261f17b864ad28c4}{uart\+Receive\+String\+Size}} (uint8\+\_\+t $\ast$pstring, uint16\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Receive a string by UART. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_a_p_i__uart_8c_a2d3238638f25fd8e78b21dc8e5efd348}\label{_a_p_i__uart_8c_a2d3238638f25fd8e78b21dc8e5efd348}} 
+UART\+\_\+\+Handle\+Type\+Def {\bfseries Uart\+Handle}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+API uart. 
+
+\begin{DoxyAuthor}{Author}
+Gabriel Postolov 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_a_p_i__uart_8c_af4d71a13f5cd2001ac0eb140ec9bd084}\label{_a_p_i__uart_8c_af4d71a13f5cd2001ac0eb140ec9bd084}} 
+\index{API\_uart.c@{API\_uart.c}!uartinit@{uartinit}}
+\index{uartinit@{uartinit}!API\_uart.c@{API\_uart.c}}
+\doxysubsubsection{\texorpdfstring{uartinit()}{uartinit()}}
+{\footnotesize\ttfamily bool uartinit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize UART and send the configuration by UART. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & UART initialized successfully. \\
+\hline
+{\em false} & UART was not initialized successfully. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{_a_p_i__uart_8c_aeffd5a15e15e28b5261f17b864ad28c4}\label{_a_p_i__uart_8c_aeffd5a15e15e28b5261f17b864ad28c4}} 
+\index{API\_uart.c@{API\_uart.c}!uartReceiveStringSize@{uartReceiveStringSize}}
+\index{uartReceiveStringSize@{uartReceiveStringSize}!API\_uart.c@{API\_uart.c}}
+\doxysubsubsection{\texorpdfstring{uartReceiveStringSize()}{uartReceiveStringSize()}}
+{\footnotesize\ttfamily void uart\+Receive\+String\+Size (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{pstring,  }\item[{uint16\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Receive a string by UART. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pstring} & String to be received. \\
+\hline
+{\em size} & Number of characters to receive. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{_a_p_i__uart_8c_a446c11b67abd8d44ae9ae308805bf848}\label{_a_p_i__uart_8c_a446c11b67abd8d44ae9ae308805bf848}} 
+\index{API\_uart.c@{API\_uart.c}!uartsendString@{uartsendString}}
+\index{uartsendString@{uartsendString}!API\_uart.c@{API\_uart.c}}
+\doxysubsubsection{\texorpdfstring{uartsendString()}{uartsendString()}}
+{\footnotesize\ttfamily void uartsend\+String (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{pstring }\end{DoxyParamCaption})}
+
+
+
+Send a string by UART. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pstring} & String to be sent. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{_a_p_i__uart_8c_a5f7272d7b83bf68319beb9c9acbb3f22}\label{_a_p_i__uart_8c_a5f7272d7b83bf68319beb9c9acbb3f22}} 
+\index{API\_uart.c@{API\_uart.c}!uartSendStringSize@{uartSendStringSize}}
+\index{uartSendStringSize@{uartSendStringSize}!API\_uart.c@{API\_uart.c}}
+\doxysubsubsection{\texorpdfstring{uartSendStringSize()}{uartSendStringSize()}}
+{\footnotesize\ttfamily void uart\+Send\+String\+Size (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{pstring,  }\item[{uint16\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Send a part of string by UART. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pstring} & String to be sent. \\
+\hline
+{\em size} & size of the string to be sent. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}

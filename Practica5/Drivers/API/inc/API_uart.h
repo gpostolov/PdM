@@ -1,7 +1,7 @@
 /**
  ******************************************************************************
  * @file	API_uart.h
- * @author Gabriel Postolov
+ * @author 	Gabriel Postolov
  * @brief	API uart para la Practica5
  ******************************************************************************
  * @attention
@@ -43,7 +43,7 @@
 #define UART_TX_TIMEOUT 200
 #define UART_RX_TIMEOUT 0xFFFF
 /* Exported functions ------------------------------------------------------- */
-bool uartinit();
+bool uartinit(void);
 void uartsendString(uint8_t * pstring);
 void uartSendStringSize(uint8_t * pstring, uint16_t size);
 void uartReceiveStringSize(uint8_t * pstring, uint16_t size);

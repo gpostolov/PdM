@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__a_p_i__delay_8h_source" xml:lang="en-US">
+<title>API_delay.h</title>
+<indexterm><primary>C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_delay.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+9 <emphasis role="comment">/*&#32;Define&#32;to&#32;prevent&#32;recursive&#32;inclusion&#32;-------------------------------------*/</emphasis>
+10 <emphasis role="preprocessor">#ifndef&#32;API_API_DELAY_H_</emphasis>
+11 <emphasis role="preprocessor">#define&#32;API_API_DELAY_H_</emphasis>
+12 
+13 <emphasis role="comment">/*&#32;Includes&#32;------------------------------------------------------------------*/</emphasis>
+14 <emphasis role="preprocessor">#include&#32;&lt;stdio.h&gt;</emphasis>
+15 <emphasis role="preprocessor">#include&#32;&lt;stdbool.h&gt;</emphasis>
+16 <emphasis role="comment">/*&#32;Exported&#32;types&#32;------------------------------------------------------------*/</emphasis>
+17 <emphasis role="keyword">typedef</emphasis>&#32;uint32_t&#32;tick_t;
+18 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;bool_t;
+19 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct</emphasis>{
+20 &#32;&#32;&#32;tick_t&#32;startTime;
+21 &#32;&#32;&#32;tick_t&#32;duration;
+22 &#32;&#32;&#32;bool_t&#32;running;
+23 }&#32;<link linkend="_structdelay__t">delay_t</link>;
+24 <emphasis role="comment">/*&#32;Exported&#32;constants&#32;--------------------------------------------------------*/</emphasis>
+25 <emphasis role="comment">/*&#32;Exported&#32;macro&#32;------------------------------------------------------------*/</emphasis>
+26 <emphasis role="comment">/*&#32;Exported&#32;functions&#32;-------------------------------------------------------&#32;*/</emphasis>
+27 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__a_p_i__delay_8h_1a6613427678149cadd03bac79e79475f3">delayInit</link>(&#32;<link linkend="_structdelay__t">delay_t</link>&#32;*&#32;delay,&#32;tick_t&#32;duration&#32;);
+28 bool_t&#32;<link linkend="__a_p_i__delay_8h_1afecaa44225b94ebfb354e4b6b7e6e9ce">delayRead</link>(&#32;<link linkend="_structdelay__t">delay_t</link>&#32;*&#32;delay&#32;);
+29 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__a_p_i__delay_8h_1a2af041ac01bb3db8ecf87ce371fac67d">delayWrite</link>(&#32;<link linkend="_structdelay__t">delay_t</link>&#32;*&#32;delay,&#32;tick_t&#32;duration&#32;);
+30 
+31 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;API_API_DELAY_H_&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+</programlisting></section>

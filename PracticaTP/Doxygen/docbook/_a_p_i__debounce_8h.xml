@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__a_p_i__debounce_8h" xml:lang="en-US">
+<title>C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_debounce.h File Reference</title>
+<indexterm><primary>C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_debounce.h</primary></indexterm>
+<para>
+
+<para>API debounce. </para>
+ 
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="__a_p_i__debounce_8h_1ab3a205fff0350c246091ed7d529af591">debounceFSM_init</link> (void)</para>
+
+<para>Initialize FSM. </para>
+</listitem>
+            <listitem><para>void <link linkend="__a_p_i__debounce_8h_1ab41687f9d772b432731f47e3ac14906a">debounceFSM_update</link> (void)</para>
+
+<para>Update FSM. </para>
+</listitem>
+            <listitem><para>bool <link linkend="__a_p_i__debounce_8h_1a1e3a414aec5def470add78a0ee37722c">readKey</link> (void)</para>
+
+<para>Read key. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>API debounce. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Gabriel Postolov </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__a_p_i__debounce_8h_1ab3a205fff0350c246091ed7d529af591"/><section>
+    <title>debounceFSM_init()</title>
+<indexterm><primary>debounceFSM_init</primary><secondary>API_debounce.h</secondary></indexterm>
+<indexterm><primary>API_debounce.h</primary><secondary>debounceFSM_init</secondary></indexterm>
+<para><computeroutput>void debounceFSM_init (void )</computeroutput></para><para>
+
+<para>Initialize FSM. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None.</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None.</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="__a_p_i__debounce_8h_1ab41687f9d772b432731f47e3ac14906a"/><section>
+    <title>debounceFSM_update()</title>
+<indexterm><primary>debounceFSM_update</primary><secondary>API_debounce.h</secondary></indexterm>
+<indexterm><primary>API_debounce.h</primary><secondary>debounceFSM_update</secondary></indexterm>
+<para><computeroutput>void debounceFSM_update (void )</computeroutput></para><para>
+
+<para>Update FSM. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None.</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None.</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="__a_p_i__debounce_8h_1a1e3a414aec5def470add78a0ee37722c"/><section>
+    <title>readKey()</title>
+<indexterm><primary>readKey</primary><secondary>API_debounce.h</secondary></indexterm>
+<indexterm><primary>API_debounce.h</primary><secondary>readKey</secondary></indexterm>
+<para><computeroutput>bool readKey (void )</computeroutput></para><para>
+
+<para>Read key. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None.</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>true</entry><entry>
+<para>Button User pressed. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>false</entry><entry>
+<para>Button User not pressed. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+</section>

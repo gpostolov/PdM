@@ -1,8 +1,8 @@
 /**
  ******************************************************************************
- * @file	main.c
+ * @file	API_delay.c
  * @author	Gabriel Postolov
- * @brief	Main File para la Practica2
+ * @brief	API_delay File para la Practica2
  ******************************************************************************
  * @attention
  *

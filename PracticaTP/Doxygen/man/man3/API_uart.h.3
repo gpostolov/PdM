@@ -1,0 +1,167 @@
+.TH "C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_uart.h" 3 "Sun Apr 10 2022" "PdM TP" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+C:/Users/Gabriel/Documents/GitHub/PdM/PracticaTP/Drivers/API/inc/API_uart.h \- API uart\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdbool\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBUSARTx\fP   USART3"
+.br
+.ti -1c
+.RI "#define \fBUSARTx_CLK_ENABLE\fP()   __HAL_RCC_USART3_CLK_ENABLE();"
+.br
+.ti -1c
+.RI "#define \fBUSARTx_RX_GPIO_CLK_ENABLE\fP()   __HAL_RCC_GPIOD_CLK_ENABLE()"
+.br
+.ti -1c
+.RI "#define \fBUSARTx_TX_GPIO_CLK_ENABLE\fP()   __HAL_RCC_GPIOD_CLK_ENABLE()"
+.br
+.ti -1c
+.RI "#define \fBUSARTx_FORCE_RESET\fP()   __HAL_RCC_USART3_FORCE_RESET()"
+.br
+.ti -1c
+.RI "#define \fBUSARTx_RELEASE_RESET\fP()   __HAL_RCC_USART3_RELEASE_RESET()"
+.br
+.ti -1c
+.RI "#define \fBUSARTx_TX_PIN\fP   GPIO_PIN_8"
+.br
+.ti -1c
+.RI "#define \fBUSARTx_TX_GPIO_PORT\fP   GPIOD"
+.br
+.ti -1c
+.RI "#define \fBUSARTx_TX_AF\fP   GPIO_AF7_USART3"
+.br
+.ti -1c
+.RI "#define \fBUSARTx_RX_PIN\fP   GPIO_PIN_9"
+.br
+.ti -1c
+.RI "#define \fBUSARTx_RX_GPIO_PORT\fP   GPIOD"
+.br
+.ti -1c
+.RI "#define \fBUSARTx_RX_AF\fP   GPIO_AF7_USART3"
+.br
+.ti -1c
+.RI "#define \fBUART_TX_TIMEOUT\fP   200"
+.br
+.ti -1c
+.RI "#define \fBUART_RX_TIMEOUT\fP   0xFFFF"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBuartinit\fP (void)"
+.br
+.RI "Initialize UART and send the configuration by UART\&. "
+.ti -1c
+.RI "void \fBuartsendString\fP (uint8_t *pstring)"
+.br
+.RI "Send a string by UART\&. "
+.ti -1c
+.RI "void \fBuartSendStringSize\fP (uint8_t *pstring, uint16_t size)"
+.br
+.RI "Send a part of string by UART\&. "
+.ti -1c
+.RI "void \fBuartReceiveStringSize\fP (uint8_t *pstring, uint16_t size)"
+.br
+.RI "Receive a string by UART\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+API uart\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Gabriel Postolov 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "bool uartinit (void)"
+
+.PP
+Initialize UART and send the configuration by UART\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fItrue\fP UART initialized successfully\&. 
+.br
+\fIfalse\fP UART was not initialized successfully\&. 
+.RE
+.PP
+
+.SS "void uartReceiveStringSize (uint8_t * pstring, uint16_t size)"
+
+.PP
+Receive a string by UART\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpstring\fP String to be received\&. 
+.br
+\fIsize\fP Number of characters to receive\&. 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.SS "void uartsendString (uint8_t * pstring)"
+
+.PP
+Send a string by UART\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpstring\fP String to be sent\&. 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.SS "void uartSendStringSize (uint8_t * pstring, uint16_t size)"
+
+.PP
+Send a part of string by UART\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpstring\fP String to be sent\&. 
+.br
+\fIsize\fP size of the string to be sent\&. 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for PdM TP from the source code\&.
