@@ -10,8 +10,15 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="alarmType_t"/>
+		<item key="selection" value="I2C1"/>
 		<list key="findhistory">
+			<item value="I2C1"/>
+			<item value="RCC_P"/>
+			<item value="RCC_"/>
+			<item value="RCC_PER"/>
+			<item value="RCC_per"/>
+			<item value="HAL_I2C_MspInit"/>
+			<item value="I2Cx_SCL_PIN"/>
 			<item value="delay_LED3"/>
 			<item value="alarmTH_FSM_init"/>
 			<item value="alarmType_t"/>
@@ -20,22 +27,15 @@
 			<item value="NVIC"/>
 			<item value="HAL_StatusTypeDef"/>
 			<item value="timeout"/>
-			<item value="HAL_I2C_MspInit"/>
-			<item value="I2Cx_CLK_ENABLE"/>
-			<item value="HAL_I2C_Init"/>
-			<item value="I2C_duty_cycle_in_fast_mode"/>
-			<item value="I2C_HandleTypeDef"/>
-			<item value="strle"/>
-			<item value="USARTx"/>
 		</list>
 		<list key="replacehistory">
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1042"/>
-		<item key="DIALOG_Y_ORIGIN" value="346"/>
+		<item key="DIALOG_X_ORIGIN" value="351"/>
+		<item key="DIALOG_Y_ORIGIN" value="418"/>
 		<item key="DIALOG_WIDTH" value="322"/>
-		<item key="DIALOG_HEIGHT" value="390"/>
+		<item key="DIALOG_HEIGHT" value="310"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 	</section>
 </section>

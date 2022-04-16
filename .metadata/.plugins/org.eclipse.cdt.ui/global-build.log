@@ -1,7 +1,14 @@
-16:58:29 **** Incremental Build of configuration Debug for project PracticaTP ****
+13:28:10 **** Incremental Build of configuration Debug for project PracticaTP ****
 make -j4 all 
 arm-none-eabi-size   PracticaTP.elf 
    text	   data	    bss	    dec	    hex	filename
-  17604	     96	   1904	  19604	   4c94	PracticaTP.elf
+  17748	     96	   1904	  19748	   4d24	PracticaTP.elf
+Finished building: default.size.stdout
+ 
+13:28:13 **** Incremental Build of configuration Debug for project PracticaTP ****
+make -j4 all 
+arm-none-eabi-size   PracticaTP.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17748	     96	   1904	  19748	   4d24	PracticaTP.elf
 Finished building: default.size.stdout
  

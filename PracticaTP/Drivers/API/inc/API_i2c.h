@@ -14,6 +14,9 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+#include "stm32f4xx_hal.h"  		/* <- HAL include */
+#include "stm32f4xx_nucleo_144.h" 	/* <- BSP include */
+
 /* Exported types ------------------------------------------------------------*/
 typedef enum {
 	NO_ALARM_,
@@ -32,10 +35,10 @@ typedef enum {
 #define I2Cx_RELEASE_RESET()             __HAL_RCC_I2C1_RELEASE_RESET()
 
 /* Definition for I2Cx Pins */
-#define I2Cx_SCL_PIN                    GPIO_PIN_6
+#define I2Cx_SCL_PIN                    GPIO_PIN_8
 #define I2Cx_SCL_GPIO_PORT              GPIOB
 #define I2Cx_SCL_AF                     GPIO_AF4_I2C1
-#define I2Cx_SDA_PIN                    GPIO_PIN_7
+#define I2Cx_SDA_PIN                    GPIO_PIN_9
 #define I2Cx_SDA_GPIO_PORT              GPIOB
 #define I2Cx_SDA_AF                     GPIO_AF4_I2C1
 
