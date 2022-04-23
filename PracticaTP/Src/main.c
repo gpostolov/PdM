@@ -13,6 +13,7 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <stdbool.h>
+#include <string.h>
 
 #include "stm32f4xx_hal.h"  		/* <- HAL include */
 #include "stm32f4xx_nucleo_144.h" 	/* <- BSP include */
@@ -40,6 +41,10 @@ static const char * I2C_RESET_ALARM = " \n\r ** The alarm was reset. ** \n\n\r "
 static const char * I2C_MAX_TEMP_ABS_ALARM = " \n\r ** Alarm: Maximum absolute temperature reached. ** \n\n\r ";
 static const char * I2C_MAX_TEMP_DIFF_ALARM = " \n\r ** Alarm: Maximum difference temperature reached. ** \n\n\r ";
 static const char * I2C_MAX_HUM_DIFF_ALARM = " \n\r ** Alarm: Maximum difference temperature reached. ** \n\n\r ";
+
+static char str_to_send_t[40] = "Current Temperature: ";
+static char str_to_send_h[40] = "Current Humidity: ";
+static char str_aux[10];
 
 static alarmType_t my_alarm = NO_ALARM_;
 static alarmType_t my_old_alarm = NO_ALARM_;
@@ -91,9 +96,6 @@ int main(void) {
 	/* Initialize delay for LED2 */
 	delayInit(&delay_LED3, DELAY_LED3_DURATION);
 
-
-
-
 	if(uartinit()){
 		uartsendString((uint8_t *)UART_CONFIG_OK);
 	}else{
@@ -113,9 +115,13 @@ int main(void) {
 		debounceFSM_update();
 		my_alarm = alarmTH_FSM_update();
 		if(TH_updated(&my_temp, &my_hum)){
-			//Usar concat string
-			uartsendString((uint8_t *)"Current Temperature: XX C \n\r");
-			uartsendString((uint8_t *)"Current Humidity: XX % \n\r");
+			sprintf(str_aux, "%u", (unsigned int)my_temp);
+			strcat( str_to_send_t, str_aux );
+			uartsendString((uint8_t *)str_to_send_t);
+
+			sprintf(str_aux, "%u", (unsigned int)my_hum);
+			strcat( str_to_send_h, str_aux );
+			uartsendString((uint8_t *)str_to_send_h);
 		}
 
 		if(my_alarm == NO_ALARM_){
